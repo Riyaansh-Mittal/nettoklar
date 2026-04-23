@@ -1,17 +1,16 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "NettoKlar",
+  "url": "https://nettoklar.de"
+};
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="NettoKlar – Steuer & Rente einfach erklärt" description="Steuerklassen, Rentenpunkte und TVöD-Rechner einfach erklärt." schema={schema}>
+  <main>
+    <h1>NettoKlar</h1>
+    <p>Skeleton live. Content coming soon.</p>
+  </main>
+</BaseLayout>
