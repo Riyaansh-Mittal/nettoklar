@@ -1,6 +1,4 @@
 ---
-import '../styles/global.css';
-
 const { title, description, schema } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -12,11 +10,44 @@ const { title, description, schema } = Astro.props;
     <title>{title}</title>
     <link rel="canonical" href={Astro.url.href} />
 
+    <!-- General Sans from Fontshare -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Global design system -->
+    <link rel="stylesheet" href="/src/styles/global.css" />
+
+    <!-- JSON-LD Schema -->
     {schema && (
-      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+      <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(schema)}</script>`} />
     )}
   </head>
   <body>
+    <header class="site-header">
+      <a href="/" class="site-logo">Netto<span>Klar</span></a>
+      <span class="freshness-badge">✓ 2026 aktualisiert</span>
+    </header>
+
     <slot />
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <nav class="site-footer-links" aria-label="Footer Navigation">
+          <a href="/steuerklasse-finder/">Steuerklassen-Finder</a>
+          <a href="/steuerklasse-heirat/">Steuerklasse Heirat</a>
+          <a href="/grundfreibetrag-2026/">Grundfreibetrag 2026</a>
+          <a href="/steuererklarung-frist-2025/">Steuererklärung Frist</a>
+          <a href="/tvoed-rechner/">TVöD-Rechner</a>
+        </nav>
+        <p class="site-footer-legal">
+          © 2026 NettoKlar. Basiert auf dem BMF Programmablaufplan 2026.
+          Alle Angaben ohne Gewähr. |
+          <a href="/impressum/">Impressum</a> ·
+          <a href="/datenschutz/">Datenschutz</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
