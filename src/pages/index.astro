@@ -3,14 +3,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "NettoKlar",
-  "url": "https://nettoklar.de"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nettoklar.de/#website",
+      "url": "https://nettoklar.de/",
+      "name": "NettoKlar",
+      "description": "Kostenlose Steuer- und Gehaltsrechner für Deutschland – Steuerklassen, Rentenpunkte, TVöD und mehr.",
+      "inLanguage": "de-DE",
+      "publisher": { "@id": "https://nettoklar.de/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nettoklar.de/#organization",
+      "name": "NettoKlar",
+      "url": "https://nettoklar.de/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nettoklar.de/favicon.svg",
+        "width": 300,
+        "height": 60
+      }
+    }
+  ]
 };
 ---
-<BaseLayout title="NettoKlar – Steuer & Rente einfach erklärt" description="Steuerklassen, Rentenpunkte und TVöD-Rechner einfach erklärt." schema={schema}>
-  <main>
+
+<BaseLayout
+  title="NettoKlar – Steuer & Rente einfach erklärt"
+  description="Steuerklassen-Finder, Rentenpunkte-Rechner, Grundfreibetrag 2026 und TVöD-Rechner – kostenlos und aktuell."
+  schema={schema}
+>
+  <main class="page-wrapper">
     <h1>NettoKlar</h1>
-    <p>Skeleton live. Content coming soon.</p>
+    <p>Dein Brutto-Netto-Rechner 2026 — wird gerade gebaut.</p>
   </main>
 </BaseLayout>
