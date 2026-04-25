@@ -1,0 +1,506 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://nettoklar.de/steuerklasse-3-5/#webpage",
+      "url": "https://nettoklar.de/steuerklasse-3-5/",
+      "name": "Steuerklasse 3 und 5: Nachzahlung, Rechner & Vergleich 2026",
+      "headline": "Steuerklasse 3 und 5: Nachzahlung berechnen, Rechner & lohnt es sich?",
+      "datePublished": "2026-04-26",
+      "dateModified": "2026-04-26",
+      "inLanguage": "de-DE",
+      "isPartOf": { "@id": "https://nettoklar.de/#website" },
+      "breadcrumb": { "@id": "https://nettoklar.de/steuerklasse-3-5/#breadcrumb" },
+      "author": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de/" },
+      "publisher": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de/" },
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".fact-strip", ".correction-callout", "#faq"] }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nettoklar.de/steuerklasse-3-5/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de/" },
+        { "@type": "ListItem", "position": 2, "name": "Steuerklasse 3 und 5", "item": "https://nettoklar.de/steuerklasse-3-5/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nettoklar.de/steuerklasse-3-5/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Werden die Steuerklassen 3 und 5 abgeschafft?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die aktuelle CDU/CSU-geführte Bundesregierung (seit 2025) hat die Abschaffungspläne der Vorgängerregierung ausdrücklich zurückgenommen. SK 3/5 bleibt 2026 vollständig gültig." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie hoch ist die Nachzahlung bei Steuerklasse 3 und 5?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Die Nachzahlung hängt von der Einkommensdifferenz ab. SK 3 behält monatlich zu wenig ein (nutzt doppelten Grundfreibetrag €24.696), SK 5 zu viel. Das Finanzamt gleicht die Differenz am Jahresende aus. Unser Rechner schätzt den Betrag anhand Ihrer Bruttogehälter." }
+        },
+        {
+          "@type": "Question",
+          "name": "Zahlt man bei Steuerklasse 3 und 5 mehr Steuern als bei 4 und 4?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Jahres-Gesamtsteuerlast ist bei SK 3/5 und SK 4/4 exakt identisch. Der Unterschied liegt nur in der monatlichen Verteilung." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wann lohnt sich Steuerklasse 3 und 5?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Die 60-40-Regel: SK 3/5 ist sinnvoll, wenn ein Partner mindestens 60% des gemeinsamen Haushaltseinkommens verdient. Bei 70/30 oder 80/20 erhöht SK 3 den monatlichen Nettolohn des Hauptverdieners deutlich." }
+        },
+        {
+          "@type": "Question",
+          "name": "Können unverheiratete Paare Steuerklasse 3 und 5 wählen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nein. SK 3/5 ist ausschließlich für verheiratete Paare und eingetragene Lebenspartnerschaften. Unverheiratete Paare können diese Kombination nicht wählen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit der Steuerklasse nach einer Trennung?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Bei dauerhafter Trennung werden beide Partner ab dem darauffolgenden Kalenderjahr automatisch in SK 1 eingestuft. Im Trennungsjahr selbst bleibt die bisherige Kombination bestehen." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie beantrage ich Steuerklasse 4 mit Faktor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Gemeinsam via mein.elster.de, Antrag auf Steuerklassenwechsel, Option Faktorverfahren auswählen. Kein fester Stichtag — jederzeit beantragbar, wirksam ab dem 1. des Folgemonats." }
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://nettoklar.de/steuerklasse-3-5/#app",
+      "name": "Steuerklassen-Vergleich 3/5 vs 4/4 mit Nachzahlungsschätzung",
+      "url": "https://nettoklar.de/steuerklasse-3-5/",
+      "description": "Bruttogehälter eingeben — sofortige Empfehlung SK 3/5, 4/4 oder Faktor plus geschätzte Nachzahlung am Jahresende.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "de-DE",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Steuerklasse 3 und 5: Nachzahlung, Rechner & Vergleich 2026"
+  description="Steuerklasse 3 und 5: Wie hoch ist die Nachzahlung? Mit Rechner berechnen, Vergleich 4/4 & ob es sich noch lohnt."
+  schema={schema}
+>
+  <main class="page-wrapper">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="/">NettoKlar</a></li>
+        <li>Steuerklasse 3 und 5</li>
+      </ol>
+    </nav>
+
+    <header class="article-header">
+      <h1>Steuerklasse 3 und 5: Nachzahlung berechnen, Rechner &amp; lohnt es sich?</h1>
+      <p class="article-meta">
+        <span>Letzte Aktualisierung: 26. April 2026</span>
+        <span>·</span>
+        <span>Lesezeit: ca. 6 Minuten</span>
+      </p>
+    </header>
+
+    <dl class="fact-strip">
+      <div class="fact-item">
+        <dt>Abschaffung SK 3/5?</dt>
+        <dd>Nein — CDU/CSU hat Pläne 2025 zurückgenommen</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Jahressteuerlast SK 3/5 vs 4/4</dt>
+        <dd>Identisch — nur Cashflow unterscheidet sich</dd>
+      </div>
+      <div class="fact-item">
+        <dt>60-40-Regel</dt>
+        <dd>SK 3/5 lohnt ab ≥60% Einkommensanteil</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Grundfreibetrag SK 3</dt>
+        <dd>€24.696 (doppelt)</dd>
+      </div>
+    </dl>
+
+    <!-- CALCULATOR -->
+    <section class="calculator-card" id="sk-vergleich">
+      <h2>Rechner: SK 3/5 vs. 4/4 – Empfehlung &amp; Nachzahlung schätzen</h2>
+      <p class="calc-subtitle">Bruttogehälter eingeben — Empfehlung und geschätzte Jahres-Nachzahlung erscheinen sofort.</p>
+
+      <div class="calc-grid-2">
+        <div class="calc-field-group">
+          <label class="calc-label" for="brutto-a">Partner A – Brutto / Monat</label>
+          <div class="input-euro-wrap">
+            <input type="number" id="brutto-a" class="calc-input" placeholder="z.B. 4000" min="0" max="50000" />
+            <span class="input-euro-symbol">€</span>
+          </div>
+        </div>
+        <div class="calc-field-group">
+          <label class="calc-label" for="brutto-b">Partner B – Brutto / Monat</label>
+          <div class="input-euro-wrap">
+            <input type="number" id="brutto-b" class="calc-input" placeholder="z.B. 2000" min="0" max="50000" />
+            <span class="input-euro-symbol">€</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="preset-row">
+        <button class="preset-chip" data-a="3000" data-b="3000">Gleiche Gehälter (3k/3k)</button>
+        <button class="preset-chip" data-a="4500" data-b="2000">60/40-Grenzfall (4,5k/2k)</button>
+        <button class="preset-chip" data-a="5500" data-b="1500">Klarer 3/5-Fall (5,5k/1,5k)</button>
+        <button class="preset-chip" data-a="6500" data-b="0">Alleinverdiener (6,5k/0)</button>
+      </div>
+
+      <!-- Result -->
+      <div id="sk35-result" class="hidden result-block">
+        <div class="result-top-row">
+          <div id="sk35-badge" class="result-badge"></div>
+          <p id="sk35-reason" class="result-reason"></p>
+        </div>
+        <p id="sk35-ratio" class="calc-hint"></p>
+
+        <div id="sk35-nachzahlung-box" class="nachzahlung-box hidden">
+          <p class="nachzahlung-label">Geschätzte Jahres-Nachzahlung</p>
+          <p id="sk35-nachzahlung-text" class="nachzahlung-text"></p>
+        </div>
+
+        <p class="calc-hint">
+          Die Jahressteuerlast ist bei SK 3/5 und SK 4/4
+          <strong>identisch</strong>. Nur der monatliche Cashflow unterscheidet sich.
+        </p>
+
+        <div id="sk35-share" class="share-row"></div>
+      </div>
+    </section>
+
+    <article class="article-body">
+
+      <h2>Steuerklassen für Ehepaare – Alle Optionen im Vergleich</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Kombination</th>
+              <th>Geeignet wenn</th>
+              <th>Monatl. Abzüge</th>
+              <th>Jahressteuerlast</th>
+              <th>Nachzahlungsrisiko</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>SK 3 / SK 5</strong></td>
+              <td>Einer verdient ≥60%, anderer ≤40%</td>
+              <td>SK3 niedrig, SK5 hoch</td>
+              <td>Identisch</td>
+              <td>Hoch</td>
+            </tr>
+            <tr>
+              <td><strong>SK 4 / SK 4</strong></td>
+              <td>Beide verdienen ähnlich</td>
+              <td>Mittel / Mittel</td>
+              <td>Identisch</td>
+              <td>Gering</td>
+            </tr>
+            <tr>
+              <td><strong>SK 4 mit Faktor</strong></td>
+              <td>Präzise Verteilung gewünscht</td>
+              <td>Individuell</td>
+              <td>Identisch</td>
+              <td>Sehr gering</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inline-link-callout">
+        Die Gesamtsteuerlast ist bei allen drei Kombinationen <strong>exakt gleich</strong>.
+        SK 3/5 verschiebt nur die monatliche Verteilung — der Hauptverdiener bekommt mehr
+        im Monat, zahlt aber am Jahresende eine Nachzahlung.
+      </div>
+
+      <h2>Die 60-40-Regel – Wann lohnt sich Steuerklasse 3 und 5?</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Partner A / Jahr</th>
+              <th>Partner B / Jahr</th>
+              <th>Anteil A</th>
+              <th>Empfehlung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>€60.000</td><td>€60.000</td><td>50%</td><td>SK 4/4</td>
+            </tr>
+            <tr>
+              <td>€60.000</td><td>€40.000</td><td>60%</td><td>SK 3/5 — Grenzfall</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>€70.000</td><td>€30.000</td><td>70%</td><td><strong>SK 3/5</strong></td>
+            </tr>
+            <tr>
+              <td>€80.000</td><td>€20.000</td><td>80%</td><td><strong>SK 3/5 klar</strong></td>
+            </tr>
+            <tr>
+              <td>€50.000</td><td>€0</td><td>100%</td><td>SK 3 / SK 5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Nicht sicher?
+        <a href="/steuerklasse-finder/">Steuerklassen-Finder nutzen →</a>
+      </p>
+
+      <h2>Warum gibt es bei SK 3 und 5 immer eine Nachzahlung?</h2>
+      <p>
+        SK 3 nutzt den <strong>doppelten Grundfreibetrag</strong> (€24.696 statt €12.348) —
+        dadurch wird monatlich zu wenig Lohnsteuer einbehalten. SK 5 nutzt keinen Grundfreibetrag
+        und behält zu viel ein. Am Jahresende gleicht das Finanzamt die Differenz aus: Für den
+        SK-3-Partner entsteht eine Nachzahlung.
+      </p>
+      <p>
+        Das ist <strong>keine Strafe</strong> — es ist eine strukturell vorgesehene Jahresabrechnung.
+        Beide Partner müssen eine gemeinsame Steuererklärung einreichen. Wer die Nachzahlung
+        vermeiden will, wählt SK 4/4 oder das Faktorverfahren.
+      </p>
+
+      <h2>Steuerklasse 4 mit Faktor – Die dritte Option</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Merkmal</th>
+              <th>SK 4/4</th>
+              <th>SK 3/5</th>
+              <th>SK 4 Faktor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Netto Hauptverdiener / Monat</td>
+              <td>Mittel</td><td>Am höchsten</td><td>Hoch</td>
+            </tr>
+            <tr>
+              <td>Netto Geringverdiener / Monat</td>
+              <td>Mittel</td><td>Am niedrigsten</td><td>Mittel–hoch</td>
+            </tr>
+            <tr>
+              <td>Steuererklärung Pflicht?</td>
+              <td>Nein</td><td>Ja</td><td>Ja</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Nachzahlungsrisiko</td>
+              <td>Gering</td><td>Hoch</td><td><strong>Sehr gering</strong></td>
+            </tr>
+            <tr>
+              <td>Jährlich neu beantragen?</td>
+              <td>Nein</td><td>Nein</td><td>Bei Einkommensänderung</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Steuerklasse wechseln nach der Heirat – Schritt für Schritt</h2>
+      <ol class="step-list">
+        <li>Beide Partner einloggen auf <strong>mein.elster.de</strong></li>
+        <li>Formulare → <em>Antrag auf Steuerklassenwechsel</em> gemeinsam ausfüllen</li>
+        <li>Bei Faktorverfahren: Option „Faktorverfahren" auswählen</li>
+        <li>Wirksam ab dem 1. des Folgemonats — kein fester Jahresstichtag</li>
+        <li>Arbeitgeber wird automatisch informiert</li>
+      </ol>
+      <p>
+        Alle Details zu Frist und Rückwirkung:
+        <a href="/steuerklasse-heirat/">Steuerklasse wechseln nach Heirat →</a>
+      </p>
+
+      <!-- ABSCHAFFUNG CORRECTION -->
+      <h2>Werden Steuerklassen 3 und 5 abgeschafft? – Aktuelle Lage 2026</h2>
+
+      <div class="correction-callout" role="note" aria-label="Korrektur verbreiteter Fehlinformation">
+        <span class="correction-badge">Korrektur</span>
+        <p>
+          Mehrere große Finanzportale schreiben noch, SK 3/5 werde abgeschafft.
+          Das ist <strong>falsch</strong> — die aktuelle CDU/CSU-Bundesregierung hat diesen Plan 2025 zurückgenommen.
+        </p>
+      </div>
+
+      <p>
+        <strong>Nein — Steuerklasse 3 und 5 werden nicht abgeschafft.</strong> Die frühere SPD-geführte
+        Koalition hatte geplant, SK 3/5 durch das Faktorverfahren zu ersetzen.
+        Die aktuelle <strong>CDU/CSU-geführte Bundesregierung (seit 2025)</strong> hat diesen Plan
+        ausdrücklich zurückgenommen. Finanztip bestätigte im November 2025:
+        <em>„Die Steuerklassen 3 und 5 werden nicht abgeschafft."</em>
+        SK 3/5 ist in 2026 vollständig gültig und auf absehbare Zeit nicht gefährdet.
+      </p>
+
+      <h2 id="faq">FAQ – Häufige Fragen zu Steuerklasse 3 und 5</h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>Wie hoch ist die Nachzahlung bei Steuerklasse 3 und 5?</summary>
+          <div class="faq-answer">
+            <p>Die Nachzahlung hängt direkt von der Einkommensdifferenz der Partner ab. Je größer der Gehaltsunterschied, desto höher fällt sie typischerweise aus. Nutzen Sie unseren Rechner oben — er schätzt die Nachzahlung anhand Ihrer Bruttogehälter. Als grobe Faustregel: Bei €70k/€30k Jahreseinkommen ist mit ca. €800–1.500 Nachzahlung zu rechnen, abhängig von Sonderausgaben.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Welche Steuerklasse ist nach der Heirat die beste?</summary>
+          <div class="faq-answer">
+            <p>Wenn beide Partner ähnlich viel verdienen (±40%): <strong>SK 4/4</strong> — kein Nachzahlungsrisiko. Wenn einer ≥60% verdient: <strong>SK 3/5</strong> — mehr monatliches Netto für den Hauptverdiener. Die Jahressteuerlast ist bei beiden identisch. Bei Unsicherheit ist das Faktorverfahren immer die sicherste Wahl.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Zahlt man bei SK 3 und 5 mehr Steuern als bei 4 und 4?</summary>
+          <div class="faq-answer">
+            <p>Nein — die Jahres-Gesamtsteuerlast ist <strong>exakt identisch</strong>, egal ob SK 3/5, SK 4/4 oder SK 4-Faktor. SK 3/5 beeinflusst nur den monatlichen Cashflow. Die Nachzahlung am Jahresende ist keine Mehrsteuer, sondern die Verrechnung der monatlichen Unterzahlung.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Was passiert mit der Steuerklasse nach einer Trennung?</summary>
+          <div class="faq-answer">
+            <p>Bei dauerhafter Trennung werden beide Partner <strong>ab dem Folgejahr</strong> automatisch in SK 1 eingestuft. Im Trennungsjahr bleibt die bisherige Kombination bestehen. Das Finanzamt muss über die Änderung des Familienstands informiert werden.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Können unverheiratete Paare SK 3 und 5 wählen?</summary>
+          <div class="faq-answer">
+            <p>Nein. SK 3/5 ist ausschließlich für <strong>verheiratete Paare und eingetragene Lebenspartnerschaften</strong>. Unverheiratete Paare — unabhängig von Beziehungsdauer oder gemeinsamem Haushalt — können diese Kombination nicht nutzen.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Wie beantrage ich Steuerklasse 4 mit Faktor?</summary>
+          <div class="faq-answer">
+            <p>Gemeinsam via <strong>mein.elster.de</strong> → Antrag auf Steuerklassenwechsel → Option Faktorverfahren auswählen. Kein fester Stichtag — jederzeit beantragbar, wirksam ab dem 1. des Folgemonats. Das Finanzamt berechnet Ihren individuellen Faktor. Bei deutlicher Einkommensänderung erneut beantragen.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="cta-group">
+        <a href="#sk-vergleich" class="btn-primary">Nachzahlung schätzen → Rechner starten</a>
+        <a href="https://www.elster.de/eportal/start" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          Steuerklasse wechseln → ELSTER
+        </a>
+      </div>
+
+    </article>
+  </main>
+</BaseLayout>
+
+<script>
+(function () {
+  var inputA   = document.getElementById('brutto-a');
+  var inputB   = document.getElementById('brutto-b');
+  var result   = document.getElementById('sk35-result');
+  var badge    = document.getElementById('sk35-badge');
+  var reason   = document.getElementById('sk35-reason');
+  var ratioEl  = document.getElementById('sk35-ratio');
+  var nachBox  = document.getElementById('sk35-nachzahlung-box');
+  var nachTxt  = document.getElementById('sk35-nachzahlung-text');
+  var shareDiv = document.getElementById('sk35-share');
+
+  function fmt(n) { return n.toLocaleString('de-DE'); }
+
+  function calcRecommendation() {
+    var a = parseFloat(inputA.value) || 0;
+    var b = parseFloat(inputB.value) || 0;
+    if (a <= 0 && b <= 0) { result.classList.add('hidden'); return; }
+
+    var combined = a + b;
+    var ratioA   = combined > 0 ? a / combined : 0.5;
+    var higher   = ratioA >= 0.5 ? 'Partner A' : 'Partner B';
+    var highPct  = Math.round(Math.max(ratioA, 1 - ratioA) * 100);
+    var empfehlung, reasonText, showNach = false;
+
+    if (ratioA >= 0.60 || ratioA <= 0.40) {
+      empfehlung  = 'SK 3 / SK 5';
+      reasonText  = higher + ' verdient ' + highPct + '% — die 60-40-Regel ist erfüllt. SK 3/5 erhöht das monatliche Netto des Hauptverdieners. Am Jahresende fällt eine Nachzahlung an (Schätzung unten).';
+      showNach    = true;
+    } else if (ratioA >= 0.45 && ratioA <= 0.55) {
+      empfehlung = 'SK 4 / SK 4';
+      reasonText = 'Beide Partner verdienen ähnlich — SK 4/4 ist die fairste Wahl. Kein Nachzahlungsrisiko, keine gemeinsame Steuererklärungspflicht.';
+    } else {
+      empfehlung = 'SK 4 mit Faktor';
+      reasonText = 'Grenzbereich (40–60%): Das Faktorverfahren verteilt monatliche Abzüge am präzisesten und vermeidet die Nachzahlung von SK 3/5.';
+    }
+
+    badge.textContent  = empfehlung;
+    reason.textContent = reasonText;
+    ratioEl.textContent = 'Partner A: ' + Math.round(ratioA * 100) +
+      '% · Partner B: ' + Math.round((1 - ratioA) * 100) + '% des gemeinsamen Einkommens';
+
+    if (showNach) {
+      var diff = Math.abs(a - b) * 12;
+      var low  = Math.round(diff * 0.06);
+      var high = Math.round(diff * 0.10);
+      nachTxt.textContent = 'Ca. €' + fmt(low) + ' – €' + fmt(high) +
+        ' / Jahr — abhängig von Sonderausgaben, Krankenversicherungsbeiträgen und ' +
+        'tatsächlichem Jahreseinkommen. Das Finanzamt berechnet den exakten Betrag im Steuerbescheid.';
+      nachBox.classList.remove('hidden');
+    } else {
+      nachBox.classList.add('hidden');
+    }
+
+    var params    = new URLSearchParams({ a: inputA.value, b: inputB.value });
+    var shareUrl  = 'https://nettoklar.de/steuerklasse-3-5/?' + params.toString();
+    var shareText = 'Bei ' + fmt(a) + '€/' + fmt(b) + '€ Brutto empfiehlt NettoKlar: ' + empfehlung + ' — ' + shareUrl;
+
+    history.replaceState(null, '', '?' + params.toString());
+
+    shareDiv.innerHTML = '';
+    var cpBtn = document.createElement('button');
+    cpBtn.className   = 'preset-chip';
+    cpBtn.textContent = '📋 Link kopieren';
+    cpBtn.addEventListener('click', function () {
+      navigator.clipboard.writeText(shareUrl).then(function () {
+        cpBtn.textContent = '✓ Kopiert!';
+        setTimeout(function () { cpBtn.textContent = '📋 Link kopieren'; }, 2000);
+      });
+    });
+    var waLink = document.createElement('a');
+    waLink.href        = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+    waLink.target      = '_blank';
+    waLink.rel         = 'noopener noreferrer';
+    waLink.className   = 'preset-chip';
+    waLink.textContent = '💬 WhatsApp teilen';
+    shareDiv.appendChild(cpBtn);
+    shareDiv.appendChild(waLink);
+
+    result.classList.remove('hidden');
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Live on input
+  [inputA, inputB].forEach(function (inp) {
+    inp.addEventListener('input', calcRecommendation);
+  });
+
+  // Preset chips
+  document.querySelectorAll('.preset-chip[data-a]').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      inputA.value = chip.dataset.a;
+      inputB.value = chip.dataset.b;
+      calcRecommendation();
+    });
+  });
+
+  // Restore from URL
+  (function () {
+    var p = new URLSearchParams(window.location.search);
+    if (p.get('a')) { inputA.value = p.get('a'); }
+    if (p.get('b')) { inputB.value = p.get('b'); }
+    if (p.get('a') || p.get('b')) calcRecommendation();
+  })();
+})();
+</script>
