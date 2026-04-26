@@ -649,7 +649,7 @@ tr:hover .row-anchor {
 }
 
 .fact-item dt {
-  font-size: 0.65rem;          /* slightly smaller so long labels fit */
+  font-size: 0.65rem; /* slightly smaller so long labels fit */
   hyphens: none;
   overflow-wrap: normal;
   white-space: normal;
@@ -1073,4 +1073,102 @@ tr:hover .row-anchor {
 
 .hidden {
   display: none !important;
+}
+
+/* ============================================
+   TOGGLE BUTTON GROUP (calculator period/entry toggles)
+   ============================================ */
+
+.toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  font-family: var(--font-body);
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+}
+
+.toggle-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-highlight);
+}
+
+.toggle-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ============================================
+   CALC RESULT GRID (multi-output comparison)
+   ============================================ */
+
+.calc-result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.calc-result-item {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.calc-result-item .result-label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.calc-result-item .result-badge {
+  font-size: var(--text-lg);
+  padding: var(--space-1) var(--space-3);
+}
+
+.calc-result-item.highlight-result {
+  grid-column: 1 / -1;
+  background: var(--color-primary-highlight);
+  border-color: rgba(0, 107, 112, 0.25);
+}
+
+.calc-result-item.highlight-result .result-badge {
+  font-size: var(--text-xl);
+}
+
+@media (max-width: 560px) {
+  .calc-result-grid {
+    grid-template-columns: 1fr;
+  }
+  .calc-result-item.highlight-result {
+    grid-column: 1;
+  }
 }

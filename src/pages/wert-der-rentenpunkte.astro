@@ -1,0 +1,482 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://nettoklar.de/wert-der-rentenpunkte/#webpage",
+      "url": "https://nettoklar.de/wert-der-rentenpunkte/",
+      "name": "Wert der Rentenpunkte 2026 – Aktueller Rentenpunktwert & Rechner",
+      "headline": "Wert der Rentenpunkte 2026 – Aktueller Rentenpunktwert & Rechner",
+      "datePublished": "2026-04-26",
+      "dateModified": "2026-04-26",
+      "inLanguage": "de-DE",
+      "isPartOf": { "@id": "https://nettoklar.de/#website" },
+      "breadcrumb": { "@id": "https://nettoklar.de/wert-der-rentenpunkte/#breadcrumb" },
+      "author": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de/" },
+      "publisher": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nettoklar.de/wert-der-rentenpunkte/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de/" },
+        { "@type": "ListItem", "position": 2, "name": "Wert der Rentenpunkte 2026", "item": "https://nettoklar.de/wert-der-rentenpunkte/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nettoklar.de/wert-der-rentenpunkte/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie viel ist ein Rentenpunkt 2026 wert?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ein Rentenpunkt ist von Januar bis Juni 2026 genau 40,79 Euro pro Monat wert. Ab dem 1. Juli 2026 steigt der Wert durch die Rentenanpassung auf 42,52 Euro monatlich. West und Ost sind seit Juli 2024 gleichgestellt." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Rentenpunkte brauche ich für 2.000 Euro Rente?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ab Juli 2026 (Rentenwert 42,52 Euro) benötigen Sie für eine Bruttorente von 2.000 Euro monatlich ca. 47 Rentenpunkte (2.000 ÷ 42,52). Für 1.500 Euro reichen ca. 35 Punkte, für 2.500 Euro ca. 59 Punkte." }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind 40 Rentenpunkte gut?",
+          "acceptedAnswer": { "@type": "Answer", "text": "40 Punkte × 42,52 Euro (ab Juli 2026) ergeben eine Bruttorente von 1.700,80 Euro monatlich. Nach Abzug von Kranken- und Pflegeversicherung (ca. 14,2 % gesamt) verbleiben netto rund 1.460 Euro. Bei durchschnittlichem Einkommen entspricht das etwa 40 Arbeitsjahren." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie sammelt man Rentenpunkte?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ein voller Entgeltpunkt entspricht einem Arbeitsjahr mit dem Durchschnittsverdienst (2026: ca. 51.944 Euro brutto jährlich). Wer weniger verdient, sammelt anteilig weniger Punkte. Kinderziehungsjahre, Pflegezeiten und freiwillige Beiträge können ebenfalls Punkte gutschreiben." }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum sind die letzten 5 Jahre vor der Rente nicht besonders wichtig?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Jedes Arbeitsjahr trägt gleich viel zu den Rentenpunkten bei – es gibt keine Aufwertung für die letzten Jahre. Die Deutsche Rentenversicherung berechnet die Rente aus der gesamten Erwerbsbiografie. Das ist ein weit verbreiteter Irrtum, den die DRV offiziell widerlegt." }
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://nettoklar.de/wert-der-rentenpunkte/#app",
+      "name": "Rentenpunkte-Rechner 2026 (Vorwärts & Rückwärts)",
+      "url": "https://nettoklar.de/wert-der-rentenpunkte/",
+      "description": "Berechnen Sie Ihre monatliche Bruttorente aus Ihrer Punkteanzahl – oder ermitteln Sie, wie viele Rentenpunkte Sie für Ihre Wunschrente benötigen.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "de-DE",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "@id": "https://nettoklar.de/wert-der-rentenpunkte/#speakable",
+      "cssSelector": [".fact-strip", ".summary-card", "h1"]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Rentenpunkt Wert 2026: €40,79 – Rente berechnen"
+  description="1 Rentenpunkt = €40,79 (bis Jun 2026), ab Juli €42,52. Berechnen Sie Ihre monatliche Rente mit unserem Rentenpunkte-Rechner 2026. Jetzt kostenlos."
+  schema={schema}
+>
+  <main class="page-wrapper">
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        <li><a href="/">NettoKlar</a></li>
+        <li>Wert der Rentenpunkte 2026</li>
+      </ol>
+    </nav>
+
+    <header class="article-header">
+      <h1>Wert der Rentenpunkte 2026 – Aktueller Rentenpunktwert &amp; Rechner</h1>
+      <p class="article-meta">
+        <span>Letzte Aktualisierung: 26. April 2026</span>
+        <span>·</span>
+        <span>Lesezeit: ca. 6 Minuten</span>
+      </p>
+    </header>
+
+    <dl class="fact-strip">
+      <div class="fact-item">
+          <dd>€40,79</dd>
+          <dt>Rentenpunktwert Jan–Jun 2026</dt>
+      </div>
+      <div class="fact-item">
+          <dd>€42,52</dd>
+          <dt>Rentenpunktwert ab Jul 2026</dt>
+      </div>
+      <div class="fact-item">
+          <dd>+4,24%</dd>
+          <dt>Rentenanpassung Juli 2026</dt>
+      </div>
+      <div class="fact-item">
+          <dd>€51.944</dd>
+          <dt>Durchschnittsverdienst 2026 (DRV)</dt>
+      </div>
+    </dl>
+
+    <article class="article-body">
+
+      <h2>Aktueller Rentenpunktwert 2026 – Übersicht</h2>
+      <div class="summary-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Zeitraum</th>
+              <th>Rentenpunktwert (West)</th>
+              <th>Rentenpunktwert (Ost)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>Ab Juli 2026</strong></td>
+              <td><strong>€42,52</strong></td>
+              <td><strong>€42,52</strong></td>
+            </tr>
+            <tr>
+              <td>Jan 2026 – Jun 2026</td>
+              <td>€40,79</td>
+              <td>€40,79</td>
+            </tr>
+            <tr>
+              <td>2025 (Vergleich)</td>
+              <td>€39,32</td>
+              <td>€39,32</td>
+            </tr>
+            <tr>
+              <td>Anstieg Jul 2026</td>
+              <td>+€1,73 (+4,24%)</td>
+              <td>Angeglichen seit Jul 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Seit Juli 2024 gilt für West und Ost derselbe Rentenpunktwert — die jahrzehntelange
+        Ungleichbehandlung ist vollständig abgebaut. Ab dem <strong>1. Juli 2026</strong> steigt
+        der Wert von €40,79 auf <strong>€42,52 pro Monat und Rentenpunkt</strong>.
+      </p>
+
+      <h2>Wie viel Rente bekomme ich? – Rentenpunkte Rechner</h2>
+      <p>Geben Sie Ihre gesammelten Entgeltpunkte ein und wählen Sie Ihren Renteneintritt:</p>
+
+      <div class="calculator-card" id="rechner-vorwaerts">
+        <h3>Rechner A — Punkte → Monatsrente</h3>
+
+        <div class="calc-field-group">
+            <label class="calc-label" for="punkte-input">Meine Rentenpunkte (Entgeltpunkte)</label>
+            <div class="input-euro-wrap">
+            <input class="calc-input" type="number" id="punkte-input"
+                    min="0" max="100" step="0.1" placeholder="z.B. 35" />
+            <span class="input-euro-symbol">EP</span>
+            </div>
+        </div>
+
+        <div class="calc-field-group">
+            <label class="calc-label">Zeitraum</label>
+            <div class="toggle-group">
+            <button class="toggle-btn active" data-rentenwert="40.79">Bis Jun 2026 (€40,79)</button>
+            <button class="toggle-btn" data-rentenwert="42.52">Ab Jul 2026 (€42,52)</button>
+            </div>
+        </div>
+
+        <div class="calc-field-group">
+            <label class="calc-label">Renteneintritt</label>
+            <div class="toggle-group">
+            <button class="toggle-btn active" data-eintritt="normal">Regelaltersgrenze</button>
+            <button class="toggle-btn" data-eintritt="frueh">Früher</button>
+            <button class="toggle-btn" data-eintritt="spaet">Später</button>
+            </div>
+        </div>
+
+        <div class="calc-field-group" id="monate-group" style="display:none">
+            <label class="calc-label" for="monate-input" id="monate-label">
+            Monate vor Regelaltersgrenze (max. 48)
+            </label>
+            <div class="input-euro-wrap">
+            <input class="calc-input" type="number" id="monate-input"
+                    min="1" max="48" step="1" placeholder="z.B. 24" />
+            <span class="input-euro-symbol">Mo</span>
+            </div>
+            <p class="calc-hint" id="zugangsfaktor-hint"></p>
+        </div>
+
+        <div class="result-block" id="result-vorwaerts" aria-live="polite">
+            <p class="result-label">Monatliche Bruttorente</p>
+            <div class="result-badge" id="rente-output" style="min-width: 120px; text-align: center;">–</div>
+        </div>
+      </div>
+
+      <div class="inline-link-callout">
+        → Rentenpunkte nachkaufen?
+        <a href="/rentenpunkte-kaufen/">Kosten, Tabelle &amp; ob es sich lohnt →</a>
+      </div>
+
+      <h2>Wie viele Rentenpunkte brauche ich? – Rente rückwärts berechnen</h2>
+      <p>Sie wissen, wie viel Rente Sie möchten — der Rechner zeigt, wie viele Punkte Sie dafür brauchen:</p>
+
+      <div class="calculator-card" id="rechner-rueckwaerts">
+        <h3>Rechner B — Wunschrente → Benötigte Punkte</h3>
+        <p class="calc-subtitle">Sie wissen, wie viel Rente Sie möchten — der Rechner zeigt, wie viele Punkte Sie dafür brauchen.</p>
+
+        <div class="calc-field-group">
+            <label class="calc-label" for="wunschrente-input">
+            Gewünschte Monatsrente (brutto)
+            </label>
+            <div class="input-euro-wrap">
+            <input
+                class="calc-input"
+                type="number"
+                id="wunschrente-input"
+                min="0"
+                max="10000"
+                step="50"
+                placeholder="z.B. 2000"
+            />
+            <span class="input-euro-symbol">€</span>
+            </div>
+        </div>
+
+        <div class="calc-field-group">
+            <label class="calc-label">Zeitraum</label>
+            <div class="toggle-group">
+            <button class="toggle-btn active" data-wert-b="40.79" id="btn-r-vor-juli">
+                Bis Jun 2026 (€40,79)
+            </button>
+            <button class="toggle-btn" data-wert-b="42.52" id="btn-r-ab-juli">
+                Ab Jul 2026 (€42,52)
+            </button>
+            </div>
+        </div>
+
+        <div class="result-block hidden" id="result-rueckwaerts" aria-live="polite">
+            <p class="result-label">Benötigte Rentenpunkte</p>
+            <div class="result-badge is-placeholder" id="punkte-output">–</div>
+        </div>
+      </div>
+
+      <h3>Schnellübersicht: Wie viele Punkte für welche Rente?</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Gewünschte Monatsrente (brutto)</th>
+            <th>Benötigte Rentenpunkte (ab Jul 2026, €42,52)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>€1.000 / Monat</td><td>~24 Punkte</td></tr>
+          <tr><td>€1.500 / Monat</td><td>~35 Punkte</td></tr>
+          <tr class="highlight-row"><td><strong>€2.000 / Monat</strong></td><td><strong>~47 Punkte</strong></td></tr>
+          <tr><td>€2.500 / Monat</td><td>~59 Punkte</td></tr>
+          <tr><td>€3.000 / Monat</td><td>~71 Punkte</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Wie sammelt man Rentenpunkte? – Entgeltpunkte verstehen</h2>
+      <p>
+        Ein voller Entgeltpunkt entspricht einem Arbeitsjahr mit dem
+        <strong>Durchschnittsverdienst 2026: €51.944 brutto/Jahr</strong> (offizieller DRV-Wert,
+        Sozialversicherungsrechengrößenverordnung 2026). Wer mehr oder weniger verdient,
+        sammelt proportional mehr oder weniger Punkte.
+      </p>
+
+      <div class="correction-callout">
+        ⚠️ <strong>Weit verbreiteter Irrtum:</strong> Viele Quellen nennen noch €45.358 als
+        Durchschnittsverdienst 2026. Das war der Wert für 2025. Der offizielle DRV-Wert
+        für 2026 ist <strong>€51.944/Jahr</strong> (Bundeskabinett, 8. Oktober 2025).
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Jahresbrutto</th>
+            <th>Entgeltpunkte pro Jahr</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>€25.000</td><td>0,481 Punkte</td></tr>
+          <tr><td>€35.000</td><td>0,674 Punkte</td></tr>
+          <tr class="highlight-row"><td><strong>€51.944 (Ø)</strong></td><td><strong>1,000 Punkte</strong></td></tr>
+          <tr><td>€65.000</td><td>1,251 Punkte</td></tr>
+          <tr><td>€80.000</td><td>1,540 Punkte</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Kinderziehungsjahre bringen <strong>1 Punkt pro Jahr</strong> (bis zu 3 Jahre pro Kind).
+        Pflegezeiten und freiwillige Beiträge können ebenfalls Punkte gutschreiben. Wer
+        2 Jahre vor der Rente arbeitslos wird, verliert keine bereits gesammelten Punkte —
+        aber sammelt in dieser Zeit deutlich weniger nach.
+      </p>
+
+      <div class="inline-link-callout">
+        → Fehlende Punkte nachkaufen:
+        <a href="/rentenpunkte-kaufen/">Rentenpunkte kaufen 2026 – Kosten &amp; Lohnt es sich?</a>
+      </div>
+
+      <h2>Rentenpunkte kaufen – Lohnt sich freiwillig einzahlen?</h2>
+      <p>
+        Wer absehbar zu wenige Punkte sammeln wird — z.B. durch Teilzeit, Elternzeit oder
+        Frührente — kann freiwillig in die gesetzliche Rentenversicherung einzahlen und so
+        zusätzliche Rentenpunkte erwerben. <strong>1 Rentenpunkt kostet 2026 genau €9.661,58</strong>
+        (€51.944 × 18,6% Beitragssatz). Ob sich das lohnt, hängt von Ihrer Lebenserwartung
+        und dem Renteneintrittsalter ab.
+      </p>
+      <p>
+        → <a href="/rentenpunkte-kaufen/">Break-Even-Rechner &amp; vollständige Kosten-Tabelle für 2026</a>
+      </p>
+
+      <h2 id="faq">FAQ – Häufige Fragen zum Rentenpunktwert 2026</h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>Wie viel ist ein Rentenpunkt 2026 wert?</summary>
+          <div class="faq-answer">
+            <p>Von Januar bis Juni 2026: <strong>€40,79/Monat</strong>. Ab 1. Juli 2026: <strong>€42,52/Monat</strong> (+4,24%). West und Ost sind seit Juli 2024 gleichgestellt. Gegenüber 2025 (€39,32) ist das ein Jahresanstieg von +8,1%.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Wie viele Rentenpunkte brauche ich für €2.000 Rente?</summary>
+          <div class="faq-answer">
+            <p>Ab Juli 2026 (€42,52): €2.000 ÷ €42,52 = <strong>~47 Punkte</strong>. Vor Juli 2026 (€40,79): ~49 Punkte. Nutzen Sie Rechner B oben für Ihren genauen Zielbetrag.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Sind 40 Rentenpunkte gut?</summary>
+          <div class="faq-answer">
+            <p>40 Punkte × €42,52 (ab Jul 2026) = <strong>€1.700,80 Bruttorente/Monat</strong>. Nach Kranken- und Pflegeversicherung (ca. 14,2%) verbleiben netto rund €1.460/Monat. Bei durchschnittlichem Einkommen entspricht das ca. 40 Arbeitsjahren.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Wie viele Rentenpunkte sollte man mit 50 haben?</summary>
+          <div class="faq-answer">
+            <p>Als Faustregel: Bei 25 Arbeitsjahren mit Durchschnittsverdienst ca. 25 Punkte. Das projiziert auf ~38–40 Punkte bis zum Renteneintritt (67). Nutzen Sie Rechner A, um Ihre Situation zu modellieren.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Warum sind die letzten 5 Jahre vor der Rente nicht so wichtig wie gedacht?</summary>
+          <div class="faq-answer">
+            <p>Jedes Arbeitsjahr trägt gleich viel zu den Rentenpunkten bei — es gibt keine Aufwertung für die Endjahre. Die DRV berechnet auf Basis der gesamten Erwerbsbiografie. Das ist ein weit verbreiteter Irrtum, den die Deutsche Rentenversicherung offiziell widerlegt.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="cta-group">
+        <a href="/rentenpunkte-kaufen/" class="btn-primary">
+          Rentenpunkte kaufen – Lohnt sich das? →
+        </a>
+        <a href="/steuerklasse-finder/" class="btn-secondary">
+          Steuerklasse prüfen →
+        </a>
+      </div>
+
+    </article>
+  </main>
+</BaseLayout>
+
+<script>
+  // ── Constants ────────────────────────────────────────────────
+  const RENTENWERT_PRE  = 40.79;
+  const RENTENWERT_POST = 42.52;
+
+  // ── Calculator A: Vorwärts ───────────────────────────────────
+  let rentenwertA  = RENTENWERT_PRE;
+  let eintrittTyp  = 'normal';
+
+  const punkteInput    = document.getElementById('punkte-input');
+  const monateGroup    = document.getElementById('monate-group');
+  const monateInput    = document.getElementById('monate-input');
+  const monateLabel    = document.getElementById('monate-label');
+  const zugangHint     = document.getElementById('zugangsfaktor-hint');
+  const renteOutput    = document.getElementById('rente-output');
+
+  document.querySelectorAll('[data-rentenwert]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-rentenwert]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      rentenwertA = parseFloat(btn.dataset.rentenwert);
+      berechneVorwaerts();
+    });
+  });
+
+  document.querySelectorAll('[data-eintritt]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-eintritt]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      eintrittTyp = btn.dataset.eintritt;
+      if (eintrittTyp === 'normal') {
+        monateGroup.style.display = 'none';
+      } else {
+        monateGroup.style.display = 'block';
+        monateLabel.textContent = eintrittTyp === 'frueh'
+          ? 'Monate vor Regelaltersgrenze (max. 48)'
+          : 'Monate nach Regelaltersgrenze';
+      }
+      berechneVorwaerts();
+    });
+  });
+
+  punkteInput.addEventListener('input', berechneVorwaerts);
+  monateInput.addEventListener('input', berechneVorwaerts);
+
+  function berechneVorwaerts() {
+    const punkte = parseFloat(punkteInput.value);
+    if (isNaN(punkte) || punkte < 0) { renteOutput.textContent = '–'; return; }
+
+    const monate = parseFloat(monateInput.value) || 0;
+    let zugangsfaktor = 1.0;
+
+    if (eintrittTyp === 'frueh') {
+      zugangsfaktor = Math.max(1.0 - (0.003 * monate), 0.856);
+      zugangHint.textContent = `Zugangsfaktor: ${zugangsfaktor.toFixed(3)} (−0,003 × ${monate} Monate)`;
+    } else if (eintrittTyp === 'spaet') {
+      zugangsfaktor = 1.0 + (0.005 * monate);
+      zugangHint.textContent = `Zugangsfaktor: ${zugangsfaktor.toFixed(3)} (+0,005 × ${monate} Monate)`;
+    } else {
+      zugangHint.textContent = '';
+    }
+
+    const rente = punkte * rentenwertA * zugangsfaktor;
+    renteOutput.textContent = '€' + rente.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  // ── Calculator B: Rückwärts ──────────────────────────────────
+  let rentenwertB = RENTENWERT_PRE;
+
+  const wunschInput  = document.getElementById('wunschrente-input');
+  const punkteOutput = document.getElementById('punkte-output');
+  const resultB      = document.getElementById('result-rueckwaerts');
+
+  document.querySelectorAll('[data-wert-b]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-wert-b]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      rentenwertB = parseFloat(btn.dataset.wertB);
+      berechneRueckwaerts();
+    });
+  });
+
+  wunschInput.addEventListener('input', berechneRueckwaerts);
+
+  function berechneRueckwaerts() {
+    const ziel = parseFloat(wunschInput.value);
+    if (isNaN(ziel) || ziel <= 0) {
+      punkteOutput.textContent = '–';
+      punkteOutput.classList.add('is-placeholder');
+      resultB.classList.add('hidden');
+      return;
+    }
+    const punkte = ziel / rentenwertB;
+    punkteOutput.textContent = '~' + Math.ceil(punkte) + ' Punkte';
+    punkteOutput.classList.remove('is-placeholder');
+    resultB.classList.remove('hidden');
+  }
+</script>
