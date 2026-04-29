@@ -44,6 +44,8 @@ const ogImage = 'https://nettoklar.de/og-default.png';
     {schema && (
       <Fragment set:html={`<script type="application/ld+json">${JSON.stringify(schema)}</script>`} />
     )}
+
+    <link rel="llms-txt" href="/llms.txt" />
   </head>
   <body>
     <header class="site-header">
