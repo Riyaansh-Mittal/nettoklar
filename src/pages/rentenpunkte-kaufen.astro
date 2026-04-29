@@ -1,0 +1,609 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Rentenpunkte kaufen 2026", "item": "https://nettoklar.de/rentenpunkte-kaufen/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "dateModified": "2026-04-25",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was kostet ein Rentenpunkt 2026 beim Kauf?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Der Kauf eines Rentenpunktes kostet 2026 genau 9.661,58 Euro (51.944 × 18,6 %). Nach Steuerbonus als Sonderausgaben sinken die effektiven Kosten auf ca. 5.600–7.200 Euro je nach Grenzsteuersatz." }
+      },
+      {
+        "@type": "Question",
+        "name": "Lohnt sich der Kauf von Rentenpunkten?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Der Break-even liegt bei ca. 80 Jahren (Rente ab 67, Steuer 30 %). Für Frauen und gesunde Personen lohnt es sich meistens. Nutzen Sie den Rechner für Ihre persönliche Situation." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie viele Rentenpunkte kann man kaufen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Es gibt keine Höchstzahl. Die jährliche Einzahlung ist auf die BBG (€101.400 in 2026) begrenzt. Teilzahlungen über mehrere Jahre sind möglich." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist das Formular V0800?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Das Formular V0800 ist der offizielle DRV-Antrag für freiwillige Rentenbeiträge. Kostenlos auf drv.de." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wer darf keine Rentenpunkte kaufen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nicht berechtigt: bereits Rentenbeziehende, Personen in den letzten 24 Monaten vor Renteneintritt arbeitslos, Beamte außerhalb der GRV (§ 187a SGB VI)." }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Rentenpunkte Kauf-Rechner 2026",
+    "url": "https://nettoklar.de/rentenpunkte-kaufen/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+];
+---
+
+<BaseLayout
+  title="Rentenpunkte kaufen 2026: Kosten, Rechner & lohnt sich?"
+  description="1 Rentenpunkt kaufen kostet 2026 ca. €9.661. Rechner zeigt Break-Even & Steuerersparnis. Formular V0800 erklärt. Lohnt es sich wirklich?"
+  schema={schema}
+>
+  <a href="#main-content" class="sr-only">Zum Inhalt springen</a>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">NettoKlar</a></li>
+          <li>Rentenpunkte kaufen 2026</li>
+        </ol>
+      </nav>
+
+      <article class="article-body">
+
+        <!-- Article Header -->
+        <header class="article-header">
+          <h1>Rentenpunkte kaufen 2026 – Was kostet ein Punkt &amp; lohnt es sich wirklich?</h1>
+          <div class="article-meta">
+            <span>Aktualisiert: April 2026</span>
+            <span class="freshness-badge">✓ Geprüft 2026</span>
+          </div>
+        </header>
+
+        <!-- Fact Strip -->
+        <dl class="fact-strip">
+          <div class="fact-item">
+            <dt>Kosten pro Punkt (2026)</dt>
+            <dd>€9.661,58</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Rentenwert ab Jul 2026</dt>
+            <dd>€42,52 / Monat</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Rechtsgrundlage</dt>
+            <dd>§ 187a SGB VI</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Break-Even (SK 1, 30 %)</dt>
+            <dd>ca. Alter 80</dd>
+          </div>
+          <div class="fact-item">
+            <dt>BBG 2026</dt>
+            <dd>€101.400 / Jahr</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Steuerlich absetzbar</dt>
+            <dd>Ja — Sonderausgaben</dd>
+          </div>
+        </dl>
+
+        <!-- H2 1: Kosten -->
+        <section id="kosten" class="anchor-section">
+          <h2>Was kostet ein Rentenpunkt 2026?</h2>
+          <p>
+            Die Kosten ergeben sich aus dem vorläufigen Durchschnittsentgelt 2026 multipliziert mit dem
+            Rentenversicherungsbeitragssatz: <strong>€51.944 × 18,6 % = €9.661,58 pro Punkt</strong>.
+            Der exakte Betrag wird von der DRV auf Anfrage per <a href="#v0800">Formular V0800</a> bestätigt.
+          </p>
+
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Kennzahl</th>
+                  <th>Wert 2026</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="highlight-row">
+                  <td><strong>Kosten pro Rentenpunkt</strong></td>
+                  <td><strong>€9.661,58</strong></td>
+                </tr>
+                <tr>
+                  <td>Vorläufiges Durchschnittsentgelt (DRV)</td>
+                  <td>€51.944 / Jahr</td>
+                </tr>
+                <tr>
+                  <td>Rentenwert Jan–Jun 2026</td>
+                  <td>€40,79 / Monat</td>
+                </tr>
+                <tr>
+                  <td>Rentenwert ab Jul 2026</td>
+                  <td>€42,52 / Monat</td>
+                </tr>
+                <tr>
+                  <td>Maximale Einzahlung pro Jahr</td>
+                  <td>Bis BBG (€101.400)</td>
+                </tr>
+                <tr>
+                  <td>Amortisationsdauer (ohne Steuer)</td>
+                  <td>~18,9 Jahre</td>
+                </tr>
+                <tr>
+                  <td>Amortisationsdauer (nach Steuer 30 %)</td>
+                  <td>~13,2 Jahre (ab Alter 67 ≈ Alter 80)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="inline-link-callout">
+            <span>→</span>
+            <span>Zum Vergleich: <a href="/wert-der-rentenpunkte/">Was ist ein Rentenpunkt 2026 wert?</a></span>
+          </div>
+        </section>
+
+        <!-- H2 2: Rechner -->
+        <section id="rechner" class="anchor-section">
+          <h2>Lohnt sich Rentenpunkte kaufen? — Rechner 2026</h2>
+
+          <div class="calculator-card">
+            <h2>Rentenpunkte Kauf-Rechner</h2>
+            <p class="calc-subtitle">
+              Berechnen Sie Ihre persönliche Rendite, Steuerersparnis und Break-Even-Alter.
+            </p>
+
+            <!-- Row 1: Alter & Rentenalter -->
+            <div class="calc-grid-2">
+              <div class="calc-field-group">
+                <label class="calc-label" for="rk-alter">Ihr aktuelles Alter</label>
+                <div class="input-euro-wrap">
+                  <input class="calc-input" type="number" id="rk-alter" min="35" max="65" value="50" />
+                </div>
+              </div>
+              <div class="calc-field-group">
+                <label class="calc-label" for="rk-rentenalter">Geplantes Rentenalter</label>
+                <div class="input-euro-wrap">
+                  <input class="calc-input" type="number" id="rk-rentenalter" min="60" max="70" value="67" />
+                </div>
+                <p class="calc-hint">Regelrentenalter 2026: 67 Jahre</p>
+              </div>
+            </div>
+
+            <!-- Row 2: Punkte & Steuer -->
+            <div class="calc-grid-2">
+              <div class="calc-field-group">
+                <label class="calc-label" for="rk-punkte">Anzahl Punkte kaufen</label>
+                <div class="input-euro-wrap">
+                  <input class="calc-input" type="number" id="rk-punkte" min="1" max="20" value="3" />
+                </div>
+                <div class="preset-row">
+                  <button class="preset-chip" data-target="rk-punkte" data-val="1">1</button>
+                  <button class="preset-chip" data-target="rk-punkte" data-val="3">3</button>
+                  <button class="preset-chip" data-target="rk-punkte" data-val="5">5</button>
+                  <button class="preset-chip" data-target="rk-punkte" data-val="10">10</button>
+                </div>
+              </div>
+              <div class="calc-field-group">
+                <label class="calc-label" for="rk-steuer">Ihr Grenzsteuersatz</label>
+                <div class="toggle-group">
+                  <button class="toggle-btn" data-rate="0.25">25 %</button>
+                  <button class="toggle-btn active" data-rate="0.30">30 %</button>
+                  <button class="toggle-btn" data-rate="0.35">35 %</button>
+                  <button class="toggle-btn" data-rate="0.42">42 %</button>
+                </div>
+                <input type="hidden" id="rk-steuer" value="0.30" />
+              </div>
+            </div>
+
+            <button id="rk-berechnen" class="btn-primary btn-full">
+              Jetzt berechnen — Lohnt sich der Kauf für mich?
+            </button>
+
+            <!-- Warning -->
+            <div id="rk-warning" class="nachzahlung-box hidden" role="alert">
+              <p class="nachzahlung-label">⚠️ Achtung — Nicht berechtigt</p>
+              <p class="nachzahlung-text">
+                Innerhalb der letzten 2 Jahre vor Renteneintritt ist der Kauf von
+                Rentenpunkten nicht mehr möglich (§ 187a SGB VI).
+              </p>
+            </div>
+
+            <!-- Results -->
+            <div id="rk-results" class="result-block hidden" aria-live="polite">
+              <div class="calc-result-grid">
+
+                <div class="calc-result-item">
+                  <span class="result-label">Gesamtkosten (brutto)</span>
+                  <span class="result-badge" id="rk-out-brutto" style="background:var(--color-gross)"></span>
+                </div>
+
+                <div class="calc-result-item">
+                  <span class="result-label">Steuerersparnis</span>
+                  <span class="result-badge" id="rk-out-steuer" style="background:var(--color-deduction)"></span>
+                </div>
+
+                <div class="calc-result-item highlight-result">
+                  <span class="result-label">Effektive Kosten nach Steuer</span>
+                  <span class="result-badge" id="rk-out-netto" style="background:var(--color-net)"></span>
+                </div>
+
+                <div class="calc-result-item">
+                  <span class="result-label">Monatliche Rentenerhöhung</span>
+                  <span class="result-badge" id="rk-out-rente"></span>
+                </div>
+
+                <div class="calc-result-item">
+                  <span class="result-label">Jährliche Rentenerhöhung</span>
+                  <span class="result-badge" id="rk-out-rente-annual" style="background:var(--color-text-muted)"></span>
+                </div>
+
+                <div class="calc-result-item">
+                  <span class="result-label">Break-Even Alter</span>
+                  <span class="result-badge" id="rk-out-breakeven" style="background:var(--color-text)"></span>
+                </div>
+
+              </div>
+
+              <!-- Verdict -->
+              <div id="rk-verdict" class="result-block">
+                <div class="result-top-row">
+                  <span class="result-badge" id="rk-out-verdict-badge"></span>
+                  <p class="result-reason" id="rk-out-verdict-text"></p>
+                </div>
+              </div>
+            </div>
+
+            <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted);">
+              Basis: Rentenwert €42,52/Monat (ab Jul 2026). §187a SGB VI. Rechtsgrundlage SVRVG 2026.
+              Kein Steuerberatungsersatz.
+            </p>
+          </div>
+        </section>
+
+        <!-- H2 3: Wer darf -->
+        <section id="wer-darf" class="anchor-section">
+          <h2>Wer darf Rentenpunkte kaufen?</h2>
+
+          <div class="calc-grid-2">
+            <div>
+              <p><strong style="color:var(--color-net)">✅ Berechtigt</strong></p>
+              <ul class="content-list">
+                <li>Pflichtversicherte in der GRV</li>
+                <li>Freiwillig Versicherte</li>
+                <li>Beamte (eingeschränkt, je nach Versicherungsart)</li>
+                <li>Personen in Elternzeit</li>
+              </ul>
+            </div>
+            <div>
+              <p><strong style="color:var(--color-deduction)">❌ Nicht berechtigt</strong></p>
+              <ul class="content-list">
+                <li>Bereits Rentenbeziehende</li>
+                <li>In den letzten 24 Monaten vor Renteneintritt arbeitslos</li>
+                <li>Beamte außerhalb der GRV</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- H2 4: So geht es -->
+        <section id="so-geht-es" class="anchor-section">
+          <h2>Rentenpunkte kaufen — Schritt für Schritt</h2>
+          <ol class="step-list">
+            <li>DRV kontaktieren und Kontoklärung anfordern</li>
+            <li>Formular V0800 ausfüllen (Antrag auf freiwillige Beitragszahlung)</li>
+            <li>Beitragshöhe festlegen — Teilzahlung über mehrere Jahre möglich</li>
+            <li>Zahlung an die DRV überweisen</li>
+            <li>Steuererklärung: Sonderausgaben in Anlage AV eintragen</li>
+          </ol>
+          <div class="inline-link-callout">
+            <span>→</span>
+            <span>Details: <a href="/rentenpunkt-2026/">Was kostet ein Rentenpunkt 2026?</a></span>
+          </div>
+        </section>
+
+        <!-- H2 5: Formular V0800 -->
+        <section id="v0800" class="anchor-section">
+          <h2>Formular V0800 erklärt</h2>
+          <p>
+            Der vollständige Name: <strong>„Antrag auf freiwillige Beitragszahlung zur Rentenversicherung"</strong>.
+            Das Formular ist kostenlos als PDF auf
+            <a href="https://www.deutsche-rentenversicherung.de" target="_blank" rel="noopener noreferrer">drv.de</a>
+            verfügbar oder per Post erhältlich.
+          </p>
+
+          <div class="summary-card">
+            <h2>Was Sie eintragen müssen</h2>
+            <ul class="content-list">
+              <li>Persönliche Daten &amp; Rentenversicherungsnummer</li>
+              <li>Gewünschter Beitragsbetrag (einmalig oder Ratenzahlung)</li>
+              <li>Bankverbindung für Rückfragen</li>
+              <li>Gewünschter Renteneintrittsmonat</li>
+            </ul>
+            <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-3)">
+              Das Formular verzeichnet laut Google Trends seit Anfang 2026 einen Suchanstieg von +170 %.
+            </p>
+          </div>
+        </section>
+
+        <!-- H2 6: Steuer -->
+        <section id="steuer" class="anchor-section">
+          <h2>Steuerlicher Vorteil beim Rentenpunkte kaufen</h2>
+          <p>
+            Die Einzahlung ist als <strong>Sonderausgabe</strong> steuerlich absetzbar —
+            bis zu €29.344/Jahr (Singles 2026).
+          </p>
+
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Grenzsteuersatz</th>
+                  <th>Kosten brutto</th>
+                  <th>Steuerersparnis</th>
+                  <th>Effektive Kosten</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>25 %</td>
+                  <td>€9.661,58</td>
+                  <td>−€2.415,40</td>
+                  <td>€7.246,19</td>
+                </tr>
+                <tr>
+                  <td>30 %</td>
+                  <td>€9.661,58</td>
+                  <td>−€2.898,47</td>
+                  <td>€6.763,11</td>
+                </tr>
+                <tr>
+                  <td>35 %</td>
+                  <td>€9.661,58</td>
+                  <td>−€3.381,55</td>
+                  <td>€6.280,03</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>42 %</td>
+                  <td>€9.661,58</td>
+                  <td><strong>−€4.057,86</strong></td>
+                  <td><strong>€5.603,72</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- H2 7: Break-Even Tabelle -->
+        <section id="tabelle" class="anchor-section">
+          <h2>Rentenpunkte kaufen — Tabelle: Kosten und Break-Even</h2>
+
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Punkte</th>
+                  <th>Kosten brutto</th>
+                  <th>Kosten netto (30 %)</th>
+                  <th>Monatl. Rentenplus</th>
+                  <th>Break-Even ab Rente 67</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>€9.662</td>
+                  <td>~€6.763</td>
+                  <td>+€42,52</td>
+                  <td>~Alter 80</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>€28.985</td>
+                  <td>~€20.290</td>
+                  <td>+€127,56</td>
+                  <td>~Alter 80</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>€48.308</td>
+                  <td>~€33.816</td>
+                  <td>+€212,60</td>
+                  <td>~Alter 80</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>10</td>
+                  <td>€96.616</td>
+                  <td>~€67.631</td>
+                  <td><strong>+€425,20</strong></td>
+                  <td>~Alter 80</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: var(--text-xs); color: var(--color-text-muted)">
+            Break-Even: Renteneintritt 67, Grenzsteuersatz 30 %, Rentenwert €42,52/Monat (ab Jul 2026).
+          </p>
+        </section>
+
+        <!-- H2 8: FAQ -->
+        <section id="faq" class="anchor-section">
+          <h2>Häufige Fragen zum Rentenpunkte kaufen 2026</h2>
+
+          <div class="faq-list">
+
+            <details class="faq-item">
+              <summary>Was kostet ein Rentenpunkt 2026 beim Kauf?</summary>
+              <div class="faq-answer">
+                <p>
+                  In 2026 kostet ein Rentenpunkt <strong>€9.661,58</strong>.
+                  Berechnung: vorläufiges Durchschnittsentgelt 2026 (€51.944) × 18,6 % Beitragssatz.
+                  Den genauen Betrag bestätigt die DRV per Formular V0800.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Lohnt sich Rentenpunkte kaufen?</summary>
+              <div class="faq-answer">
+                <p>
+                  Der Break-even liegt bei ca. Alter 80 (Rente ab 67, Steuer 30 %).
+                  Für Frauen und gesunde Personen lohnt es sich meistens.
+                  Bei 42 % Grenzsteuersatz sinken die Kosten auf ~€5.604 pro Punkt —
+                  dann liegt Break-Even bereits bei ~Alter 78.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Wie viele Rentenpunkte kann man kaufen?</summary>
+              <div class="faq-answer">
+                <p>
+                  Es gibt keine gesetzliche Höchstzahl. Die jährliche Einzahlung ist auf die
+                  Beitragsbemessungsgrenze (€101.400/Jahr 2026) begrenzt.
+                  Teilzahlungen über mehrere Jahre sind möglich.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Was ist das Formular V0800?</summary>
+              <div class="faq-answer">
+                <p>
+                  Das Formular V0800 ist der offizielle DRV-Antrag für freiwillige Rentenbeiträge.
+                  Es dient zur Kontoklärung und Anmeldung der Einzahlung.
+                  Kostenlos auf drv.de oder per Post erhältlich.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Wer darf keine Rentenpunkte kaufen?</summary>
+              <div class="faq-answer">
+                <p>
+                  Nicht berechtigt: bereits Rentenbeziehende, Personen die in den letzten 24 Monaten
+                  vor Renteneintritt arbeitslos waren, sowie Beamte außerhalb der gesetzlichen
+                  Rentenversicherung (§ 187a SGB VI).
+                </p>
+              </div>
+            </details>
+
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-group">
+          <a href="/steuerklasse-finder/" class="btn-secondary">Steuerklasse prüfen →</a>
+          <a href="/wert-der-rentenpunkte/" class="btn-secondary">Rentenwert 2026 →</a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+  // ── Constants (verified 2026) ──────────────────────────────
+  const COST_PER_POINT = 9661.58;
+  const RENTENWERT     = 42.52;  // Jul–Dec 2026
+
+  function fmt(val: number): string {
+    return val.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
+  }
+  function r2(v: number): number { return Math.round(v * 100) / 100; }
+
+  // Preset chips
+  document.querySelectorAll<HTMLButtonElement>('.preset-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const input = document.getElementById(chip.dataset.target!) as HTMLInputElement;
+      if (input) input.value = chip.dataset.val!;
+    });
+  });
+
+  // Toggle rate buttons
+  let selectedRate = 0.30;
+  document.querySelectorAll<HTMLButtonElement>('.toggle-btn[data-rate]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.toggle-btn[data-rate]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedRate = parseFloat(btn.dataset.rate!);
+      (document.getElementById('rk-steuer') as HTMLInputElement).value = String(selectedRate);
+    });
+  });
+
+  // Calculate
+  document.getElementById('rk-berechnen')?.addEventListener('click', () => {
+    const alter       = parseInt((document.getElementById('rk-alter') as HTMLInputElement).value);
+    const rentenalter = parseInt((document.getElementById('rk-rentenalter') as HTMLInputElement).value);
+    const punkte      = parseInt((document.getElementById('rk-punkte') as HTMLInputElement).value);
+    const steuer      = selectedRate;
+
+    const warning = document.getElementById('rk-warning')!;
+    const results = document.getElementById('rk-results')!;
+
+    if (rentenalter - alter < 2) {
+      warning.classList.remove('hidden');
+      results.classList.add('hidden');
+      return;
+    }
+    warning.classList.add('hidden');
+
+    const totalBrutto  = r2(punkte * COST_PER_POINT);
+    const taxSaving    = r2(totalBrutto * steuer);
+    const totalNet     = r2(totalBrutto - taxSaving);
+    const monthlyGain  = r2(punkte * RENTENWERT);
+    const annualGain   = r2(monthlyGain * 12);
+    const yearsBreak   = totalNet / annualGain;
+    const breakEvenAge = Math.round(rentenalter + yearsBreak);
+
+    (document.getElementById('rk-out-brutto') as HTMLElement).textContent      = fmt(totalBrutto);
+    (document.getElementById('rk-out-steuer') as HTMLElement).textContent      = '−' + fmt(taxSaving);
+    (document.getElementById('rk-out-netto') as HTMLElement).textContent       = fmt(totalNet);
+    (document.getElementById('rk-out-rente') as HTMLElement).textContent       = '+' + fmt(monthlyGain) + '/Monat';
+    (document.getElementById('rk-out-rente-annual') as HTMLElement).textContent= '+' + fmt(annualGain) + '/Jahr';
+    (document.getElementById('rk-out-breakeven') as HTMLElement).textContent   = 'Alter ' + breakEvenAge;
+
+    const verdictBadge = document.getElementById('rk-out-verdict-badge')!;
+    const verdictText  = document.getElementById('rk-out-verdict-text')!;
+    if (breakEvenAge <= 82) {
+      verdictBadge.textContent = '✅ Lohnt sich';
+      verdictBadge.style.background = 'var(--color-net)';
+      verdictText.textContent = `Break-Even Alter ${breakEvenAge} liegt innerhalb der durchschnittlichen Lebenserwartung.`;
+    } else if (breakEvenAge <= 86) {
+      verdictBadge.textContent = '⚠️ Grenzfall';
+      verdictBadge.style.background = 'var(--color-deduction)';
+      verdictText.textContent = `Break-Even Alter ${breakEvenAge} liegt im Bereich der weiblichen Lebenserwartung. Mit Steuerbonus oft lohnenswert.`;
+    } else {
+      verdictBadge.textContent = '❌ Eher nicht';
+      verdictBadge.style.background = '#9e3a3a';
+      verdictText.textContent = `Break-Even Alter ${breakEvenAge} liegt jenseits der durchschnittlichen Lebenserwartung. Steuerbonus prüfen.`;
+    }
+
+    results.classList.remove('hidden');
+    results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>

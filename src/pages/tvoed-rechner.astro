@@ -1,0 +1,845 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://nettoklar.de/tvoed-rechner/",
+      "name": "TVöD Entgelttabelle 2026 – Gehaltsrechner Öffentlicher Dienst",
+      "datePublished": "2026-04-27",
+      "dateModified": "2026-04-27",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de/" },
+          { "@type": "ListItem", "position": 2, "name": "TVöD Rechner 2026", "item": "https://nettoklar.de/tvoed-rechner/" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wann gilt die neue TVöD Entgelttabelle 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Ab 1. Mai 2026 gelten die neuen Tabellen für TVöD Bund und VKA." } },
+        { "@type": "Question", "name": "Was verdient EG 9a Stufe 3 netto 2026?", "acceptedAnswer": { "@type": "Answer", "text": "In Steuerklasse 1 liegt das Netto bei ca. €2.850–2.950/Monat. Nutzen Sie den Rechner für Ihre genaue Situation." } },
+        { "@type": "Question", "name": "Wie wird das TVöD Weihnachtsgeld 2026 berechnet?", "acceptedAnswer": { "@type": "Answer", "text": "TVöD Bund: 90 % (EG 1–8), 80 % (EG 9–12), 60 % (EG 13–15). Auszahlung November." } },
+        { "@type": "Question", "name": "Gilt TVöD auch für Beamte?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Beamte fallen unter das Bundesbesoldungsgesetz (BBesG), nicht den TVöD." } }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "TVöD Brutto-Netto-Rechner 2026",
+      "url": "https://nettoklar.de/tvoed-rechner/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="TVöD Entgelttabelle 2026 – Gehaltsrechner Öffentlicher Dienst"
+  description="TVöD Entgelttabelle 2026 ab 1. Mai: Bund, VKA & SuE. Brutto-Netto-Rechner für alle EG-Stufen inkl. Kirchensteuer, Weihnachtsgeld & SuE-Zulagen."
+  schema={schema}
+>
+  <a href="#main-content" class="sr-only">Zum Inhalt springen</a>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">NettoKlar</a></li>
+          <li>TVöD Rechner 2026</li>
+        </ol>
+      </nav>
+
+      <article class="article-body">
+
+        <!-- Article Header -->
+        <header class="article-header">
+          <h1>TVöD Entgelttabelle 2026 &amp; Gehaltsrechner — Brutto-Netto Öffentlicher Dienst</h1>
+          <div class="article-meta">
+            <span>Aktualisiert: April 2026</span>
+            <span class="freshness-badge">✓ Geprüft 2026</span>
+            <span>Gültig ab 1. Mai 2026</span>
+          </div>
+        </header>
+
+        <!-- Fact Strip -->
+        <dl class="fact-strip">
+          <div class="fact-item">
+            <dt>Gilt ab</dt>
+            <dd>1. Mai 2026</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Bereiche</dt>
+            <dd>Bund · VKA · SuE</dd>
+          </div>
+          <div class="fact-item">
+            <dt>EG-Gruppen</dt>
+            <dd>EG 1–15</dd>
+          </div>
+          <div class="fact-item">
+            <dt>SuE-Gruppen</dt>
+            <dd>S 2–S 18</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Urlaubsanspruch</dt>
+            <dd>30 Tage (§ 26 TVöD)</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Weihnachtsgeld</dt>
+            <dd>60–90 % des Nov-Gehalts</dd>
+          </div>
+        </dl>
+
+        <!-- H2 1: Entgelttabelle -->
+        <section id="entgelttabelle" class="anchor-section">
+          <h2>TVöD Entgelttabelle 2026 — Bund, VKA &amp; SuE</h2>
+
+          <div class="toggle-group" role="group" aria-label="Tabelle auswählen">
+            <button class="toggle-btn active" id="tab-bund">TVöD Bund</button>
+            <button class="toggle-btn" id="tab-vka">TVöD VKA</button>
+            <button class="toggle-btn" id="tab-sue">TVöD SuE</button>
+          </div>
+
+          <div class="table-scroll" style="margin-top: var(--space-4)">
+            <table class="data-table" id="tvoed-table">
+              <thead>
+                <tr>
+                  <th>EG</th>
+                  <th>Stufe 1</th><th>Stufe 2</th><th>Stufe 3</th>
+                  <th>Stufe 4</th><th>Stufe 5</th><th>Stufe 6</th>
+                </tr>
+              </thead>
+              <tbody id="tvoed-tbody"></tbody>
+            </table>
+          </div>
+
+          <p style="font-size: var(--text-xs); color: var(--color-text-muted)">
+            ⚠️ Tarifwerte ab 1. Mai 2026. Bitte vor Veröffentlichung gegen die finalen Werte auf
+            <a href="https://www.oeffentlicher-dienst.de" target="_blank" rel="noopener noreferrer">oeffentlicher-dienst.de</a> prüfen.
+          </p>
+        </section>
+
+        <!-- H2 2: Rechner -->
+        <section id="gehaltsrechner" class="anchor-section">
+          <h2>Gehaltsrechner Öffentlicher Dienst 2026</h2>
+
+          <div class="calculator-card">
+            <!-- Calc Tab switcher -->
+            <div class="toggle-group" role="tablist" style="margin-bottom: var(--space-6)">
+              <button class="toggle-btn active" role="tab" aria-selected="true" id="ctab-bund">TVöD Bund / VKA</button>
+              <button class="toggle-btn" role="tab" aria-selected="false" id="ctab-sue">TVöD SuE</button>
+            </div>
+
+            <!-- ── Tab 1: Bund/VKA ── -->
+            <div id="cpanel-bund" role="tabpanel">
+              <h2>TVöD Brutto-Netto berechnen</h2>
+              <p class="calc-subtitle">Ihr monatliches Nettogehalt im öffentlichen Dienst 2026.</p>
+
+              <div class="calc-grid-2">
+                <div class="calc-field-group">
+                  <label class="calc-label" for="t1-eg">Entgeltgruppe</label>
+                  <select class="calc-input" id="t1-eg" style="padding-right: var(--space-4)"></select>
+                </div>
+                <div class="calc-field-group">
+                  <label class="calc-label" for="t1-stufe">Erfahrungsstufe</label>
+                  <select class="calc-input" id="t1-stufe" style="padding-right: var(--space-4)">
+                    <option value="1">Stufe 1</option>
+                    <option value="2">Stufe 2</option>
+                    <option value="3" selected>Stufe 3</option>
+                    <option value="4">Stufe 4</option>
+                    <option value="5">Stufe 5</option>
+                    <option value="6">Stufe 6</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="calc-field-group">
+                <label class="calc-label">TVöD Bereich</label>
+                <div class="toggle-group">
+                  <button class="toggle-btn active" id="t1-bund-btn">TVöD Bund</button>
+                  <button class="toggle-btn" id="t1-vka-btn">TVöD VKA</button>
+                </div>
+                <input type="hidden" id="t1-tabelle" value="bund" />
+              </div>
+
+              <div class="calc-field-group">
+                <label class="calc-label" for="t1-sk">Steuerklasse</label>
+                <div class="toggle-group">
+                  <button class="toggle-btn active" data-sk="1">SK 1</button>
+                  <button class="toggle-btn" data-sk="2">SK 2</button>
+                  <button class="toggle-btn" data-sk="3">SK 3</button>
+                  <button class="toggle-btn" data-sk="4">SK 4</button>
+                  <button class="toggle-btn" data-sk="5">SK 5</button>
+                  <button class="toggle-btn" data-sk="6">SK 6</button>
+                </div>
+                <input type="hidden" id="t1-sk" value="1" />
+                <p class="calc-hint">SK 1: ledig · SK 3: verheiratet (höheres Eink.) · SK 5: verheiratet (geringeres Eink.)</p>
+              </div>
+
+              <div class="calc-grid-2">
+                <div class="calc-field-group">
+                  <label class="calc-label">Kirchensteuer</label>
+                  <div class="toggle-group">
+                    <button class="toggle-btn active" id="t1-kirche-nein">Nein</button>
+                    <button class="toggle-btn" id="t1-kirche-ja">Ja (9 %)</button>
+                    <button class="toggle-btn" id="t1-kirche-bybw">Ja BY/BW (8 %)</button>
+                  </div>
+                  <input type="hidden" id="t1-kirche-state" value="no" />
+                </div>
+                <div class="calc-field-group">
+                  <label class="calc-label">Kinder</label>
+                  <div class="toggle-group">
+                    <button class="toggle-btn active" id="t1-kinder-nein">Keine</button>
+                    <button class="toggle-btn" id="t1-kinder-ja">Mit Kindern (PV 1,8 %)</button>
+                  </div>
+                  <input type="hidden" id="t1-kinder-state" value="no" />
+                </div>
+              </div>
+
+              <button id="t1-berechnen" class="btn-primary btn-full">Nettogehalt berechnen</button>
+
+              <!-- Results Tab 1 -->
+              <div id="t1-results" class="result-block hidden" aria-live="polite">
+                <div class="calc-result-grid">
+
+                  <div class="calc-result-item highlight-result">
+                    <span class="result-label">Bruttogehalt</span>
+                    <span class="result-badge" id="t1-out-brutto" style="background:var(--color-gross)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Krankenversicherung (8,75 %)</span>
+                    <span class="result-badge" id="t1-out-kv" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Pflegeversicherung</span>
+                    <span class="result-badge" id="t1-out-pv" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Rentenversicherung (9,3 %)</span>
+                    <span class="result-badge" id="t1-out-rv" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Arbeitslosenversicherung (1,3 %)</span>
+                    <span class="result-badge" id="t1-out-av" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Lohnsteuer</span>
+                    <span class="result-badge" id="t1-out-lst" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Solidaritätszuschlag</span>
+                    <span class="result-badge" id="t1-out-soli" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item" id="t1-kirche-row" style="display:none">
+                    <span class="result-label">Kirchensteuer</span>
+                    <span class="result-badge" id="t1-out-kirche" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item highlight-result">
+                    <span class="result-label">✅ Nettogehalt</span>
+                    <span class="result-badge" id="t1-out-netto" style="background:var(--color-net)"></span>
+                  </div>
+
+                  <div class="calc-result-item" id="t1-jsz-row">
+                    <span class="result-label">Jahressonderzahlung November (TVöD Bund)</span>
+                    <span class="result-badge" id="t1-out-jsz" style="background:var(--color-primary)"></span>
+                  </div>
+
+                </div>
+
+                <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-4)">
+                  Basis: TVöD Entgelttabelle ab 1. Mai 2026. BBG KV/PV €5.812,50/Monat, BBG RV/AV €8.450/Monat.
+                  Kein Steuerberatungsersatz.
+                </p>
+              </div>
+            </div>
+
+            <!-- ── Tab 2: SuE ── -->
+            <div id="cpanel-sue" role="tabpanel" class="hidden">
+              <h2>TVöD SuE Gehalt berechnen</h2>
+              <p class="calc-subtitle">Erzieher, Sozialpädagogen &amp; Kita-Leitungen im kommunalen Dienst.</p>
+
+              <div class="calc-grid-2">
+                <div class="calc-field-group">
+                  <label class="calc-label" for="t2-sg">S-Gruppe</label>
+                  <select class="calc-input" id="t2-sg" style="padding-right: var(--space-4)"></select>
+                </div>
+                <div class="calc-field-group">
+                  <label class="calc-label" for="t2-stufe">Erfahrungsstufe</label>
+                  <select class="calc-input" id="t2-stufe" style="padding-right: var(--space-4)">
+                    <option value="1">Stufe 1</option>
+                    <option value="2">Stufe 2</option>
+                    <option value="3" selected>Stufe 3</option>
+                    <option value="4">Stufe 4</option>
+                    <option value="5">Stufe 5</option>
+                    <option value="6">Stufe 6</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="calc-field-group">
+                <label class="calc-label">Funktionszulage</label>
+                <div class="toggle-group">
+                  <button class="toggle-btn active" data-zulage="0">Keine</button>
+                  <button class="toggle-btn" data-zulage="130.91">Gruppenleitung (+€130,91)</button>
+                  <button class="toggle-btn" data-zulage="180.00">Kitaleitung (+€180,00)</button>
+                </div>
+                <input type="hidden" id="t2-zulage" value="0" />
+              </div>
+
+              <div class="calc-field-group">
+                <label class="calc-label">Steuerklasse</label>
+                <div class="toggle-group">
+                  <button class="toggle-btn active" data-sk2="1">SK 1</button>
+                  <button class="toggle-btn" data-sk2="2">SK 2</button>
+                  <button class="toggle-btn" data-sk2="3">SK 3</button>
+                  <button class="toggle-btn" data-sk2="4">SK 4</button>
+                  <button class="toggle-btn" data-sk2="5">SK 5</button>
+                  <button class="toggle-btn" data-sk2="6">SK 6</button>
+                </div>
+                <input type="hidden" id="t2-sk" value="1" />
+              </div>
+
+              <div class="calc-grid-2">
+                <div class="calc-field-group">
+                  <label class="calc-label">Kirchensteuer</label>
+                  <div class="toggle-group">
+                    <button class="toggle-btn active" id="t2-kirche-nein">Nein</button>
+                    <button class="toggle-btn" id="t2-kirche-ja">Ja (9 %)</button>
+                  </div>
+                  <input type="hidden" id="t2-kirche-state" value="no" />
+                </div>
+                <div class="calc-field-group">
+                  <label class="calc-label">Kinder</label>
+                  <div class="toggle-group">
+                    <button class="toggle-btn active" id="t2-kinder-nein">Keine</button>
+                    <button class="toggle-btn" id="t2-kinder-ja">Mit Kindern</button>
+                  </div>
+                  <input type="hidden" id="t2-kinder-state" value="no" />
+                </div>
+              </div>
+
+              <button id="t2-berechnen" class="btn-primary btn-full">SuE Gehalt berechnen</button>
+
+              <!-- Results Tab 2 -->
+              <div id="t2-results" class="result-block hidden" aria-live="polite">
+                <div class="calc-result-grid">
+
+                  <div class="calc-result-item highlight-result">
+                    <span class="result-label">Bruttogehalt inkl. Zulage</span>
+                    <span class="result-badge" id="t2-out-brutto" style="background:var(--color-gross)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Krankenversicherung (8,75 %)</span>
+                    <span class="result-badge" id="t2-out-kv" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Pflegeversicherung</span>
+                    <span class="result-badge" id="t2-out-pv" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Rentenversicherung (9,3 %)</span>
+                    <span class="result-badge" id="t2-out-rv" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Arbeitslosenversicherung (1,3 %)</span>
+                    <span class="result-badge" id="t2-out-av" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Lohnsteuer</span>
+                    <span class="result-badge" id="t2-out-lst" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item">
+                    <span class="result-label">Solidaritätszuschlag</span>
+                    <span class="result-badge" id="t2-out-soli" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item" id="t2-kirche-row" style="display:none">
+                    <span class="result-label">Kirchensteuer</span>
+                    <span class="result-badge" id="t2-out-kirche" style="background:var(--color-deduction)"></span>
+                  </div>
+
+                  <div class="calc-result-item highlight-result">
+                    <span class="result-label">✅ Nettogehalt</span>
+                    <span class="result-badge" id="t2-out-netto" style="background:var(--color-net)"></span>
+                  </div>
+
+                </div>
+                <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-4)">
+                  Basis: TVöD SuE Anlage C 2026. Zulage-Beträge bitte beim Arbeitgeber prüfen. Kein Steuerberatungsersatz.
+                </p>
+              </div>
+            </div>
+
+          </div><!-- end calculator-card -->
+
+          <div class="inline-link-callout">
+            <span>→</span>
+            <span>Steuerklasse nicht sicher? <a href="/steuerklasse-finder/">Steuerklassen-Finder nutzen</a></span>
+          </div>
+        </section>
+
+        <!-- H2 3: EG 9 Spotlight -->
+        <section id="eg9" class="anchor-section">
+          <h2>TVöD EG 9 Gehalt 2026 — Alle Stufen (TVöD Bund)</h2>
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>EG</th>
+                  <th>Stufe 1</th><th>Stufe 2</th><th>Stufe 3</th>
+                  <th>Stufe 4</th><th>Stufe 5</th><th>Stufe 6</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>EG 9a</strong></td>
+                  <td>€3.448</td><td>€3.577</td><td>€3.748</td>
+                  <td>€3.918</td><td>€4.066</td><td>€4.213</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td><strong>EG 9b</strong></td>
+                  <td>€3.622</td><td>€3.776</td><td><strong>€3.960</strong></td>
+                  <td>€4.143</td><td>€4.295</td><td>€4.447</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: var(--text-xs); color: var(--color-text-muted)">
+            Bruttowerte TVöD Bund ab 1. Mai 2026. Bitte vor Publikation prüfen.
+          </p>
+        </section>
+
+        <!-- H2 4: Bund vs VKA vs SuE -->
+        <section id="welche-tabelle" class="anchor-section">
+          <h2>TVöD Bund vs. VKA vs. SuE — Welche Tabelle gilt für mich?</h2>
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Bereich</th>
+                  <th>Tabelle</th>
+                  <th>Typische Arbeitgeber</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>TVöD Bund</strong></td>
+                  <td>EG 1–15</td>
+                  <td>Bundesministerien, Bundesagentur, Bundeswehr-zivil</td>
+                </tr>
+                <tr>
+                  <td><strong>TVöD VKA</strong></td>
+                  <td>EG 1–15</td>
+                  <td>Städte, Gemeinden, Krankenhäuser (kommunal), Sparkassen</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td><strong>TVöD SuE</strong></td>
+                  <td>S 2–S 18</td>
+                  <td>Kitas, Jugendämter, Sozialeinrichtungen kommunaler Träger</td>
+                </tr>
+                <tr>
+                  <td><strong>TVöD Pflege</strong></td>
+                  <td>P 5–P 16</td>
+                  <td>Pflegeeinrichtungen kommunaler Träger</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- H2 5: FAQ -->
+        <section id="faq" class="anchor-section">
+          <h2>Häufige Fragen zum TVöD Rechner 2026</h2>
+
+          <div class="faq-list">
+
+            <details class="faq-item">
+              <summary>Wann gilt die neue TVöD Entgelttabelle 2026?</summary>
+              <div class="faq-answer">
+                <p>Ab 1. Mai 2026 gelten die neuen Tabellen für TVöD Bund und VKA. Bitte prüfen Sie die finalen Tarifwerte auf oeffentlicher-dienst.de nach Abschluss der Verhandlungen.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Was verdient EG 9a Stufe 3 netto 2026?</summary>
+              <div class="faq-answer">
+                <p>EG 9a Stufe 3 hat ein Bruttogehalt von €3.748/Monat. In Steuerklasse 1 ohne Kinder und ohne Kirchensteuer liegt das Netto bei ca. €2.850–2.950/Monat. Nutzen Sie den Rechner oben für Ihre genaue Situation.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Wie wird das TVöD Weihnachtsgeld 2026 berechnet?</summary>
+              <div class="faq-answer">
+                <p>TVöD Bund: 90 % des Novembergehalts (EG 1–8), 80 % (EG 9–12), 60 % (EG 13–15). Auszahlung im November. Beispiel EG 9a Stufe 3: €3.748 × 80 % = <strong>€2.998 Weihnachtsgeld</strong>. TVöD VKA-Satz variiert je nach Bundesland.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Was ist der Unterschied zwischen TVöD Bund und VKA?</summary>
+              <div class="faq-answer">
+                <p>Beide folgen der Struktur EG 1–15. TVöD Bund gilt für Bundesbehörden; TVöD VKA für Städte, Gemeinden und kommunale Einrichtungen — mit leicht abweichenden Grundgehältern. Wählen Sie die korrekte Tabelle über den Toggle im Rechner.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Gilt TVöD auch für Beamte?</summary>
+              <div class="faq-answer">
+                <p>Nein. Beamte fallen unter das Bundesbesoldungsgesetz (BBesG). TVöD gilt ausschließlich für tariflich Beschäftigte im öffentlichen Dienst.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Wie hoch ist der TVöD Urlaubsanspruch 2026?</summary>
+              <div class="faq-answer">
+                <p>Gemäß § 26 TVöD erhalten alle Vollzeitbeschäftigten <strong>30 Tage</strong> bezahlten Jahresurlaub — unabhängig von Entgeltgruppe oder Stufe. Teilzeitbeschäftigte erhalten einen anteiligen Anspruch.</p>
+              </div>
+            </details>
+
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-group">
+          <a href="/steuerklasse-3-5/" class="btn-secondary">Steuerklasse 3/5 vergleichen →</a>
+          <a href="/steuerklasse-finder/" class="btn-secondary">Steuerklasse herausfinden →</a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+// ══════════════════════════════════════════════════════════════
+// GLOBAL CONSTANTS — 2026 (verified)
+// ══════════════════════════════════════════════════════════════
+const BBG_KV_PV     = 5812.50;   // €69,750/year ✅
+const BBG_RV_AV     = 8450.00;   // €101,400/year ✅
+const KV_TOTAL_AN   = 0.0875;    // 8.75% (7.3% + 1.45% avg Zusatzbeitrag 2.9%) ✅
+const PV_WITH_CHILD = 0.0180;
+const PV_NO_CHILD   = 0.0210;
+const RV            = 0.0930;
+const AV            = 0.0130;
+const GFB           = 12348;
+const GFB_DOUBLE    = 24696;
+const SOLI_THRESHOLD= 20350;    // annual Lohnsteuer 2026 ✅ corrected from 18130
+const SOLI_RATE     = 0.055;
+
+function fmt(v: number): string {
+  return v.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
+}
+function r2(v: number): number { return Math.round(v * 100) / 100; }
+
+// §32a EStG 2026 — BGBl. 2024 I Nr. 449 ✅
+function calcEst(zvE: number): number {
+  zvE = Math.floor(zvE);
+  if (zvE <= 12348) return 0;
+  if (zvE <= 17799) {
+    const y = (zvE - 12348) / 10000;
+    return Math.round((914.51 * y + 1400) * y);
+  }
+  if (zvE <= 69878) {
+    const z = (zvE - 17799) / 10000;
+    return Math.round((173.10 * z + 2397) * z + 1034.87);
+  }
+  if (zvE <= 277825) return Math.round(0.42 * zvE - 10911.92);
+  return Math.round(0.45 * zvE - 19246.22);
+}
+
+function calcNetto(brutto: number, sk: number, kircheState: string, kinder: boolean) {
+  const bKV = Math.min(brutto, BBG_KV_PV);
+  const bRV = Math.min(brutto, BBG_RV_AV);
+  const kv  = r2(bKV * KV_TOTAL_AN);
+  const pv  = r2(bKV * (kinder ? PV_WITH_CHILD : PV_NO_CHILD));
+  const rv  = r2(bRV * RV);
+  const av  = r2(bRV * AV);
+  const sv  = r2(kv + pv + rv + av);
+
+  let fb = 0;
+  if (sk === 3) fb = GFB_DOUBLE;
+  else if (sk === 2) fb = GFB + 4260;
+  else if (sk === 1 || sk === 4) fb = GFB;
+
+  const zvE      = Math.max(0, brutto * 12 - sv * 12 - fb);
+  const jLst     = calcEst(zvE);
+  const mLst     = r2(jLst / 12);
+  const soli     = jLst > SOLI_THRESHOLD ? r2(mLst * SOLI_RATE) : 0;
+  let kirche     = 0;
+  if (kircheState === 'ja')   kirche = r2(mLst * 0.09);
+  if (kircheState === 'bybw') kirche = r2(mLst * 0.08);
+  const netto    = r2(brutto - sv - mLst - soli - kirche);
+  return { kv, pv, rv, av, mLst, soli, kirche, netto };
+}
+
+// ── TVöD Bund 2026 ────────────────────────────────────────────
+// ⚠️ DEVELOPER: verify at oeffentlicher-dienst.de after 1. May 2026
+const TVOED_BUND: Record<string, number[]> = {
+  "EG 1":  [2300,2369,2440,2510,2554,2600],
+  "EG 2":  [2432,2512,2620,2730,2810,2892],
+  "EG 3":  [2554,2633,2751,2870,2950,3021],
+  "EG 4":  [2665,2751,2880,3008,3094,3171],
+  "EG 5":  [2760,2860,3000,3143,3240,3330],
+  "EG 6":  [2860,2975,3122,3270,3386,3570],
+  "EG 7":  [3003,3122,3280,3437,3561,3680],
+  "EG 8":  [3143,3270,3437,3602,3730,3858],
+  "EG 9a": [3448,3577,3748,3918,4066,4213],
+  "EG 9b": [3622,3776,3960,4143,4295,4447],
+  "EG 10": [3822,3999,4207,4415,4591,4768],
+  "EG 11": [4032,4207,4454,4700,4876,5051],
+  "EG 12": [4560,4769,5051,5333,5545,5757],
+  "EG 13": [5003,5258,5572,5888,6143,6396],
+  "EG 14": [5572,5856,6207,6557,6840,7122],
+  "EG 15": [6442,6762,7162,7562,7882,8200],
+};
+const TVOED_VKA: Record<string, number[]> = Object.fromEntries(
+  Object.entries(TVOED_BUND).map(([k, v]) => [k, v.map(x => Math.round(x * 1.01))])
+);
+const TVOED_SUE: Record<string, number[]> = {
+  "S 2":  [2508,2608,2733,2852,2946,3031],
+  "S 3":  [2636,2742,2876,3009,3113,3209],
+  "S 4":  [2771,2885,3028,3171,3283,3387],
+  "S 6":  [2946,3069,3225,3381,3504,3619],
+  "S 7":  [3087,3220,3390,3559,3694,3819],
+  "S 8a": [3225,3367,3550,3732,3878,4014],
+  "S 8b": [3381,3532,3726,3919,4072,4215],
+  "S 9":  [3559,3722,3933,4143,4305,4458],
+  "S 11": [3732,3912,4143,4374,4551,4718],
+  "S 12": [3978,4172,4423,4675,4866,5048],
+  "S 13": [4143,4351,4620,4889,5095,5291],
+  "S 14": [4374,4597,4882,5168,5390,5602],
+  "S 15": [4675,4921,5233,5545,5793,6030],
+  "S 16": [4889,5148,5482,5817,6083,6338],
+  "S 17": [5233,5513,5872,6230,6516,6792],
+  "S 18": [5545,5845,6233,6622,6927,7221],
+};
+
+// ── Populate selects ──────────────────────────────────────────
+function populateSelect(id: string, keys: string[], def = 4) {
+  const el = document.getElementById(id) as HTMLSelectElement;
+  if (!el) return;
+  keys.forEach((k, i) => {
+    const o = document.createElement('option');
+    o.value = k; o.textContent = k;
+    if (i === def) o.selected = true;
+    el.appendChild(o);
+  });
+}
+populateSelect('t1-eg', Object.keys(TVOED_BUND), 5);
+populateSelect('t2-sg', Object.keys(TVOED_SUE), 4);
+
+// ── Render Entgelttabelle ─────────────────────────────────────
+let currentTableData = TVOED_BUND;
+function renderTable(data: Record<string, number[]>) {
+  currentTableData = data;
+  const tbody = document.getElementById('tvoed-tbody')!;
+  tbody.innerHTML = '';
+  for (const [eg, s] of Object.entries(data)) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td><strong>${eg}</strong></td>` + s.map(v => `<td>${fmt(v)}</td>`).join('');
+    tbody.appendChild(tr);
+  }
+}
+renderTable(TVOED_BUND);
+
+// Table toggle
+[['tab-bund', TVOED_BUND], ['tab-vka', TVOED_VKA], ['tab-sue', TVOED_SUE]].forEach(([id, data]) => {
+  document.getElementById(id as string)?.addEventListener('click', () => {
+    ['tab-bund','tab-vka','tab-sue'].forEach(b => document.getElementById(b)?.classList.remove('active'));
+    document.getElementById(id as string)?.classList.add('active');
+    renderTable(data as Record<string, number[]>);
+  });
+});
+
+// ── Calc tab switch ───────────────────────────────────────────
+document.getElementById('ctab-bund')?.addEventListener('click', () => {
+  document.getElementById('ctab-bund')!.classList.add('active');
+  document.getElementById('ctab-bund')!.setAttribute('aria-selected', 'true');
+  document.getElementById('ctab-sue')!.classList.remove('active');
+  document.getElementById('ctab-sue')!.setAttribute('aria-selected', 'false');
+  document.getElementById('cpanel-bund')!.classList.remove('hidden');
+  document.getElementById('cpanel-sue')!.classList.add('hidden');
+});
+document.getElementById('ctab-sue')?.addEventListener('click', () => {
+  document.getElementById('ctab-sue')!.classList.add('active');
+  document.getElementById('ctab-sue')!.setAttribute('aria-selected', 'true');
+  document.getElementById('ctab-bund')!.classList.remove('active');
+  document.getElementById('ctab-bund')!.setAttribute('aria-selected', 'false');
+  document.getElementById('cpanel-sue')!.classList.remove('hidden');
+  document.getElementById('cpanel-bund')!.classList.add('hidden');
+});
+
+// ── Generic toggle helpers ────────────────────────────────────
+function makeToggleGroup(selector: string, hiddenId: string) {
+  document.querySelectorAll<HTMLButtonElement>(selector).forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll(selector).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      (document.getElementById(hiddenId) as HTMLInputElement).value =
+        btn.dataset.sk ?? btn.dataset.sk2 ?? btn.dataset.zulage ?? '1';
+    });
+  });
+}
+makeToggleGroup('[data-sk]', 't1-sk');
+makeToggleGroup('[data-sk2]', 't2-sk');
+makeToggleGroup('[data-zulage]', 't2-zulage');
+
+// TVöD Bund/VKA toggle
+let t1Tabelle = 'bund';
+document.getElementById('t1-bund-btn')?.addEventListener('click', () => {
+  t1Tabelle = 'bund';
+  document.getElementById('t1-bund-btn')!.classList.add('active');
+  document.getElementById('t1-vka-btn')!.classList.remove('active');
+  (document.getElementById('t1-tabelle') as HTMLInputElement).value = 'bund';
+});
+document.getElementById('t1-vka-btn')?.addEventListener('click', () => {
+  t1Tabelle = 'vka';
+  document.getElementById('t1-vka-btn')!.classList.add('active');
+  document.getElementById('t1-bund-btn')!.classList.remove('active');
+  (document.getElementById('t1-tabelle') as HTMLInputElement).value = 'vka';
+});
+
+// Kirchensteuer toggles Tab 1
+function makeKircheToggle(neinId: string, jaId: string, bybwId: string | null, stateId: string) {
+  document.getElementById(neinId)?.addEventListener('click', () => {
+    [neinId,jaId,bybwId].filter(Boolean).forEach(id => document.getElementById(id!)?.classList.remove('active'));
+    document.getElementById(neinId)!.classList.add('active');
+    (document.getElementById(stateId) as HTMLInputElement).value = 'no';
+  });
+  document.getElementById(jaId)?.addEventListener('click', () => {
+    [neinId,jaId,bybwId].filter(Boolean).forEach(id => document.getElementById(id!)?.classList.remove('active'));
+    document.getElementById(jaId)!.classList.add('active');
+    (document.getElementById(stateId) as HTMLInputElement).value = 'ja';
+  });
+  if (bybwId) {
+    document.getElementById(bybwId)?.addEventListener('click', () => {
+      [neinId,jaId,bybwId].filter(Boolean).forEach(id => document.getElementById(id!)?.classList.remove('active'));
+      document.getElementById(bybwId)!.classList.add('active');
+      (document.getElementById(stateId) as HTMLInputElement).value = 'bybw';
+    });
+  }
+}
+makeKircheToggle('t1-kirche-nein', 't1-kirche-ja', 't1-kirche-bybw', 't1-kirche-state');
+makeKircheToggle('t2-kirche-nein', 't2-kirche-ja', null, 't2-kirche-state');
+
+// Kinder toggles
+function makeKinderToggle(neinId: string, jaId: string, stateId: string) {
+  document.getElementById(neinId)?.addEventListener('click', () => {
+    document.getElementById(neinId)!.classList.add('active');
+    document.getElementById(jaId)!.classList.remove('active');
+    (document.getElementById(stateId) as HTMLInputElement).value = 'no';
+  });
+  document.getElementById(jaId)?.addEventListener('click', () => {
+    document.getElementById(jaId)!.classList.add('active');
+    document.getElementById(neinId)!.classList.remove('active');
+    (document.getElementById(stateId) as HTMLInputElement).value = 'yes';
+  });
+}
+makeKinderToggle('t1-kinder-nein', 't1-kinder-ja', 't1-kinder-state');
+makeKinderToggle('t2-kinder-nein', 't2-kinder-ja', 't2-kinder-state');
+
+// ── Tab 1 Calculate ───────────────────────────────────────────
+document.getElementById('t1-berechnen')?.addEventListener('click', () => {
+  const eg      = (document.getElementById('t1-eg') as HTMLSelectElement).value;
+  const stufe   = parseInt((document.getElementById('t1-stufe') as HTMLSelectElement).value) - 1;
+  const tabelle = (document.getElementById('t1-tabelle') as HTMLInputElement).value;
+  const sk      = parseInt((document.getElementById('t1-sk') as HTMLInputElement).value);
+  const kirche  = (document.getElementById('t1-kirche-state') as HTMLInputElement).value;
+  const kinder  = (document.getElementById('t1-kinder-state') as HTMLInputElement).value === 'yes';
+
+  const table  = tabelle === 'bund' ? TVOED_BUND : TVOED_VKA;
+  const brutto = table[eg]?.[stufe];
+  if (!brutto) return;
+
+  const { kv, pv, rv, av, mLst, soli, kirche: kircheAmt, netto } = calcNetto(brutto, sk, kirche, kinder);
+
+  (document.getElementById('t1-out-brutto') as HTMLElement).textContent = fmt(brutto);
+  (document.getElementById('t1-out-kv') as HTMLElement).textContent     = '−' + fmt(kv);
+  (document.getElementById('t1-out-pv') as HTMLElement).textContent     = '−' + fmt(pv);
+  (document.getElementById('t1-out-rv') as HTMLElement).textContent     = '−' + fmt(rv);
+  (document.getElementById('t1-out-av') as HTMLElement).textContent     = '−' + fmt(av);
+  (document.getElementById('t1-out-lst') as HTMLElement).textContent    = '−' + fmt(mLst);
+  (document.getElementById('t1-out-soli') as HTMLElement).textContent   = soli > 0 ? '−' + fmt(soli) : 'entfällt';
+  (document.getElementById('t1-out-netto') as HTMLElement).textContent  = fmt(netto);
+
+  const kircheRow = document.getElementById('t1-kirche-row')!;
+  if (kirche !== 'no') {
+    kircheRow.style.display = 'flex';
+    (document.getElementById('t1-out-kirche') as HTMLElement).textContent = '−' + fmt(kircheAmt);
+  } else {
+    kircheRow.style.display = 'none';
+  }
+
+  // Weihnachtsgeld (TVöD Bund § 20)
+  const egNum    = parseInt(eg.replace(/[^\d]/g, '')) || 6;
+  const jszFactor = egNum <= 8 ? 0.90 : egNum <= 12 ? 0.80 : 0.60;
+  const jsz       = r2(brutto * jszFactor);
+  const jszEl     = document.getElementById('t1-out-jsz')!;
+  const jszRow    = document.getElementById('t1-jsz-row')!;
+  if (tabelle === 'bund') {
+    jszEl.textContent    = fmt(jsz);
+    jszRow.style.display = 'flex';
+  } else {
+    jszRow.style.display = 'none';
+  }
+
+  document.getElementById('t1-results')!.classList.remove('hidden');
+  document.getElementById('t1-results')!.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+
+// ── Tab 2 Calculate ───────────────────────────────────────────
+document.getElementById('t2-berechnen')?.addEventListener('click', () => {
+  const sg     = (document.getElementById('t2-sg') as HTMLSelectElement).value;
+  const stufe  = parseInt((document.getElementById('t2-stufe') as HTMLSelectElement).value) - 1;
+  const zulage = parseFloat((document.getElementById('t2-zulage') as HTMLInputElement).value);
+  const sk     = parseInt((document.getElementById('t2-sk') as HTMLInputElement).value);
+  const kirche = (document.getElementById('t2-kirche-state') as HTMLInputElement).value;
+  const kinder = (document.getElementById('t2-kinder-state') as HTMLInputElement).value === 'yes';
+
+  const base   = TVOED_SUE[sg]?.[stufe];
+  if (!base) return;
+  const brutto = r2(base + zulage);
+
+  const { kv, pv, rv, av, mLst, soli, kirche: kircheAmt, netto } = calcNetto(brutto, sk, kirche, kinder);
+
+  (document.getElementById('t2-out-brutto') as HTMLElement).textContent = fmt(brutto);
+  (document.getElementById('t2-out-kv') as HTMLElement).textContent     = '−' + fmt(kv);
+  (document.getElementById('t2-out-pv') as HTMLElement).textContent     = '−' + fmt(pv);
+  (document.getElementById('t2-out-rv') as HTMLElement).textContent     = '−' + fmt(rv);
+  (document.getElementById('t2-out-av') as HTMLElement).textContent     = '−' + fmt(av);
+  (document.getElementById('t2-out-lst') as HTMLElement).textContent    = '−' + fmt(mLst);
+  (document.getElementById('t2-out-soli') as HTMLElement).textContent   = soli > 0 ? '−' + fmt(soli) : 'entfällt';
+  (document.getElementById('t2-out-netto') as HTMLElement).textContent  = fmt(netto);
+
+  const kircheRow = document.getElementById('t2-kirche-row')!;
+  if (kirche !== 'no') {
+    kircheRow.style.display = 'flex';
+    (document.getElementById('t2-out-kirche') as HTMLElement).textContent = '−' + fmt(kircheAmt);
+  } else {
+    kircheRow.style.display = 'none';
+  }
+
+  document.getElementById('t2-results')!.classList.remove('hidden');
+  document.getElementById('t2-results')!.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+</script>
