@@ -1,0 +1,362 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://nettoklar.de/ueber-nettoklar/",
+      "name": "Über NettoKlar — Steuerrechner für Deutschland",
+      "description": "NettoKlar ist ein unabhängiger Steuer- und Gehaltsrechner für Deutschland. Alle Rechner basieren auf aktuellen Gesetzeswerten 2026.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de/" },
+          { "@type": "ListItem", "position": 2, "name": "Über NettoKlar", "item": "https://nettoklar.de/ueber-nettoklar/" }
+        ]
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "NettoKlar",
+      "url": "https://nettoklar.de",
+      "description": "Kostenlose Steuer- und Gehaltsrechner für Deutschland — Brutto-Netto, Rentenpunkte, TVöD, Steuerklassen.",
+      "foundingDate": "2026",
+      "areaServed": "DE",
+      "inLanguage": "de-DE",
+      "knowsAbout": [
+        "Einkommensteuer Deutschland",
+        "Brutto-Netto-Berechnung",
+        "Rentenpunkte",
+        "TVöD Gehalt",
+        "Steuerklassen"
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Über NettoKlar — Wer steckt hinter dem Steuerrechner?"
+  description="NettoKlar ist ein unabhängiger, kostenloser Steuerrechner für Deutschland. Alle Werte basieren auf aktuellen Gesetzen 2026. Impressum, Datenschutz und Kontakt."
+  schema={schema}
+  slug="ueber-nettoklar"
+>
+  <a href="#main-content" class="sr-only">Zum Inhalt springen</a>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">NettoKlar</a></li>
+          <li>Über NettoKlar</li>
+        </ol>
+      </nav>
+
+      <article class="article-body">
+
+        <header class="article-header">
+          <h1>Über NettoKlar</h1>
+          <div class="article-meta">
+            <span>Stand: April 2026</span>
+            <span class="freshness-badge">✓ Geprüft 2026</span>
+          </div>
+        </header>
+
+        <!-- Mission -->
+        <section id="mission" class="anchor-section">
+          <h2>Was ist NettoKlar?</h2>
+          <p>
+            NettoKlar ist ein unabhängiger, kostenloser Steuer- und Gehaltsrechner für Deutschland.
+            Das Ziel ist einfach: Jeder Arbeitnehmer, Rentner und Selbstständige soll in Sekunden
+            verstehen, wie viel Geld tatsächlich auf dem Konto landet — ohne Fachjargon, ohne
+            versteckte Kosten, ohne Registrierung.
+          </p>
+          <p>
+            Alle Rechner basieren ausschließlich auf aktuellen Gesetzeswerten — direkt aus
+            Bundesministerium der Finanzen, Deutscher Rentenversicherung und den TVöD-Tarifverträgen.
+            Kein Schätzen, keine veralteten Tabellen.
+          </p>
+        </section>
+
+        <!-- Why -->
+        <section id="warum" class="anchor-section">
+          <h2>Warum NettoKlar?</h2>
+
+          <div class="summary-card">
+            <h2>Das Problem mit anderen Rechnern</h2>
+            <p>
+              Die meisten deutschen Steuerrechner zeigen entweder veraltete Werte aus dem Vorjahr,
+              erklären nichts, oder verstecken sich hinter Werbebannern und Registrierungspflichten.
+              Konkret: Im Januar 2026 zeigten noch viele Rechner den alten Grundfreibetrag (€12.096
+              statt €12.348) und den alten Mindestlohn (€13,00 statt €13,90).
+            </p>
+          </div>
+
+          <p>
+            NettoKlar löst das mit einem klaren Versprechen: Alle Werte werden zu Jahresbeginn
+            und bei jeder Gesetzesänderung sofort aktualisiert. Jede Zahl trägt eine Quellenangabe.
+          </p>
+
+          <dl class="fact-strip">
+            <div class="fact-item">
+              <dt>Gegründet</dt>
+              <dd>2026</dd>
+            </div>
+            <div class="fact-item">
+              <dt>Rechner</dt>
+              <dd>10+ kostenlos</dd>
+            </div>
+            <div class="fact-item">
+              <dt>Registrierung</dt>
+              <dd>Keine</dd>
+            </div>
+            <div class="fact-item">
+              <dt>Werbung</dt>
+              <dd>Keine Pop-ups</dd>
+            </div>
+            <div class="fact-item">
+              <dt>Sprache</dt>
+              <dd>Deutsch (de-DE)</dd>
+            </div>
+            <div class="fact-item">
+              <dt>Aktualisierung</dt>
+              <dd>Jährlich + laufend</dd>
+            </div>
+          </dl>
+        </section>
+
+        <!-- Data Sources -->
+        <section id="datenquellen" class="anchor-section">
+          <h2>Unsere Datenquellen</h2>
+          <p>
+            NettoKlar verwendet ausschließlich amtliche Quellen. Keine Schätzungen,
+            keine redaktionellen Interpretationen — nur offizielle Gesetzeswerte.
+          </p>
+
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Quelle</th>
+                  <th>Verwendung bei NettoKlar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="https://www.bundesfinanzministerium.de" target="_blank" rel="noopener noreferrer">
+                      Bundesministerium der Finanzen (BMF)
+                    </a>
+                  </td>
+                  <td>Grundfreibetrag, Steuertarif §32a EStG, Kinderfreibetrag, Soli-Freigrenze</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.deutsche-rentenversicherung.de" target="_blank" rel="noopener noreferrer">
+                      Deutsche Rentenversicherung (DRV)
+                    </a>
+                  </td>
+                  <td>Rentenpunktwert, Rentenerhöhung, Beitragssätze, Kaufpreis Rentenpunkte</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.bmas.de" target="_blank" rel="noopener noreferrer">
+                      Bundesministerium für Arbeit und Soziales (BMAS)
+                    </a>
+                  </td>
+                  <td>Mindestlohn, Rentenanpassung, Sozialversicherungsbeiträge</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://oeffentlicher-dienst.info" target="_blank" rel="noopener noreferrer">
+                      TVöD-Tarifverträge VKA / Bund / SuE
+                    </a>
+                  </td>
+                  <td>Entgelttabellen EG 1–15, S 2–S 18, Jahressonderzahlung</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.destatis.de" target="_blank" rel="noopener noreferrer">
+                      Statistisches Bundesamt (Destatis)
+                    </a>
+                  </td>
+                  <td>Durchschnittliche Steuererstattung, Rentendurchschnitte</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td><strong>Aktualisierungsrhythmus</strong></td>
+                  <td><strong>Jährlich zu Jahresbeginn + sofort bei Gesetzesänderungen</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Haftungsausschluss -->
+        <section id="haftung" class="anchor-section">
+          <h2>Haftungsausschluss</h2>
+
+          <div class="nachzahlung-box" role="note">
+            <p class="nachzahlung-label">Kein Steuerberatungsersatz</p>
+            <p class="nachzahlung-text">
+              Alle Rechner und Inhalte auf NettoKlar dienen ausschließlich der allgemeinen
+              Information. Sie ersetzen keine individuelle Steuerberatung. Für verbindliche
+              Auskünfte wenden Sie sich an einen zugelassenen Steuerberater oder das zuständige
+              Finanzamt. NettoKlar übernimmt keine Haftung für die Richtigkeit, Vollständigkeit
+              oder Aktualität der bereitgestellten Informationen.
+            </p>
+          </div>
+
+          <p style="margin-top: var(--space-4)">
+            Die Berechnungen basieren auf vereinfachten Modellen. Individuelle Faktoren wie
+            Freibeträge, Pauschalen, außergewöhnliche Belastungen oder besondere Einkunftsarten
+            werden nicht vollständig berücksichtigt. Das tatsächliche Nettoeinkommen kann
+            abweichen.
+          </p>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="kontakt" class="anchor-section">
+          <h2>Kontakt</h2>
+          <p>
+            Fehler gefunden? Veralteter Wert? Anregung für einen neuen Rechner?
+            Wir freuen uns über Feedback.
+          </p>
+
+          <div class="summary-card">
+            <h2>So erreichen Sie uns</h2>
+            <ul class="content-list">
+              <li>E-Mail: <a href="mailto:kontakt@nettoklar.de">kontakt@nettoklar.de</a></li>
+              <li>Antwortzeit: In der Regel innerhalb von 48 Stunden</li>
+              <li>Sprache: Deutsch bevorzugt</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Impressum -->
+        <section id="impressum" class="anchor-section">
+          <h2>Impressum</h2>
+          <p style="font-size: var(--text-sm); color: var(--color-text-muted)">
+            Angaben gemäß § 5 TMG (Telemediengesetz)
+          </p>
+
+          <div class="summary-card" style="margin-top: var(--space-4)">
+            <h2>Verantwortlich für den Inhalt</h2>
+            <address style="font-style: normal; line-height: 2">
+              <strong>Riyaansh Mittal</strong><br />
+              3, Naval Vihar, Baghpat Road<br />
+              Meerut, Uttar Pradesh 250002<br />
+              India<br /><br />
+              E-Mail: <a href="mailto:kontakt@nettoklar.de">kontakt@nettoklar.de</a><br />
+              Website: <a href="https://nettoklar.de">nettoklar.de</a>
+            </address>
+          </div>
+
+          <p style="margin-top: var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted)">
+            <strong>Hinweis:</strong> NettoKlar ist kein gewerbliches Unternehmen im Sinne des
+            Handelsgesetzbuchs. Es besteht keine Umsatzsteuer-Identifikationsnummer.
+            Eine Eintragung im Handelsregister besteht nicht.
+          </p>
+
+          <h3 style="margin-top: var(--space-8); font-size: var(--text-base); font-weight: 600">
+            Haftung für Inhalte (§ 7 Abs. 1 TMG)
+          </h3>
+          <p>
+            Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten
+            nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
+            Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
+            Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
+            Tätigkeit hinweisen.
+          </p>
+
+          <h3 style="margin-top: var(--space-6); font-size: var(--text-base); font-weight: 600">
+            Haftung für Links
+          </h3>
+          <p>
+            Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir
+            keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
+            Anbieter oder Betreiber der Seiten verantwortlich. Eine permanente inhaltliche
+            Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung
+            nicht zumutbar.
+          </p>
+
+          <h3 style="margin-top: var(--space-6); font-size: var(--text-base); font-weight: 600">
+            Urheberrecht
+          </h3>
+          <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+            dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+            der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
+            Zustimmung des jeweiligen Autors bzw. Erstellers.
+          </p>
+        </section>
+
+        <!-- Datenschutz -->
+        <section id="datenschutz" class="anchor-section">
+          <h2>Datenschutz</h2>
+          <p style="font-size: var(--text-sm); color: var(--color-text-muted)">
+            Gemäß DSGVO / GDPR und § 13 TMG
+          </p>
+
+          <h3 style="margin-top: var(--space-6); font-size: var(--text-base); font-weight: 600">
+            Erhobene Daten
+          </h3>
+          <p>
+            NettoKlar erhebt keine personenbezogenen Daten. Alle Rechner funktionieren vollständig
+            im Browser — keine Eingabe wird an einen Server übertragen oder gespeichert.
+          </p>
+
+          <h3 style="margin-top: var(--space-6); font-size: var(--text-base); font-weight: 600">
+            Google Analytics 4 (GA4)
+          </h3>
+          <p>
+            Diese Website verwendet Google Analytics 4, bereitgestellt über Cloudflare Zaraz.
+            GA4 wird mit Consent Mode v2 betrieben — Tracking ist standardmäßig deaktiviert
+            (<code>denied</code>) und wird nur aktiviert, wenn Sie aktiv zustimmen. Es werden
+            keine Cookies gesetzt, solange keine Einwilligung vorliegt. Die Verarbeitung erfolgt
+            auf Basis von Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).
+          </p>
+
+          <h3 style="margin-top: var(--space-6); font-size: var(--text-base); font-weight: 600">
+            Cloudflare
+          </h3>
+          <p>
+            Diese Website wird über Cloudflare Pages gehostet. Cloudflare kann technische
+            Zugriffsdaten (IP-Adresse, Browser-Typ, Zeitstempel) für Sicherheits- und
+            Performance-Zwecke verarbeiten. Weitere Informationen:
+            <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">
+              Cloudflare Privacy Policy
+            </a>.
+          </p>
+
+          <h3 style="margin-top: var(--space-6); font-size: var(--text-base); font-weight: 600">
+            Ihre Rechte (Art. 15–22 DSGVO)
+          </h3>
+          <ul class="content-list">
+            <li>Auskunft über gespeicherte Daten (Art. 15 DSGVO)</li>
+            <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+            <li>Löschung Ihrer Daten (Art. 17 DSGVO)</li>
+            <li>Widerspruch gegen Verarbeitung (Art. 21 DSGVO)</li>
+            <li>Beschwerde bei der zuständigen Aufsichtsbehörde</li>
+          </ul>
+          <p style="margin-top: var(--space-4)">
+            Da NettoKlar keine personenbezogenen Daten speichert, können die meisten dieser
+            Rechte praktisch nicht ausgeübt werden. Für Fragen:
+            <a href="mailto:kontakt@nettoklar.de">kontakt@nettoklar.de</a>
+          </p>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-group">
+          <a href="/" class="btn-secondary">Zur Startseite →</a>
+          <a href="/steuerklasse-finder/" class="btn-secondary">Steuerklassen-Finder →</a>
+          <a href="/tvoed-rechner/" class="btn-secondary">TVöD Rechner →</a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+</BaseLayout>

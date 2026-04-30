@@ -54,11 +54,6 @@ const schema = {
           "@type": "Question",
           "name": "Wird das Finanzamt bei der Heirat automatisch informiert?",
           "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Standesamt leitet keine Heiratsdaten ans Finanzamt weiter. Sie müssen den Wechsel selbst beantragen – entweder online über mein.elster.de oder per Papierformular beim zuständigen Finanzamt." }
-        },
-        {
-          "@type": "Question",
-          "name": "Kann man die Steuerklasse rückwirkend nach der Heirat wechseln?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ja – wenn Sie im laufenden Jahr heiraten und den Wechsel vor dem 31. Dezember beantragen, gilt das Ehegattensplitting rückwirkend ab dem 1. Januar dieses Jahres. Eine Dezember-Hochzeit bringt denselben vollen Jahresvorteil wie eine Januar-Hochzeit." }
         }
       ]
     }
@@ -70,6 +65,7 @@ const schema = {
   title="Steuerklasse wechseln nach Heirat – Elster & Formular (2026)"
   description="Steuerklasse nach Heirat wechseln: Schritt-für-Schritt mit Elster oder Formular. SK 3/5 vs. 4/4 Vergleich & wann sich der Wechsel lohnt."
   schema={schema}
+  slug="steuerklasse-heirat"
 >
   <main class="page-wrapper">
     <nav aria-label="Breadcrumb">
@@ -81,12 +77,43 @@ const schema = {
 
     <header class="article-header">
       <h1>Steuerklasse wechseln nach der Heirat – Antrag, Formular &amp; Elster</h1>
-      <p class="article-meta">
-        <span>Letzte Aktualisierung: 24. April 2026</span>
+      <div class="article-meta">
+        <span>Stand: April 2026</span>
         <span>·</span>
         <span>Lesezeit: ca. 6 Minuten</span>
-      </p>
+        <span class="freshness-badge">✓ 2026 aktualisiert</span>
+        <span style="font-size:var(--text-xs); color:var(--color-text-muted)">
+          Geprüft von der NettoKlar-Redaktion · Quellen: BMF, §38b EStG
+        </span>
+      </div>
     </header>
+
+    <dl class="fact-strip">
+      <div class="fact-item">
+        <dt>Automatisch nach Heirat</dt>
+        <dd>SK IV / IV</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Wechsel zu III/V</dt>
+        <dd>Antrag nötig</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Wechsel wirksam ab</dt>
+        <dd>1. Folgemonat</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Wechsel kostet</dt>
+        <dd>Nichts</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Feste Jahresfrist</dt>
+        <dd>Seit 2020: keine</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Via ELSTER</dt>
+        <dd>~10 Minuten</dd>
+      </div>
+    </dl>
 
     <div class="summary-card">
       <h2>Das Wichtigste auf einen Blick</h2>
@@ -126,6 +153,11 @@ const schema = {
 
       <h2>Welche Steuerklasse gilt automatisch nach der Hochzeit?</h2>
       <p>
+        Viele frisch verheiratete Paare wundern sich, warum sich ihr Netto nach der Hochzeit 
+        nicht verändert hat. Der Grund: Steuerklasse IV entspricht steuerlich fast genau 
+        Steuerklasse I — Ihr Netto ändert sich erst, wenn Sie aktiv einen Wechsel beantragen.
+      </p>
+      <p>
         Nach der Heirat werden beide Partner vom Finanzamt automatisch in
         <strong>Steuerklasse IV / IV</strong> eingestuft. Das passiert ohne Antrag,
         ohne Formular — das Standesamt meldet die Heirat an die Meldebehörde, die das
@@ -146,8 +178,12 @@ const schema = {
       <h2>Steuerklasse 3 und 5 oder 4 und 4 — Was ist besser?</h2>
       <p>
         Die Faustregel: Wenn ein Partner <strong>60% oder mehr</strong> des gemeinsamen
-        Bruttoeinkommens verdient, lohnt sich die Kombination III / V — der
-        Hauptverdiener wechselt in Klasse III, der andere in Klasse V.
+        Bruttoeinkommens verdient, lohnt sich die Kombination III / V — der Hauptverdiener 
+        wechselt in Klasse III, der andere in Klasse V. 
+        <strong>Warum genau 60%?</strong> Der Gesetzgeber hat die Steuerklasse III so berechnet, 
+        dass sie den Grundfreibetrag <em>beider</em> Ehepartner (also 2 × 12.348 €) auf das 
+        Einkommen des Hauptverdieners anwendet. Mathematisch geht diese Rechnung auf, wenn 
+        der Partner in Klasse III etwa 60% zum Haushaltseinkommen beisteuert.
       </p>
 
       <table class="data-table">
@@ -177,9 +213,17 @@ const schema = {
         </tbody>
       </table>
 
+      <p style="font-size:var(--text-xs); color:var(--color-text-muted)">
+        Rechtsgrundlage: 
+        <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a> · 
+        60%-Faustregel: 
+        <a href="https://www.berlin.de/sen/finanzen/steuern/informationen-fuer-steuerzahler-/faq-steuern/artikel.9287.php" target="_blank" rel="noopener noreferrer">Senatsverwaltung Berlin – FAQ Steuerklassen</a> · 
+        Stand: Januar 2026
+      </p>
+
       <p>
         Mehr zur Kombination III / V und konkreten Rechenbeispielen:
-        <a href="/steuerklasse-3-5/">Steuerklasse 3 und 5 für Ehepaare — alle Details</a>
+        <a href="/steuerklasse-3-5/">Steuerklasse 3 und 5 für Ehepaare — alle Details →</a>
       </p>
 
       <h2>Wie wechselt man nach der Hochzeit die Steuerklasse?</h2>
@@ -207,6 +251,11 @@ const schema = {
           </tr>
         </tbody>
       </table>
+      <p>
+        ELStAM (Elektronische LohnSteuerAbzugsMerkmale) ist die elektronische Datenbank, 
+        die Ihre Steuerklasse an Ihren Arbeitgeber übermittelt — sie ersetzt seit 2013 
+        die frühere Lohnsteuerkarte aus Papier.
+      </p>
       <p>
         Beide Ehegatten müssen den Antrag <strong>unterschreiben</strong> — ein Partner
         allein kann den Wechsel nicht beantragen. Sie benötigen Ihre
@@ -241,9 +290,7 @@ const schema = {
       <p>
         Die Faktor-Methode ist ein Mittelweg zwischen IV / IV und III / V: Das Finanzamt
         berechnet einen individuellen Faktor (zwischen 0,001 und 0,999), der den
-        Splittingvorteil bereits monatlich berücksichtigt — sodass beide Partner eine
-        <strong>gerechte Steuerlast</strong> tragen, ohne am Jahresende eine große
-        Nachzahlung zu riskieren.
+        Splittingvorteil bereits monatlich berücksichtigt — beide zahlen monatlich fair, und im Januar kommt keine böse Überraschung vom Finanzamt.
       </p>
       <table class="data-table">
         <thead>
@@ -286,6 +333,26 @@ const schema = {
         via ELSTER. Sie wird jährlich neu berechnet und muss jedes Jahr neu beantragt werden.
       </p>
 
+      <h2>Das Faktorverfahren — die unbekannte Alternative zu 3/5</h2>
+      <p>
+        Das Faktorverfahren (Steuerklasse IV/IV mit Faktor) ist die Option, über die kaum 
+        jemand spricht — obwohl sie für viele Paare die beste Wahl ist.
+      </p>
+      <p>
+        Das Finanzamt berechnet einen individuellen Faktor (z. B. 0,84), der den gemeinsamen 
+        Splittingvorteil fair auf beide Partner aufteilt. Ergebnis: Beide zahlen monatlich 
+        weniger als ohne Splitting — aber keiner zahlt zu wenig und riskiert eine Nachzahlung.
+      </p>
+      <p>
+        Es lohnt sich besonders, wenn: beide Partner arbeiten, die Gehälter unterschiedlich 
+        sind (aber nicht extrem), und Sie die Überraschung einer hohen Steuernachzahlung 
+        im Januar vermeiden wollen.
+      </p>
+      <p>
+        Nachteil: Sie müssen jedes Jahr eine Steuererklärung einreichen, und der Faktor 
+        muss jährlich neu beim Finanzamt beantragt werden — via ELSTER, kostenlos.
+      </p>
+
       <h2 id="faq">FAQ — Häufige Fragen zur Steuerklasse nach Heirat</h2>
       <div class="faq-list">
 
@@ -306,7 +373,7 @@ const schema = {
         <details class="faq-item">
           <summary>Warum lohnt es sich, am Ende des Jahres zu heiraten?</summary>
           <div class="faq-answer">
-            <p>Das Ehegattensplitting gilt rückwirkend für das gesamte Kalenderjahr. Eine Hochzeit am 31. Dezember bringt denselben vollen Jahressteuervorteil wie eine Hochzeit am 1. Januar — ein erheblicher Steuervorteil bei Paaren mit großem Einkommensunterschied.</p>
+            <p>Das Ehegattensplitting gilt rückwirkend für das gesamte Kalenderjahr. Eine Hochzeit am 31. Dezember bringt denselben vollen Jahressteuervorteil wie eine Hochzeit am 1. Januar — Für Paare, bei denen einer deutlich mehr verdient als der andere, ist das bares Geld.</p>
           </div>
         </details>
 
@@ -314,6 +381,11 @@ const schema = {
           <summary>Welche Nachteile hat Steuerklasse 3 und 5?</summary>
           <div class="faq-answer">
             <p>Der Partner in Klasse 5 zahlt sehr hohe monatliche Abzüge — kein Grundfreibetrag wird angerechnet. Beide müssen eine gemeinsame Steuererklärung einreichen und erhalten häufig eine Nachzahlung, weil Klasse 3 zu wenig Lohnsteuer einbehält.</p>
+            <p>
+              <strong>Hinweis:</strong> Die Steuerklassenkombination III/V soll laut aktuellem 
+              Koalitionsvertrag zum 1. Januar 2030 durch das Faktorverfahren ersetzt werden. 
+              Bis dahin bleibt sie unverändert gültig.
+            </p>
           </div>
         </details>
 
@@ -328,6 +400,29 @@ const schema = {
           <summary>Kann man die Steuerklasse rückwirkend nach der Heirat wechseln?</summary>
           <div class="faq-answer">
             <p>Ja — wenn Sie im laufenden Jahr heiraten und den Wechsel vor dem 31. Dezember beantragen, gilt das Ehegattensplitting rückwirkend ab dem 1. Januar dieses Jahres. Eine Dezember-Hochzeit bringt denselben vollen Jahresvorteil wie eine Januar-Hochzeit.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Kann ein Ehepartner alleine die Steuerklasse wechseln?</summary>
+          <div class="faq-answer">
+            <p>
+              Nur für den Wechsel zurück zu IV/IV: ja, das kann ein Partner alleine beantragen. 
+              Für alle anderen Wechsel — z. B. auf III/V oder zum Faktorverfahren — müssen 
+              beide Ehegatten den Antrag gemeinsam unterschreiben.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Mein Partner ist nicht in Deutschland beschäftigt — kann ich trotzdem SK 3 beantragen?</summary>
+          <div class="faq-answer">
+            <p>
+              Ja. Ihr Partner muss lediglich in Deutschland gemeldet sein und eine 
+              Steueridentifikationsnummer besitzen. Eine Beschäftigung in Deutschland ist 
+              nicht erforderlich. In diesem Fall wird das Finanzamt ein fiktives Einkommen 
+              des Partners von 0 € annehmen, was den vollen Splittingvorteil ermöglicht.
+            </p>
           </div>
         </details>
 

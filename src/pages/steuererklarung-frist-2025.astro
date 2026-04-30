@@ -11,7 +11,7 @@ const schema = {
       "name": "Steuererklärung 2025 Frist – Alle Fristen & Termine 2026",
       "headline": "Steuererklärung 2025 Frist – 31. Juli 2026 und alle Ausnahmen",
       "datePublished": "2026-04-23",
-      "dateModified": "2026-04-23",
+      "dateModified": "2026-04-30",
       "inLanguage": "de-DE",
       "isPartOf": { "@id": "https://nettoklar.de/#website" },
       "breadcrumb": { "@id": "https://nettoklar.de/steuererklarung-frist-2025/#breadcrumb" },
@@ -63,8 +63,9 @@ const schema = {
 
 <BaseLayout
   title="Steuererklärung 2025 Frist: 31. Juli 2026 & alle Fristen"
-  description="Die Frist für die Steuererklärung 2025 endet am 31. Juli 2026. Mit Steuerberater bis 1. März 2027. Verspätung kostet min. €25/Monat. Alle Fristen hier."
+  description="Die meisten Menschen glauben, dass sie die Steuererklärung bis zum 31. Juli abgeben müssen — das stimmt nur für einen Teil der Steuerzahler. Wer freiwillig einreicht, hat bis Ende 2029 Zeit. Wer verpflichtet ist, muss bis zum 31. Juli 2026."
   schema={schema}
+  slug="steuererklarung-frist-2025"
 >
   <main class="page-wrapper">
     <nav aria-label="Breadcrumb">
@@ -74,14 +75,42 @@ const schema = {
       </ol>
     </nav>
 
-    <header class="article-header">
-      <h1>Steuererklärung 2025: Frist endet am 31. Juli 2026</h1>
-      <p class="article-meta">
-        <span>Letzte Aktualisierung: 23. April 2026</span>
-        <span>·</span>
-        <span>Lesezeit: ca. 5 Minuten</span>
-      </p>
-    </header>
+    <div class="article-meta">
+      <span>Stand: April 2026</span>
+      <span>·</span>
+      <span>Lesezeit: ca. 5 Minuten</span>
+      <span class="freshness-badge">✓ 2026 aktualisiert</span>
+      <span style="font-size:var(--text-xs); color:var(--color-text-muted)">
+        Geprüft von der NettoKlar-Redaktion · Quellen: §149 AO, ELSTER
+      </span>
+    </div>
+
+    <dl class="fact-strip">
+      <div class="fact-item">
+        <dt>Frist ohne Berater</dt>
+        <dd>31. Juli 2026</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Frist mit Berater</dt>
+        <dd>1. März 2027</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Freiwillig bis</dt>
+        <dd>31. Dez. 2029</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Verspätungsstrafe</dt>
+        <dd>min. €25/Monat</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Ø Erstattung</dt>
+        <dd>ca. €1.000</dd>
+      </div>
+      <div class="fact-item">
+        <dt>Frist-Grundlage</dt>
+        <dd>§149 AO</dd>
+      </div>
+    </dl>
 
     <div class="summary-card">
       <h2>Alle Fristen auf einen Blick</h2>
@@ -108,6 +137,12 @@ const schema = {
         </tbody>
       </table>
     </div>
+
+    <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:calc(var(--space-2) * -1); margin-bottom:var(--space-6)">
+      Fristen: <a href="https://www.gesetze-im-internet.de/ao_1977/__149.html" target="_blank" rel="noopener noreferrer">§149 AO</a> · 
+      Verspätungszuschlag: <a href="https://www.gesetze-im-internet.de/ao_1977/__152.html" target="_blank" rel="noopener noreferrer">§152 AO</a> · 
+      <a href="https://www.elster.de" target="_blank" rel="noopener noreferrer">ELSTER</a> · Stand: Januar 2026
+    </p>
 
     <article class="article-body">
       <h2>Wann muss ich die Steuererklärung 2025 abgeben?</h2>
@@ -155,6 +190,26 @@ const schema = {
         ohne separaten Antrag, ohne Begründung.
       </p>
 
+      <section id="pflichtveranlagung" class="anchor-section">
+        <h2>Wer muss überhaupt eine Steuererklärung abgeben?</h2>
+        <p>
+          Die Frist 31. Juli gilt nur für Pflichtveranlagte. Ob Sie dazugehören,
+          entscheidet sich an wenigen Punkten:
+        </p>
+        <ul class="content-list">
+          <li>Nebeneinkünfte über €410 hatten (z. B. Freelance, Vermietung, Zinsen)</li>
+          <li>Gleichzeitig bei zwei oder mehr Arbeitgebern beschäftigt waren</li>
+          <li>Steuerklasse III, V oder VI hatten</li>
+          <li>Lohnersatzleistungen bezogen haben: Elterngeld, Kurzarbeitergeld, Krankengeld</li>
+          <li>Einen Freibetrag im Lohnsteuerabzug eingetragen hatten</li>
+        </ul>
+        <p>
+          Treffen keiner dieser Punkte auf Sie zu? Dann sind Sie freiwilliger Einreicher
+          (Antragsveranlagung). Sie können bis 31. Dezember 2029 einreichen — keine
+          Strafe, keine Frist. Im Schnitt erhalten freiwillige Einreicher ca. €1.000 zurück.
+        </p>
+      </section>
+
       <h2>Abgabefristen der letzten Jahre (2021–2025)</h2>
       <table class="data-table">
         <thead>
@@ -177,16 +232,22 @@ const schema = {
         </tbody>
       </table>
 
+      <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:calc(var(--space-2) * -1)">
+        Quelle: <a href="https://www.elster.de" target="_blank" rel="noopener noreferrer">ELSTER</a> · 
+        <a href="https://www.gesetze-im-internet.de/ao_1977/__152.html" target="_blank" rel="noopener noreferrer">§152 Abgabenordnung</a> · Stand: Januar 2026
+      </p>
+
       <h2>Selbst machen oder Steuerberater?</h2>
       <p>
         Wer eine einfache Einkommenssituation hat — ein Arbeitgeber, keine Vermietung,
         kein Auslandseinkommen — kommt mit <strong>ELSTER online</strong> gut zurecht.
+        Wer noch nicht weiß, ob er überhaupt einreichen muss: 
+        <a href="/steuerklasse-finder/">Steuerklasse und Pflicht prüfen →</a>
         Die Oberfläche ist 2025 deutlich benutzerfreundlicher geworden.
       </p>
       <p>
         Ein Steuerberater lohnt sich bei selbstständigen Nebeneinkünften, Immobilienbesitz
-        oder komplexen Familienkonstellationen. Der Kostenvorteil durch optimierte
-        Absetzbeträge übersteigt das Honorar in diesen Fällen fast immer.
+        oder komplexen Familienkonstellationen. Was der Steuerberater kostet, holt er bei Vermietung oder Selbstständigkeit fast immer wieder rein.
       </p>
 
       <div class="inline-link-callout">
@@ -231,6 +292,40 @@ const schema = {
             <p>Je nach Bundesland 34–53 Tage. NRW ca. 51 Tage, Bayern ca. 34 Tage. Über ELSTER eingereichte Erklärungen werden schneller bearbeitet. Frühzeitig einreichen ab März 2026 verkürzt die Wartezeit deutlich.</p>
           </div>
         </details>
+
+        <details class="faq-item">
+          <summary>Ich habe 2–3 Jahre lang keine Steuererklärung eingereicht — was jetzt?</summary>
+          <div class="faq-answer">
+            <p>Ruhig bleiben und nachholen. Das Finanzamt kann für jeden fehlenden Pflicht-
+              Veranlagungszeitraum eine Schätzung vornehmen — das Ergebnis fällt fast immer 
+              zu Ihren Ungunsten aus. Besser: Alle Rückstände auf einmal einreichen, möglichst 
+              mit einem Steuerberater. Die Verspätungszuschläge für mehrere Jahre können sich 
+              auf €2.000–€3.000 summieren, aber Selbstanzeige (Nachreichen) reduziert diese 
+              drastisch gegenüber einer Schätzung.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Was bedeutet Veranlagungszeitraum 2025?</summary>
+          <div class="faq-answer">
+            <p>Der Veranlagungszeitraum 2025 ist das Kalenderjahr 2025 — also Ihr gesamtes 
+              Einkommen vom 1. Januar bis 31. Dezember 2025. Die Steuererklärung für diesen 
+              Zeitraum wird im Jahr 2026 abgegeben. Das klingt selbstverständlich, verwirrt 
+              aber viele: Die "Steuererklärung 2025" wird 2026 eingereicht, nicht 2025.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="correction-callout">
+        <span class="correction-badge">Aus der Praxis</span>
+        <p>
+          Viele Finanzämter sind bei Verzögerungen von wenigen Wochen kulant — 
+          besonders bei Ersttätern und wenn keine Steuerschuld besteht. 
+          Der Verspätungszuschlag wird nicht automatisch bei jedem verhängt, 
+          er liegt im Ermessen des Finanzamts bis 14 Monate Verzug.
+        </p>
       </div>
 
       <div class="cta-group">

@@ -1,0 +1,260 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://nettoklar.de/datenschutz/",
+  "name": "Datenschutzerklärung — NettoKlar",
+  "description": "Was NettoKlar mit Ihren Daten macht — und was nicht. Informationen zu Google AdSense, Analytics und Cloudflare.",
+  "inLanguage": "de-DE",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Datenschutz", "item": "https://nettoklar.de/datenschutz/" }
+    ]
+  }
+};
+---
+
+<BaseLayout
+  title="Datenschutzerklärung — NettoKlar"
+  description="Was NettoKlar mit Ihren Daten macht — und was nicht. Google AdSense, Analytics 4 mit Consent Mode v2, Cloudflare Hosting, Ihre Rechte nach DSGVO."
+  schema={schema}
+  slug="datenschutz"
+>
+  <a href="#main-content" class="sr-only">Zum Inhalt springen</a>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">NettoKlar</a></li>
+          <li>Datenschutz</li>
+        </ol>
+      </nav>
+
+      <article class="article-body">
+
+        <header class="article-header">
+          <h1>Datenschutzerklärung</h1>
+          <div class="article-meta">
+            <span>Stand: April 2026</span>
+            <span class="freshness-badge">✓ DSGVO-konform</span>
+          </div>
+        </header>
+
+        <div class="summary-card">
+          <h2>Kurz gesagt</h2>
+          <ul class="content-list">
+            <li>Alle Rechner laufen komplett in Ihrem Browser — Ihre Gehaltseingaben verlassen nie Ihr Gerät</li>
+            <li>Kein Nutzerkonto, keine Registrierung, kein Login</li>
+            <li>Werbung (Google AdSense) und Analyse (GA4) nur nach Ihrer Einwilligung</li>
+            <li>Ohne Einwilligung: keine Cookies, kein Tracking, keine personalisierten Anzeigen</li>
+            <li>Hosting über Cloudflare Pages — dabei fallen technische Serverprotokolle an</li>
+          </ul>
+        </div>
+
+        <section id="verantwortlicher" class="anchor-section">
+          <h2>1. Wer steckt dahinter</h2>
+          <p>
+            NettoKlar ist kein Unternehmen, sondern ein privates Projekt.
+            Verantwortlich im Sinne der DSGVO bin ich:
+          </p>
+          <address style="font-style:normal; margin-top:var(--space-4); padding:var(--space-5);
+            background:var(--color-surface); border:1px solid var(--color-border);
+            border-radius:var(--radius-lg); line-height:2.2;">
+            <strong>Riyaansh Mittal</strong><br />
+            3, Naval Vihar, Baghpat Road<br />
+            Meerut, Uttar Pradesh 250002<br />
+            India<br /><br />
+            E-Mail: <a href="mailto:kontakt@nettoklar.de">kontakt@nettoklar.de</a>
+          </address>
+        </section>
+
+        <section id="rechner" class="anchor-section">
+          <h2>2. Die Rechner selbst</h2>
+          <p>
+            Das ist der wichtigste Punkt: Alles, was Sie in einen NettoKlar-Rechner eintippen —
+            Bruttolohn, Steuerklasse, Rentenangaben — wird <strong>ausschließlich lokal
+            in Ihrem Browser verarbeitet</strong>. Es gibt keinen Server, der Ihre
+            Eingaben empfängt. Es gibt keine Datenbank, in der Berechnungen gespeichert werden.
+            Wenn Sie die Seite schließen, ist alles weg.
+          </p>
+          <p>
+            Das ist keine Marketing-Aussage, sondern technische Realität: Die Rechner sind
+            in JavaScript geschrieben und laufen direkt im Browser. Ich habe schlicht keinen
+            Weg, Ihre Eingaben zu sehen — und das ist so gewollt.
+          </p>
+        </section>
+
+        <section id="hosting" class="anchor-section">
+          <h2>3. Hosting über Cloudflare Pages</h2>
+          <p>
+            NettoKlar läuft auf Cloudflare Pages, einem Hosting-Dienst von Cloudflare, Inc.
+            (101 Townsend St., San Francisco, CA 94107, USA). Wenn Sie die Website aufrufen,
+            verarbeitet Cloudflare automatisch Zugriffsdaten — das ist bei jeder Website
+            technisch unvermeidbar:
+          </p>
+          <ul class="content-list">
+            <li>Ihre IP-Adresse (wird nach dem Aufruf anonymisiert bzw. aggregiert gespeichert)</li>
+            <li>Datum, Uhrzeit und aufgerufene URL</li>
+            <li>Browser-Typ, Betriebssystem, Bildschirmgröße</li>
+            <li>Referrer (von welcher Seite Sie kamen)</li>
+          </ul>
+          <p>
+            Cloudflare braucht diese Daten für DDoS-Schutz, CDN-Auslieferung und Fehlerbehebung.
+            Ich sehe nur aggregierte Statistiken — keine individuellen IP-Adressen.
+            Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb).
+            Cloudflare ist unter dem EU-US Data Privacy Framework zertifiziert.
+            Mehr dazu: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Datenschutzrichtlinie</a>.
+          </p>
+        </section>
+
+        <section id="adsense" class="anchor-section">
+          <h2>4. Google AdSense — Werbung</h2>
+
+          <div class="nachzahlung-box" role="note">
+            <p class="nachzahlung-label">Nur mit Ihrer Einwilligung</p>
+            <p class="nachzahlung-text">
+              AdSense ist standardmäßig deaktiviert. Ohne Ihre aktive Zustimmung
+              im Cookie-Banner werden keine AdSense-Cookies gesetzt und keine
+              personalisierten Anzeigen geladen.
+            </p>
+          </div>
+
+          <p>
+            NettoKlar zeigt Werbeanzeigen über <strong>Google AdSense</strong>, einen Dienst
+            von Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland).
+            Ohne Werbung könnte ich diese Website nicht kostenlos und ohne Registrierung anbieten —
+            das ist der ehrliche Hintergrund.
+          </p>
+          <p>
+            Wenn Sie einwilligen, setzt Google AdSense Cookies, die Ihr Surf-Verhalten
+            über verschiedene Websites hinweg verfolgen, um Ihnen auf Sie zugeschnittene
+            Anzeigen zu zeigen. Das läuft über das DoubleClick-System von Google.
+            Cookie-Laufzeit: bis zu 13 Monate.
+          </p>
+          <p>
+            Ich betreibe AdSense mit <strong>Consent Mode v2</strong> über Cloudflare Zaraz.
+            Das bedeutet technisch: Bevor Sie zustimmen, sendet AdSense nur einen anonymen
+            Ping (<code>denied</code>-Modus) — keine Cookies, keine Profildaten, kein Tracking.
+            Erst nach Ihrer Einwilligung wechselt das System in den normalen Modus.
+          </p>
+          <p>
+            Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Einwilligung
+            jederzeit widerrufbar über den Cookie-Banner oder den Link
+            „Cookie-Einstellungen" im Footer dieser Seite.
+          </p>
+          <p style="font-size:var(--text-sm); color:var(--color-text-muted)">
+            Weiterführende Links:
+            <a href="https://support.google.com/adsense/answer/1348695" target="_blank" rel="noopener noreferrer">Google AdSense &amp; Datenschutz</a> ·
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a> ·
+            <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Meine Werbepräferenzen verwalten</a>
+          </p>
+        </section>
+
+        <section id="analytics" class="anchor-section">
+          <h2>5. Google Analytics 4</h2>
+          <p>
+            Ich nutze <strong>Google Analytics 4</strong> — ebenfalls über Cloudflare Zaraz
+            und Consent Mode v2 — um zu verstehen, welche Rechner am meisten genutzt werden
+            und ob neue Seiten ankommen. Ohne diese Zahlen wäre ich blind beim Verbessern
+            der Website.
+          </p>
+          <p>
+            Auch hier gilt: Standardmäßig deaktiviert. Ohne Einwilligung fließt kein
+            einziges Byte an Google Analytics. Nach Ihrer Einwilligung erfasst GA4
+            anonymisierte Seitenaufrufe, Klick-Pfade und Verweildauer — aber keine
+            Namen, E-Mail-Adressen oder persönlichen Angaben. IP-Adressen werden
+            vor der Übertragung gekürzt. Speicherdauer in GA4: 14 Monate.
+          </p>
+          <p>
+            Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Widerruf
+            jederzeit über den Cookie-Banner.
+            Mehr: <a href="https://support.google.com/analytics/answer/6004245" target="_blank" rel="noopener noreferrer">Google Analytics &amp; Datenschutz</a>.
+          </p>
+        </section>
+
+        <section id="keine-weiteren" class="anchor-section">
+          <h2>6. Was es nicht gibt</h2>
+          <p>
+            Damit keine Fragen offen bleiben — auf NettoKlar gibt es bewusst nicht:
+          </p>
+          <ul class="content-list">
+            <li>Facebook Pixel oder andere Social-Media-Tracker</li>
+            <li>Eingebettete YouTube-Videos (die automatisch Google-Cookies setzen)</li>
+            <li>Externe Schriftarten, die an Google Fonts-Server ausgeliefert werden — alle Fonts kommen vom eigenen CDN</li>
+            <li>Newsletter-Anmeldungen oder E-Mail-Marketing</li>
+            <li>Nutzerkonten, Passwörter oder gespeicherte Profile</li>
+            <li>Zahlungsdienstleister (NettoKlar kostet nichts)</li>
+          </ul>
+        </section>
+
+        <section id="kontakt-email" class="anchor-section">
+          <h2>7. Wenn Sie mir eine E-Mail schreiben</h2>
+          <p>
+            Wenn Sie mich über <a href="mailto:kontakt@nettoklar.de">kontakt@nettoklar.de</a>
+            kontaktieren, speichere ich Ihre E-Mail-Adresse und den Inhalt der Nachricht,
+            um Ihnen antworten zu können. Ich leite diese Daten nicht weiter, verwende
+            sie nicht für Werbung und lösche die Korrespondenz, sobald sie erledigt ist.
+            Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der
+            Kommunikation mit Nutzern).
+          </p>
+        </section>
+
+        <section id="cookies" class="anchor-section">
+          <h2>8. Cookies</h2>
+          <p>
+            Technisch notwendige Cookies gibt es auf NettoKlar nicht — die Website
+            funktioniert komplett ohne. Cookies kommen ausschließlich ins Spiel,
+            wenn Sie AdSense oder Analytics einwilligen (Abschnitte 4 und 5).
+            Sie können Cookies in Ihren Browser-Einstellungen jederzeit löschen,
+            ohne dass die Rechner dadurch schlechter funktionieren.
+          </p>
+        </section>
+
+        <section id="rechte" class="anchor-section">
+          <h2>9. Ihre Rechte</h2>
+          <p>
+            Nach der DSGVO haben Sie das Recht auf Auskunft (Art. 15), Berichtigung
+            (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18),
+            Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Außerdem können
+            Sie eine Einwilligung jederzeit ohne Angabe von Gründen widerrufen
+            (Art. 7 Abs. 3) — das geht über den Cookie-Banner auf dieser Seite.
+          </p>
+          <p>
+            Da ich keine personenbezogenen Daten auf eigenen Servern halte,
+            sind Auskunftsersuchen für Daten bei Google und Cloudflare direkt
+            an diese zu richten. Für alles, was meine eigene Verarbeitung betrifft:
+            <a href="mailto:kontakt@nettoklar.de">kontakt@nettoklar.de</a>,
+            Betreff „DSGVO-Anfrage". Ich antworte innerhalb von 30 Tagen.
+          </p>
+          <p>
+            Beschwerden können Sie bei der deutschen Datenschutz-Aufsichtsbehörde
+            einreichen: <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener noreferrer">Bundesbeauftragter für den Datenschutz und die Informationsfreiheit (BfDI)</a>.
+          </p>
+        </section>
+
+        <section id="aenderungen" class="anchor-section">
+          <h2>10. Änderungen</h2>
+          <p>
+            Wenn ich neue Dienste einbinde oder sich Gesetze ändern, aktualisiere
+            ich diese Seite und ändere das Datum „Stand" oben. Wesentliche Änderungen
+            — zum Beispiel ein neues Werbenetzwerk — werde ich im Cookie-Banner
+            ankündigen, sodass Sie erneut zustimmen können.
+          </p>
+        </section>
+
+        <div class="cta-group">
+          <a href="/kontakt/" class="btn-secondary">Fragen zum Datenschutz →</a>
+          <a href="/ueber-nettoklar/" class="btn-secondary">Impressum →</a>
+          <a href="/" class="btn-secondary">Zurück zur Startseite →</a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+</BaseLayout>

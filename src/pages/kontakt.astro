@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "url": "https://nettoklar.de/kontakt/",
+      "name": "Kontakt — NettoKlar",
+      "description": "Fehler melden, Werte korrigieren oder einen neuen Rechner vorschlagen. NettoKlar wird von einer Person betreut — eine E-Mail reicht.",
+      "email": "kontakt@nettoklar.de",
+      "availableLanguage": "German",
+      "areaServed": "DE",
+      "inLanguage": "de-DE"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de/" },
+        { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://nettoklar.de/kontakt/" }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Kontakt — Fehler melden oder Feedback geben | NettoKlar"
+  description="Einen Rechenfehler entdeckt oder einen veralteten Steuerwert gefunden? Schreiben Sie an kontakt@nettoklar.de — ich antworte in der Regel innerhalb von 48 Stunden."
+  schema={schema}
+  slug="kontakt"
+>
+  <a href="#main-content" class="sr-only">Zum Inhalt springen</a>
+
+  <main id="main-content">
+    <div class="page-wrapper">
+
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">NettoKlar</a></li>
+          <li>Kontakt</li>
+        </ol>
+      </nav>
+
+      <article class="article-body">
+
+        <header class="article-header">
+          <h1>Kontakt</h1>
+          <div class="article-meta">
+            <span>Antwort in ca. 48 Stunden</span>
+            <span class="freshness-badge">✓ Aktiv betreut</span>
+          </div>
+        </header>
+
+        <div class="summary-card">
+          <h2>Direkt erreichbar</h2>
+          <p style="margin-bottom:var(--space-3)">
+            NettoKlar ist kein Team und kein Ticketsystem — ich bin eine einzelne Person,
+            die diese Website in ihrer Freizeit pflegt. Eine E-Mail reicht für alles.
+          </p>
+          <p>
+            <a href="mailto:kontakt@nettoklar.de" style="font-size:var(--text-lg); font-weight:600">
+              kontakt@nettoklar.de
+            </a>
+          </p>
+          <p style="margin-top:var(--space-2); font-size:var(--text-sm); color:var(--color-text-muted)">
+            Deutsch bevorzugt · Werktags in der Regel Antwort innerhalb von 48 Stunden
+          </p>
+        </div>
+
+        <section id="wofuer" class="anchor-section">
+          <h2>Wofür Sie schreiben können</h2>
+          <p>
+            Ich freue mich über jede Art von Rückmeldung — besonders über Hinweise
+            auf Fehler, denn kein Rechner ist perfekt und Steuergesetze ändern sich.
+          </p>
+
+          <div class="faq-list">
+
+            <details class="faq-item">
+              <summary>Einen Rechenfehler melden</summary>
+              <div class="faq-answer">
+                <p>
+                  Am hilfreichsten: welcher Rechner, welche Eingaben, welches Ergebnis
+                  Sie bekommen haben — und welchen Wert Sie stattdessen erwartet hätten
+                  (gerne mit Quelle, z.B. einem Link zur BMF- oder DRV-Website).
+                  Wenn ich den Fehler bestätigen kann, ist er in der Regel innerhalb
+                  von 24 Stunden korrigiert.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Einen veralteten Steuerwert melden</summary>
+              <div class="faq-answer">
+                <p>
+                  Steuerwerte werden zum 1. Januar aktualisiert, manchmal auch unterjährig
+                  (z.B. beim Mindestlohn im Juli). Falls Sie irgendwo eine Zahl finden,
+                  die nicht mehr stimmt: kurze E-Mail mit Seitenname und korrektem Wert
+                  genügt. Ich nehme solche Hinweise sehr ernst — die Richtigkeit der
+                  Zahlen ist der eigentliche Zweck dieser Website.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Einen neuen Rechner vorschlagen</summary>
+              <div class="faq-answer">
+                <p>
+                  Gibt es eine Berechnung, die Sie regelmäßig brauchen und für die
+                  Sie keinen guten kostenlosen Rechner kennen? Beschreiben Sie kurz,
+                  was er können soll. Ich plane neue Rechner hauptsächlich auf Basis
+                  von Nutzeranfragen — das ist der verlässlichste Weg zu wissen,
+                  was tatsächlich gebraucht wird.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Technisches Problem melden</summary>
+              <div class="faq-answer">
+                <p>
+                  Wenn etwas nicht funktioniert oder komisch aussieht: Browser und Version
+                  (z.B. Firefox 125 auf Windows 11), eine Beschreibung des Problems —
+                  und wenn möglich ein Screenshot. Insbesondere auf älteren iPhones
+                  oder ungewöhnlichen Android-Browsern kommen manchmal Darstellungsprobleme vor,
+                  die ich alleine nicht immer reproduzieren kann.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Datenschutz- oder rechtliche Anfragen</summary>
+              <div class="faq-answer">
+                <p>
+                  Für DSGVO-Auskunftsersuchen (Art. 15) bitte Betreff „DSGVO-Anfrage" verwenden,
+                  ich antworte innerhalb von 30 Tagen. Für rechtliche Abmahnungen bitte
+                  ausschließlich per E-Mail — da ich in Indien lebe, können Postsendungen
+                  aus Deutschland Wochen unterwegs sein und Fristen verpassen.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Presse oder Kooperationen</summary>
+              <div class="faq-answer">
+                <p>
+                  Für redaktionelle Anfragen oder inhaltliche Kooperationen gerne ebenfalls
+                  per E-Mail. Ich schalte keine bezahlten Artikel und kennzeichne
+                  keine Inhalte als unabhängig, die es nicht sind — das ist mir wichtig.
+                </p>
+              </div>
+            </details>
+
+          </div>
+        </section>
+
+        <section id="was-ich-nicht-bin" class="anchor-section">
+          <h2>Was ich nicht beantworten kann</h2>
+
+          <div class="nachzahlung-box" role="note">
+            <p class="nachzahlung-label">Kein Steuerberater</p>
+            <p class="nachzahlung-text">
+              Ich kann keine individuelle Steuerberatung geben — weder per E-Mail
+              noch über die Website. Für konkrete Fragen zu Ihrer persönlichen
+              Steuersituation ist ein zugelassener Steuerberater oder das
+              Finanzamt die richtige Adresse.
+            </p>
+          </div>
+
+          <p style="margin-top:var(--space-4)">
+            Fragen wie „Wie viel Steuer zahle ich auf meine Abfindung?",
+            „Kann ich mein Homeoffice absetzen?" oder „Was passiert steuerlich,
+            wenn ich nebenbei freiberuflich arbeite?" hängen von Ihrer
+            individuellen Situation ab und lassen sich nicht pauschal beantworten.
+            Die Rechner auf NettoKlar sind gute Orientierungshilfen —
+            aber kein Ersatz für professionellen Rat.
+          </p>
+        </section>
+
+        <dl class="fact-strip" style="margin-top:var(--space-8)">
+          <div class="fact-item">
+            <dt>E-Mail</dt>
+            <dd>kontakt@nettoklar.de</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Sprache</dt>
+            <dd>Deutsch (bevorzugt)</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Antwortzeit</dt>
+            <dd>≤ 48 h (Werktage)</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Standort</dt>
+            <dd>Indien</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Projekt</dt>
+            <dd>Solo, privat</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Bezahlte Inhalte</dt>
+            <dd>Keine</dd>
+          </div>
+        </dl>
+
+        <div class="cta-group">
+          <a href="mailto:kontakt@nettoklar.de" class="btn-primary">E-Mail schreiben →</a>
+          <a href="/datenschutz/" class="btn-secondary">Datenschutz →</a>
+          <a href="/ueber-nettoklar/" class="btn-secondary">Impressum →</a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+</BaseLayout>
