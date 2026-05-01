@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 const { title, description, schema, slug } = Astro.props;
-const canonicalURL = `https://nettoklar.de${slug ? '/' + slug + '/' : '/'}`;
+const canonicalURL = new URL(Astro.url.pathname, 'https://nettoklar.de').href;
 const ogImage = 'https://nettoklar.de/og-default.png';
 ---
 <!DOCTYPE html>
