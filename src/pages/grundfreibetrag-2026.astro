@@ -8,21 +8,35 @@ const schema = {
       "@type": "Article",
       "@id": "https://nettoklar.de/grundfreibetrag-2026/#article",
       "url": "https://nettoklar.de/grundfreibetrag-2026/",
-      "name": "Grundfreibetrag 2026: 12.348 € – Was steuerfrei bleibt",
-      "headline": "Grundfreibetrag 2026: €12.348 – Was bedeutet das für Sie?",
+      "name": "Grundfreibetrag 2026: 12.348 € – Steuerfreies Einkommen erklärt",
+      "headline": "Grundfreibetrag 2026: 12.348 € – Steuerfreies Einkommen erklärt",
       "datePublished": "2026-04-23",
-      "dateModified": "2026-04-30",
+      "dateModified": "2026-05-05",
       "inLanguage": "de-DE",
       "isPartOf": { "@id": "https://nettoklar.de/#website" },
       "breadcrumb": { "@id": "https://nettoklar.de/grundfreibetrag-2026/#breadcrumb" },
-      "author": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de/" },
-      "publisher": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de/" },
+      "author": {
+        "@type": "Person",
+        "name": "Riyaansh Mittal",
+        "url": "https://nettoklar.de/ueber-nettoklar/",
+        "jobTitle": "Gründer, NettoKlar"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NettoKlar",
+        "url": "https://nettoklar.de/",
+        "@id": "https://nettoklar.de/#organization"
+      },
       "image": {
         "@type": "ImageObject",
         "url": "https://nettoklar.de/og-default.png",
         "width": 1200,
         "height": 630
       },
+      "speakableSpecification": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".fact-strip", ".faq-list", ".summary-card", "#direct-answer"]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -39,7 +53,10 @@ const schema = {
         {
           "@type": "Question",
           "name": "Wie hoch ist der Grundfreibetrag 2026?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Der Grundfreibetrag 2026 beträgt 12.348 Euro für Alleinstehende und 24.696 Euro für zusammen veranlagte Ehepaare. Das sind 252 Euro mehr als 2025 (12.096 Euro)." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Grundfreibetrag 2026 beträgt 12.348 Euro für Alleinstehende und 24.696 Euro für zusammen veranlagte Ehepaare. Das sind 252 Euro mehr als 2025 (12.096 Euro). Quelle: Bundesfinanzministerium, https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html"
+          }
         },
         {
           "@type": "Question",
@@ -68,8 +85,8 @@ const schema = {
 ---
 
 <BaseLayout
-  title="Grundfreibetrag 2026: Steuerfreibetrag Höhe & steuerfreies Einkommen"
-  description="Der Grundfreibetrag 2026 beträgt 12.348 €. Was ist neu? Steuerfreies Einkommen für Arbeitnehmer, Rentner & Selbstständige."
+  title="Grundfreibetrag 2026: 12.348 € – Steuerfreies Einkommen erklärt"
+  description="Der Grundfreibetrag 2026 beträgt 12.348 €. Steuerfreies Einkommen für Arbeitnehmer, Rentner & Selbstständige – mit Tabelle, FAQ & BMF-Quelle."
   schema={schema}
 >
   <main class="page-wrapper">
@@ -81,15 +98,15 @@ const schema = {
     </nav>
 
     <header class="article-header">
-      <h1>Steuerfreibetrag &amp; Grundfreibetrag 2026 – Aktuelle Höhe &amp; Änderungen</h1>
-      <div class="article-meta">
-        <span>Stand: April 2026</span>
-        <span>·</span>
-        <span>Lesezeit: ca. 5 Minuten</span>
-        <span class="freshness-badge">✓ 2026 aktualisiert</span>
-        <span style="font-size:var(--text-xs); color:var(--color-text-muted)">
-          Geprüft von der NettoKlar-Redaktion · Quellen: BMF, §32a EStG
-        </span>
+      <h1>Grundfreibetrag 2026: 12.348 € – Steuerfreies Einkommen erklärt</h1>
+      <div class="author-byline">
+        <span>Von <strong><a href="/ueber-nettoklar/">Riyaansh Mittal</a></strong></span>
+        <span class="byline-sep">·</span>
+        <span>Gründer, NettoKlar</span>
+        <span class="byline-sep">·</span>
+        <time datetime="2026-05-05">Aktualisiert: Mai 2026</time>
+        <span class="byline-sep">·</span>
+        <span>Geprüft anhand: <a href="https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html" target="_blank" rel="noopener noreferrer">BMF</a>, §32a EStG</span>
       </div>
     </header>
 
@@ -116,9 +133,35 @@ const schema = {
       </div>
       <div class="fact-item">
         <dt>Quelle</dt>
-        <dd>BMF 2026</dd>
+        <dd><a href="https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html" target="_blank" rel="noopener noreferrer">BMF 2026</a></dd>
       </div>
     </dl>
+
+    <p id="direct-answer" class="direct-answer">
+      Der Grundfreibetrag 2026 beträgt <strong>12.348 €</strong> für Alleinstehende
+      und <strong>24.696 €</strong> für zusammenveranlagte Ehepaare — 252 € mehr als 2025.
+      Einkommen bis zu dieser Grenze ist vollständig steuerfrei. Kein Antrag nötig,
+      gilt automatisch für jeden Steuerzahler in Deutschland.
+    </p>
+
+    <!-- Solution B: FAQ Preview Strip — visible in Frame 1, pill links to anchors -->
+    <div class="faq-preview-strip">
+      <span class="faq-preview-label">Häufige Fragen:</span>
+      <a href="#faq-hoehe">Wie hoch ist der Grundfreibetrag?</a>
+      <a href="#faq-rentner">Gilt er auch für Rentner?</a>
+      <a href="#faq-kinderfreibetrag">Unterschied zum Kinderfreibetrag?</a>
+      <a href="#faq-beantragen">Muss ich ihn beantragen?</a>
+      <a href="#faq" class="faq-preview-all">Alle FAQs →</a>
+    </div>
+
+    <nav class="article-jump-nav" aria-label="Springe zu Abschnitt">
+      <span class="jump-nav-label">Auf dieser Seite:</span>
+      <a href="#was-ist">Was ist der Grundfreibetrag?</a>
+      <a href="#verlauf">Verlauf 2021–2026</a>
+      <a href="#rentner">Für Rentner</a>
+      <a href="#faq">FAQ</a>
+      <a href="#steueraenderungen">→ Alle Änderungen 2026</a>
+    </nav>
 
     <div class="summary-card">
       <h2>Grundfreibetrag 2026 auf einen Blick</h2>
@@ -132,46 +175,40 @@ const schema = {
         </thead>
         <tbody>
           <tr class="highlight-row">
-            <td>Alleinstehende / Ledige</td>
-            <td><strong>€12.348</strong></td>
-            <td>+€252</td>
+            <td data-label="Wer?">Alleinstehende / Ledige</td>
+            <td data-label="Grundfreibetrag 2026"><strong>€12.348</strong></td>
+            <td data-label="Änderung zu 2025">+€252</td>
           </tr>
           <tr>
-            <td>Verheiratete (Zusammenveranlagung)</td>
-            <td><strong>€24.696</strong></td>
-            <td>+€504</td>
+            <td data-label="Wer?">Verheiratete (Zusammenveranlagung)</td>
+            <td data-label="Grundfreibetrag 2026"><strong>€24.696</strong></td>
+            <td data-label="Änderung zu 2025">+€504</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <article class="article-body">
-      <h2>Was ist der Grundfreibetrag?</h2>
+
+      <h2 id="was-ist">Was ist der Grundfreibetrag?</h2>
       <p>
-        Steuerfrei bedeutet nicht abgabenfrei: Wer unter €12.348 verdient, zahlt
-        keine Einkommensteuer — aber Sozialversicherungsbeiträge (Rente, Kranken-,
-        Pflegeversicherung) fallen ab dem ersten Euro an, unabhängig vom Grundfreibetrag.
-        Der <strong>Steuerfreibetrag 2026 beträgt 12.348 € für Alleinstehende</strong> — 
-        das ist der Betrag, auf den Sie keine Einkommensteuer zahlen. Der offizielle Name ist Grundfreibetrag — gemeint ist Ihr steuerfreies Existenzminimum. 
+        Der <strong>Grundfreibetrag 2026 beträgt 12.348 € für Alleinstehende</strong> —
+        das ist der Betrag, auf den Sie keine Einkommensteuer zahlen. Er sichert das
+        steuerliche Existenzminimum und ist verfassungsrechtlich geschützt (§32a EStG).
         Für Ehepaare gilt der doppelte Steuerfreibetrag: <strong>24.696 €</strong>.
       </p>
       <p>
-        Er gilt für <em>jeden</em> Steuerzahler automatisch, unabhängig von Ihrer
-        Steuerklasse oder Ihrem Gesamteinkommen. Kein Antrag nötig — Ihr Arbeitgeber
-        berücksichtigt ihn automatisch bei der monatlichen Lohnsteuerberechnung.
-        Nur der Teil Ihres Einkommens <em>über</em> 12.348 € wird besteuert,
-        beginnend mit einem Eingangssteuersatz von 14%.
-        Der Grundfreibetrag ist verfassungsrechtlich geschützt — er sichert das
-        steuerliche Existenzminimum und muss vom Gesetzgeber jährlich mindestens
-        an die Inflation angepasst werden.
+        Steuerfrei bedeutet nicht abgabenfrei: Wer unter €12.348 verdient, zahlt
+        keine Einkommensteuer — aber Sozialversicherungsbeiträge (Rente, Kranken-,
+        Pflegeversicherung) fallen ab dem ersten Euro an. Kein Antrag nötig — Ihr
+        Arbeitgeber berücksichtigt ihn automatisch via ELStAM.
       </p>
-
       <div class="inline-link-callout">
         → Steuererklärungspflicht prüfen:
         <a href="/steuererklarung-frist-2025/">Frist 31. Juli 2026 — alle Details</a>
       </div>
 
-      <h2>Grundfreibetrag 2026 vs. Vorjahre</h2>
+      <h2 id="verlauf">Grundfreibetrag 2026 vs. Vorjahre</h2>
       <table class="data-table">
         <thead>
           <tr>
@@ -182,27 +219,44 @@ const schema = {
         </thead>
         <tbody>
           <tr class="highlight-row">
-            <td><strong>2026</strong></td>
-            <td><strong>€12.348</strong></td>
-            <td>+€252</td>
+            <td data-label="Jahr"><strong>2026</strong></td>
+            <td data-label="Grundfreibetrag"><strong>€12.348</strong></td>
+            <td data-label="Erhöhung">+€252</td>
           </tr>
-          <tr><td>2025</td><td>€12.096</td><td>+€312</td></tr>
-          <tr><td>2024</td><td>€11.784</td><td>+€876</td></tr>
-          <tr><td>2023</td><td>€10.908</td><td>+€561</td></tr>
-          <tr><td>2022</td><td>€10.347</td><td>+€603</td></tr>
-          <tr><td>2021</td><td>€9.744</td><td>+€336</td></tr>
+          <tr>
+            <td data-label="Jahr">2025</td>
+            <td data-label="Grundfreibetrag">€12.096</td>
+            <td data-label="Erhöhung">+€312</td>
+          </tr>
+          <tr>
+            <td data-label="Jahr">2024</td>
+            <td data-label="Grundfreibetrag">€11.784</td>
+            <td data-label="Erhöhung">+€876</td>
+          </tr>
+          <tr>
+            <td data-label="Jahr">2023</td>
+            <td data-label="Grundfreibetrag">€10.908</td>
+            <td data-label="Erhöhung">+€561</td>
+          </tr>
+          <tr>
+            <td data-label="Jahr">2022</td>
+            <td data-label="Grundfreibetrag">€10.347</td>
+            <td data-label="Erhöhung">+€603</td>
+          </tr>
+          <tr>
+            <td data-label="Jahr">2021</td>
+            <td data-label="Grundfreibetrag">€9.744</td>
+            <td data-label="Erhöhung">+€336</td>
+          </tr>
         </tbody>
       </table>
-
       <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-top:calc(var(--space-2) * -1)">
         Quelle: <a href="https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html" target="_blank" rel="noopener noreferrer">BMF — Steuerliche Änderungen 2026</a> · Stand: Januar 2026
       </p>
-
       <p>
         Die jährlichen Erhöhungen gleichen die <strong>kalte Progression</strong> aus:
         Ohne Anpassung würden Arbeitnehmer durch inflationsbedingte Gehaltserhöhungen
-        automatisch in höhere Steuerstufen rutschen und real weniger behalten — obwohl
-        ihre Kaufkraft gleich bleibt.
+        automatisch in höhere Steuerstufen rutschen und real weniger behalten.
       </p>
 
       <h2>Steuerfreies Einkommen 2026 – Was zählt dazu?</h2>
@@ -214,9 +268,6 @@ const schema = {
       </p>
 
       <h2>Wer profitiert am meisten von der Erhöhung 2026?</h2>
-      <p>
-        Die Erhöhung um €252 spart unterschiedlich viel, je nach Einkommenshöhe:
-      </p>
       <table class="data-table">
         <thead>
           <tr>
@@ -225,12 +276,20 @@ const schema = {
           </tr>
         </thead>
         <tbody>
-          <tr><td>14% (Eingangssteuersatz)</td><td>ca. <strong>€35 / Jahr</strong></td></tr>
-          <tr><td>42% (Spitzensteuersatz)</td><td>ca. <strong>€106 / Jahr</strong></td></tr>
-          <tr><td>Ehepaare (doppelter GFB)</td><td>ca. <strong>€70 – €212 / Jahr</strong></td></tr>
+          <tr>
+            <td data-label="Steuersatz">14% (Eingangssteuersatz)</td>
+            <td data-label="Ersparnis">ca. <strong>€35 / Jahr</strong></td>
+          </tr>
+          <tr>
+            <td data-label="Steuersatz">42% (Spitzensteuersatz)</td>
+            <td data-label="Ersparnis">ca. <strong>€106 / Jahr</strong></td>
+          </tr>
+          <tr>
+            <td data-label="Steuersatz">Ehepaare (doppelter GFB)</td>
+            <td data-label="Ersparnis">ca. <strong>€70 – €212 / Jahr</strong></td>
+          </tr>
         </tbody>
       </table>
-
       <div class="inline-link-callout">
         → Verheiratet? Steuerklassenwechsel kann Ihre monatliche Nettodifferenz deutlich erhöhen.
         <a href="/steuerklasse-heirat/">Steuerklasse nach Heirat prüfen</a>
@@ -238,107 +297,115 @@ const schema = {
 
       <h2>Grundfreibetrag und Solidaritätszuschlag 2026</h2>
       <p>
-        Der Solidaritätszuschlag entfällt 2026 für die große Mehrheit der Steuerzahler.
-        Die Freigrenze steigt auf <strong>€20.350 festgesetzte Einkommensteuer</strong>
-        (2025: €19.950). Wer weniger als ca. €75.000 zu versteuerndes Jahreseinkommen hat,
-        zahlt keinen Soli.
+        Der Solidaritätszuschlag entfällt 2026 für die große Mehrheit. Die Freigrenze
+        steigt auf <strong>€20.350 festgesetzte Einkommensteuer</strong> (2025: €19.950).
+        Wer weniger als ca. €75.000 zu versteuerndes Jahreseinkommen hat, zahlt keinen Soli.
       </p>
 
-      <h2>Grundfreibetrag für Rentner 2026</h2>
+      <h2 id="rentner">Grundfreibetrag für Rentner 2026</h2>
       <p>
-        Rentner haben denselben Grundfreibetrag von €12.348. Da Renten jedoch nicht
-        vollständig steuerpflichtig sind, liegt die reale Grenze deutlich höher: Wer
-        2026 in Rente geht, hat einen Besteuerungsanteil von 83,5% — das heißt, erst
-        ab einer Bruttorente von ca. <strong>€14.787 pro Jahr</strong> entsteht
-        überhaupt ein steuerpflichtiger Anteil über dem Grundfreibetrag.
+        Rentner haben denselben Grundfreibetrag von €12.348. Da Renten nicht vollständig
+        steuerpflichtig sind, liegt die reale Grenze deutlich höher: Wer 2026 in Rente geht,
+        hat einen Besteuerungsanteil von 83,5% — erst ab einer Bruttorente von ca.
+        <strong>€14.787 pro Jahr</strong> entsteht ein steuerpflichtiger Anteil über dem
+        Grundfreibetrag.
       </p>
       <p>
-        Neu seit 2026 — Aktivrente (§3 Nr. 2b EStG): Arbeitende Rentner können 
-        zusätzlich bis zu €2.000 pro Monat steuerfrei hinzuverdienen, wenn sie 
-        bereits Rente beziehen. Das ist eine der größten steuerlichen Neuerungen 
-        für Rentner seit Jahren und betrifft jeden, der im Ruhestand noch arbeitet.
+        <strong>Neu seit 2026 — Aktivrente (§3 Nr. 2b EStG):</strong> Arbeitende Rentner
+        können bis zu €2.000 pro Monat steuerfrei hinzuverdienen.
+        Quelle: <a href="https://www.bundesfinanzministerium.de/Content/DE/FAQ/FAQ-zur-Aktivrente.html" target="_blank" rel="noopener noreferrer">BMF: FAQ zur Aktivrente</a>
       </p>
-      <p>
-        Mehr dazu: <a href="https://www.bundesfinanzministerium.de/Content/DE/FAQ/FAQ-zur-Aktivrente.html" 
-        target="_blank" rel="noopener noreferrer">BMF: FAQ zur Aktivrente</a>
-      </p>
-
-      <p>Den genauen Nettobetrag für Ihr Gehalt berechnen: 
+      <p>Den genauen Nettobetrag berechnen:
         <a href="/steuerklasse-finder/">Zum Steuerklassen-Finder →</a>
       </p>
 
-      <h2>FAQ — Häufige Fragen zum Grundfreibetrag 2026</h2>
+      <div id="steueraenderungen" class="related-links-box">
+        <strong>Weitere Steuerliche Themen 2026</strong>
+        <ul>
+          <li><a href="/steueraenderungen-2026/">Alle Steuerlichen Änderungen 2026 – Vollständige Übersicht</a></li>
+          <li><a href="/kinderfreibetrag-2026/">Kinderfreibetrag 2026 – Höhe, Günstigerprüfung & Kindergeld</a></li>
+          <li><a href="/lohnsteuer-tabelle-2026/">Lohnsteuertabelle 2026</a></li>
+        </ul>
+      </div>
 
+      <h2 id="faq">FAQ — Häufige Fragen zum Grundfreibetrag 2026</h2>
       <div class="faq-list">
-        <details class="faq-item">
+
+        <details class="faq-item" id="faq-hoehe">
           <summary>Wie hoch ist der Grundfreibetrag 2026?</summary>
           <div class="faq-answer">
-            <p>€12.348 für Alleinstehende, €24.696 für zusammen veranlagte Ehepaare — €252 mehr als 2025. Quelle: <a href="https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html" target="_blank" rel="noopener noreferrer">BMF — Steuerliche Änderungen 2026</a>.</p>
+            <p>€12.348 für Alleinstehende, €24.696 für zusammen veranlagte Ehepaare — €252 mehr als 2025.
+            Quelle: <a href="https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html" target="_blank" rel="noopener noreferrer">BMF — Steuerliche Änderungen 2026</a>.</p>
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" id="faq-beantragen">
           <summary>Muss ich den Grundfreibetrag beantragen?</summary>
           <div class="faq-answer">
-            <p>Nein. Er wird automatisch berücksichtigt — bei der monatlichen Lohnsteuer durch Ihren Arbeitgeber (ELStAM) und bei der Steuererklärung durch das Finanzamt.</p>
+            <p>Nein. Er wird automatisch berücksichtigt — bei der monatlichen Lohnsteuer durch Ihren
+            Arbeitgeber (ELStAM) und bei der Steuererklärung durch das Finanzamt.</p>
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" id="faq-unter-grenze">
           <summary>Was passiert, wenn mein Einkommen unter dem Grundfreibetrag liegt?</summary>
           <div class="faq-answer">
-            <p>Sie zahlen keine Einkommensteuer. Falls trotzdem Lohnsteuer einbehalten wurde (z.B. Steuerklasse 6), erhalten Sie diese vollständig zurück — aber nur durch Abgabe einer <a href="/steuererklarung-frist-2025/">Steuererklärung</a>.</p>
+            <p>Sie zahlen keine Einkommensteuer. Falls trotzdem Lohnsteuer einbehalten wurde
+            (z.B. Steuerklasse 6), erhalten Sie diese vollständig zurück — aber nur durch Abgabe
+            einer <a href="/steuererklarung-frist-2025/">Steuererklärung</a>.</p>
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" id="faq-rentner">
           <summary>Gilt der Grundfreibetrag auch für Rentner?</summary>
           <div class="faq-answer">
-            <p>Ja, €12.348 gilt für alle. Da Renten nur teilweise steuerpflichtig sind, zahlen Rentner erst ab einer Bruttorente von ca. €14.787/Jahr Steuern (bei Rentenbeginn 2026).</p>
+            <p>Ja, €12.348 gilt für alle. Da Renten nur teilweise steuerpflichtig sind, zahlen
+            Rentner erst ab einer Bruttorente von ca. €14.787/Jahr Steuern (bei Rentenbeginn 2026).</p>
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" id="faq-kinderfreibetrag">
           <summary>Was ist der Unterschied zwischen Grundfreibetrag und Kinderfreibetrag?</summary>
           <div class="faq-answer">
-            <p>Der Grundfreibetrag (€12.348) gilt für jeden automatisch. Der Kinderfreibetrag (€9.756 pro Kind, 2026) ist zusätzlich und wird gegen das Kindergeld (€259/Monat) aufgerechnet — das Finanzamt wählt automatisch die günstigere Variante (Günstigerprüfung).</p>
+            <p>Der Grundfreibetrag (€12.348) gilt für jeden automatisch. Der
+            <a href="/kinderfreibetrag-2026/">Kinderfreibetrag (€9.756 pro Kind, 2026)</a>
+            ist zusätzlich und wird gegen das Kindergeld (€259/Monat) aufgerechnet —
+            das Finanzamt wählt automatisch die günstigere Variante (Günstigerprüfung).</p>
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" id="faq-sozialversicherung">
           <summary>Ich verdiene unter €12.348 — zahle ich gar keine Abzüge?</summary>
           <div class="faq-answer">
-            <p>
-              Für die Einkommensteuer: richtig, Sie zahlen keine. Aber Sozialversicherungs-
-              beiträge (Renten-, Kranken- und Pflegeversicherung) werden ab dem ersten Euro 
-              einbehalten — unabhängig vom Grundfreibetrag. Ihr Netto ist also nicht gleich 
-              Ihrem Brutto, auch wenn Sie unter der Freigrenze liegen.
-            </p>
+            <p>Für die Einkommensteuer: richtig, Sie zahlen keine. Aber Sozialversicherungsbeiträge
+            (Renten-, Kranken- und Pflegeversicherung) werden ab dem ersten Euro einbehalten —
+            unabhängig vom Grundfreibetrag.</p>
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" id="faq-mehr-lohnsteuer">
           <summary>Warum zahle ich 2026 mehr Lohnsteuer, obwohl mein Gehalt gleich geblieben ist?</summary>
           <div class="faq-answer">
-            <p>
-              Das liegt nicht am Grundfreibetrag, sondern an der Abschaffung der 
-              Mindestvorsorgepauschale (bisher €1.900 für Kassenpatienten, €3.000 für 
-              PKV-Versicherte). Betroffen sind ausschließlich privat Krankenversicherte 
-              (PKV). Gesetzlich Versicherte (GKV) zahlen 2026 durch den höheren 
-              Grundfreibetrag tendenziell weniger, nicht mehr.
-            </p>
+            <p>Das liegt an der Abschaffung der Mindestvorsorgepauschale (bisher €1.900 für
+            Kassenpatienten, €3.000 für PKV-Versicherte). Betroffen sind ausschließlich privat
+            Krankenversicherte (PKV). Gesetzlich Versicherte zahlen 2026 tendenziell weniger.
+            Mehr: <a href="/steueraenderungen-2026/">Alle Steuerlichen Änderungen 2026</a>.</p>
           </div>
         </details>
+
+      </div>
+
+      <div class="author-bio-block">
+        <strong>Riyaansh Mittal</strong> ist Gründer von NettoKlar und recherchiert
+        Steuer- und Sozialversicherungsdaten direkt anhand offizieller Quellen
+        (BMF, DRV, ELSTER, §§ EStG). <a href="/ueber-nettoklar/">Vollständiges Profil →</a>
       </div>
 
       <div class="cta-group">
-        <a href="/steuerklasse-finder/" class="btn-primary">
-          Steuerklasse prüfen →
-        </a>
-        <a href="/steuererklarung-frist-2025/" class="btn-secondary">
-          Steuererklärung Frist 2025 →
-        </a>
+        <a href="/steuerklasse-finder/" class="btn-primary">Steuerklasse prüfen →</a>
+        <a href="/steuererklarung-frist-2025/" class="btn-secondary">Steuererklärung Frist 2025 →</a>
       </div>
+
     </article>
   </main>
 </BaseLayout>

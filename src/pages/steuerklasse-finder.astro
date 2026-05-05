@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
 
 const schema = {
   "@context": "https://schema.org",
@@ -8,22 +8,22 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://nettoklar.de/steuerklasse-finder/#webpage",
       "url": "https://nettoklar.de/steuerklasse-finder/",
-      "name": "Welche Steuerklasse habe ich? Finder & Übersicht 2026",
-      "headline": "Welche Steuerklasse habe ich? – Steuerklassen-Finder 2026",
+      "name": "Steuerklassen-Finder 2026 – Welche Steuerklasse bin ich?",
+      "headline": "Steuerklassen-Finder 2026 – Welche Steuerklasse bin ich?",
       "datePublished": "2026-04-26",
-      "dateModified": "2026-04-26",
+      "dateModified": "2026-05-05",
       "inLanguage": "de-DE",
       "isPartOf": { "@id": "https://nettoklar.de/#website" },
       "breadcrumb": { "@id": "https://nettoklar.de/steuerklasse-finder/#breadcrumb" },
-      "author": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de/" },
-      "publisher": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de/" },
+      "author": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de" },
+      "publisher": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de" },
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".fact-strip", "#faq"] }
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://nettoklar.de/steuerklasse-finder/#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de/" },
+        { "@type": "ListItem", "position": 1, "name": "NettoKlar", "item": "https://nettoklar.de" },
         { "@type": "ListItem", "position": 2, "name": "Steuerklasse herausfinden", "item": "https://nettoklar.de/steuerklasse-finder/" }
       ]
     },
@@ -33,28 +33,33 @@ const schema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Wie oft darf man die Steuerklasse wechseln?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Seit 2020 gibt es keine Einschränkungen mehr — Sie können die Steuerklasse unbegrenzt oft und jederzeit wechseln, wirksam ab dem 1. des Folgemonats. Lediglich der Rückwechsel einer Kombination (z.B. zurück von 3/5 auf 4/4) ist auf einmal pro Kalenderjahr begrenzt." }
+          "name": "Wie viele Steuerklassen gibt es in Deutschland?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Es gibt 6 Steuerklassen (§38b EStG): SK 1 (Ledig), SK 2 (Alleinerziehende), SK 3 (Verheiratet, Hauptverdiener), SK 4 (Verheiratet, ähnliche Einkommen), SK 5 (Verheiratet, Geringverdiener), SK 6 (Zweiter Job)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen Steuerklasse 1 und 4?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Beide Klassen haben denselben Grundfreibetrag (€12.348 in 2026) und nahezu identische monatliche Abzüge. SK 1 gilt für Ledige, SK 4 für Verheiratete mit ähnlichen Einkommen. Das Ehegattensplitting wirkt bei SK 4 erst in der Jahressteuererklärung." }
         },
         {
           "@type": "Question",
           "name": "Welche Steuerklasse hat man als Alleinerziehender?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Alleinerziehende haben Anspruch auf Steuerklasse 2, sofern sie mit mindestens einem Kind zusammenleben, für das Kindergeld bezogen wird, und keine weitere erwachsene Person im Haushalt lebt. Steuerklasse 2 gewährt zusätzlich den Entlastungsbetrag von 4.260 Euro jährlich (2026)." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Alleinerziehende haben Anspruch auf Steuerklasse 2, sofern sie mit mindestens einem Kind zusammenleben und keine weitere erwachsene Person im Haushalt lebt. SK 2 muss aktiv beim Finanzamt beantragt werden — sie wird nicht automatisch zugeteilt. Der Entlastungsbetrag 2026 beträgt €4.260 für das erste Kind." }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich die Steuerklasse selbst wählen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nur Verheiratete und eingetragene Lebenspartner können zwischen SK III/V, IV/IV und IV mit Faktor wählen. Alle anderen Steuerklassen werden automatisch nach Familienstand zugewiesen." }
         },
         {
           "@type": "Question",
           "name": "Was ist Steuerklasse 6 und wann gilt sie?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Steuerklasse 6 gilt für jedes weitere Arbeitsverhältnis ab dem zweiten Job. Sie hat keinen Grundfreibetrag und die höchsten Abzüge aller Klassen." }
+          "acceptedAnswer": { "@type": "Answer", "text": "SK 6 gilt automatisch für jeden zweiten (oder weiteren) Job bei einem anderen Arbeitgeber. Es gibt keinen Grundfreibetrag — die Abzüge sind am höchsten. Ausnahme: Minijobs bis €556/Monat werden pauschal versteuert und fallen nicht unter SK 6." }
         },
         {
           "@type": "Question",
-          "name": "Wie viel Netto bleibt bei 3.000 Euro Brutto je nach Steuerklasse?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Bei 3.000 Euro Brutto monatlich verbleiben nach Steuerklasse: SK 1 ca. 2.028 Euro netto, SK 3 ca. 2.309 Euro, SK 5 ca. 1.673 Euro, SK 6 ca. 1.597 Euro (Werte 2026, ohne Kirchensteuer, gesetzliche KV)." }
-        },
-        {
-          "@type": "Question",
-          "name": "Wie beantrage ich Steuerklasse 2 als Alleinerziehende?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Steuerklasse 2 wird nicht automatisch eingetragen. Sie müssen aktiv einen Antrag auf Lohnsteuerermäßigung beim Finanzamt stellen. Das Formular gibt es beim Finanzamt oder online über mein.elster.de. Die Einstufung gilt dann rückwirkend für das gesamte Kalenderjahr ab Januar." }
+          "name": "Wie oft darf man die Steuerklasse wechseln?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Seit 2020 gibt es keine Einschränkungen mehr — der Wechsel ist jederzeit möglich, wirksam ab dem 1. des Folgemonats. Lediglich der Rückwechsel einer Kombination (z.B. zurück von III/V auf IV/IV) ist auf einmal pro Kalenderjahr begrenzt." }
         }
       ]
     },
@@ -63,7 +68,7 @@ const schema = {
       "@id": "https://nettoklar.de/steuerklasse-finder/#app",
       "name": "Steuerklassen-Finder Tool 2026",
       "url": "https://nettoklar.de/steuerklasse-finder/",
-      "description": "Finden Sie in 3 Schritten heraus, welche Steuerklasse für Ihre persönliche Situation gilt.",
+      "description": "Finden Sie in 30 Sekunden heraus, welche Steuerklasse für Ihre persönliche Situation gilt.",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "Web",
       "browserRequirements": "Requires JavaScript",
@@ -71,454 +76,712 @@ const schema = {
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
     }
   ]
-};
+}
 ---
 
 <BaseLayout
-  title="Welche Steuerklasse habe ich? Finder & Übersicht 2026"
-  description="Finde heraus, welche Lohnsteuerklasse du hast. Steuerklassen-Finder 2026 für Arbeitnehmer, Alleinerziehende & Ehepaare."
+  title="Steuerklassen-Finder 2026 – Welche Steuerklasse bin ich?"
+  description="Welche Steuerklasse bin ich? In 30 Sekunden herausfinden: Familienstand eingeben → sofortige Empfehlung. Alle 6 Steuerklassen erklärt. Kostenlos & ohne Anmeldung."
   schema={schema}
 >
-  <main class="page-wrapper">
+  <a href="#main-content" class="sr-only">Zum Inhalt springen</a>
 
-    <nav aria-label="Breadcrumb">
-      <ol class="breadcrumb">
-        <li><a href="/">NettoKlar</a></li>
-        <li>Steuerklasse herausfinden</li>
-      </ol>
-    </nav>
+  <main id="main-content">
+    <div class="page-wrapper">
 
-    <header class="article-header">
-      <h1>Welche Steuerklasse habe ich? – Steuerklassen-Finder 2026</h1>
-      <p class="article-meta">
-        <span>Letzte Aktualisierung: 26. April 2026</span>
-        <span>·</span>
-        <span>Lesezeit: ca. 7 Minuten</span>
-      </p>
-    </header>
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">NettoKlar</a></li>
+          <li>Steuerklassen-Finder</li>
+        </ol>
+      </nav>
 
-    <dl class="fact-strip">
-      <div class="fact-item">
-        <dt>Grundfreibetrag 2026</dt>
-        <dd>€12.348 (Single) / €24.696 (Ehepaar)</dd>
-      </div>
-      <div class="fact-item">
-        <dt>Entlastungsbetrag SK 2</dt>
-        <dd>€4.260 / Jahr</dd>
-      </div>
-      <div class="fact-item">
-        <dt>Steuerklasse wechseln</dt>
-        <dd>Jederzeit, unbegrenzt (seit 2020)</dd>
-      </div>
-      <div class="fact-item">
-        <dt>Lohnsteuerklassen</dt>
-        <dd>SK 1 bis SK 6</dd>
-      </div>
-    </dl>
+      <article>
 
-    <!-- CALCULATOR -->
-    <section class="calculator-card" id="finder-tool">
-      <h2>Steuerklassen-Finder – Welche Steuerklasse gehört zu mir?</h2>
-      <p class="calc-subtitle">3 Fragen — sofortiges Ergebnis. Kein Login. Keine Daten gespeichert.</p>
-
-      <div id="sk-finder-form">
-
-        <!-- Step 1 -->
-        <div class="calc-field-group" id="step1">
-          <p class="calc-label">Familienstand</p>
-          <div class="radio-group">
-            <label class="radio-option">
-              <input type="radio" name="familienstand" value="ledig" />
-              <span>Ledig</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="familienstand" value="verheiratet" />
-              <span>Verheiratet / Eingetragene Lebenspartnerschaft</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="familienstand" value="geschieden" />
-              <span>Geschieden / Dauerhaft getrennt</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="familienstand" value="verwitwet" />
-              <span>Verwitwet</span>
-            </label>
+        <!-- Article Header -->
+        <header class="article-header">
+          <h1>Steuerklassen-Finder 2026 – Welche Steuerklasse bin ich?</h1>
+          <div class="author-byline">
+            <span>Von <strong>Riyaansh Mittal</strong>, Finanz- und Steuerredakteur</span>
+            <span class="byline-sep">·</span>
+            <span>Aktualisiert: Mai 2026</span>
+            <span class="byline-sep">·</span>
+            <span class="freshness-badge">✓ Geprüft 2026</span>
           </div>
+        </header>
+
+        <!-- Direct Answer -->
+        <p class="direct-answer">
+          Es gibt <strong>6 Steuerklassen</strong> in Deutschland. Welche auf Sie zutrifft, hängt fast
+          ausschließlich von Ihrem <strong>Familienstand</strong> ab — nicht von Ihrem Einkommen.
+          Nur Verheiratete können zwischen SK III/V, IV/IV und IV-Faktor <strong>wählen</strong>.
+          Der <strong>Grundfreibetrag 2026</strong> beträgt €12.348 — das bedeutet:
+          auf die ersten €12.348 Ihres Jahreseinkommens zahlen Sie <strong>0% Einkommensteuer</strong>.
+          Nutzen Sie den Finder unten (30 Sekunden).
+        </p>
+
+        <!-- Jump Nav -->
+        <nav class="article-jump-nav" aria-label="Seitennavigation">
+          <span class="jump-nav-label">Auf dieser Seite:</span>
+          <a href="#finder">Finder-Tool</a>
+          <a href="#uebersicht">Alle 6 Klassen</a>
+          <a href="#beispiele">Typische Fälle</a>
+          <a href="#sonderfaelle">Sonderfälle</a>
+          <a href="#wechsel">Klasse wechseln</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <!-- FAQ Preview Strip -->
+        <div class="faq-preview-strip">
+          <span class="faq-preview-label">Häufige Fragen:</span>
+          <a href="#faq-anzahl">Wie viele Steuerklassen?</a>
+          <a href="#faq-1vs4">SK 1 vs SK 4?</a>
+          <a href="#faq-sk2">Wer bekommt SK 2?</a>
+          <a href="#faq-wahl">Kann ich wählen?</a>
+          <a href="#faq" class="faq-preview-all">Alle FAQs →</a>
         </div>
 
-        <!-- Step 2a: Alleinerziehend (ledig only) -->
-        <div class="calc-field-group hidden" id="step-alleinerziehend">
-          <p class="calc-label">Haben Sie Kinder in Ihrem Haushalt?</p>
-          <div class="radio-group">
-            <label class="radio-option">
-              <input type="radio" name="alleinerziehend" value="ja" />
-              <span>Ja — ich bin alleinerziehend</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="alleinerziehend" value="nein" />
-              <span>Nein</span>
-            </label>
-          </div>
-        </div>
-
-        <!-- Step 2b: Income ratio (verheiratet only) -->
-        <div class="calc-field-group hidden" id="step-einkommen">
-          <label class="calc-label" for="einkommensanteil">
-            Wie viel % des gemeinsamen Einkommens verdienen <em>Sie</em>?
-          </label>
-          <div class="slider-row">
-            <input
-              type="range"
-              id="einkommensanteil"
-              name="einkommensanteil"
-              min="0"
-              max="100"
-              value="50"
-              step="5"
-              class="slider-input"
-            />
-            <span id="anteil-display" class="slider-value">50%</span>
-          </div>
-          <p class="calc-hint">
-            Ihr Partner verdient dann <span id="partner-anteil">50%</span> des gemeinsamen Einkommens.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="calc-field-group">
-          <p class="calc-label">Haben Sie einen zweiten Job (Nebenjob)?</p>
-          <div class="radio-group">
-            <label class="radio-option">
-              <input type="radio" name="zweiterjob" value="nein" checked />
-              <span>Nein</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="zweiterjob" value="ja" />
-              <span>Ja — ich habe einen Zweitjob</span>
-            </label>
-          </div>
-        </div>
-
-        <button type="button" id="sk-finder-btn" class="btn-primary btn-full">
-          Meine Steuerklasse herausfinden →
-        </button>
-
-      </div>
-
-      <!-- Result -->
-      <div id="sk-result" class="hidden result-block">
-        <p class="result-label">Ihre empfohlene Steuerklasse:</p>
-        <div id="sk-badge" class="result-badge"></div>
-        <p id="sk-reason" class="result-reason"></p>
-        <a id="sk-cta" href="#" class="btn-secondary hidden result-cta"></a>
-        <div id="sk-share-row" class="share-row hidden"></div>
-      </div>
-
-    </section>
-
-    <!-- Embed CTA -->
-    <div class="embed-cta-wrap">
-      <button id="embed-btn" class="btn-secondary btn-sm">
-        &lt;/&gt; Rechner einbetten
-      </button>
-    </div>
-
-    <!-- Embed Modal -->
-    <div id="embed-modal" role="dialog" aria-modal="true" aria-labelledby="embed-title" class="modal-overlay" style="display:none;">
-      <div class="modal-box">
-        <h3 id="embed-title">Rechner einbetten</h3>
-        <p class="modal-desc">Kopieren Sie diesen Code — der Finder erscheint sofort auf Ihrer Seite.</p>
-        <pre id="embed-code" class="embed-code-block">&lt;iframe src="https://nettoklar.de/steuerklasse-finder/" width="100%" height="540" style="border:none;border-radius:12px;" title="Steuerklassen-Finder 2026 – NettoKlar" loading="lazy"&gt;&lt;/iframe&gt;</pre>
-        <button id="copy-embed" class="btn-primary btn-full">Code kopieren</button>
-        <button id="close-embed" class="btn-secondary btn-full" style="margin-top:0.5rem;">Schließen</button>
-      </div>
-    </div>
-
-    <article class="article-body">
-
-      <h2>Steuerklassen 1–6 im Überblick – Tabelle 2026</h2>
-      <div class="table-scroll">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>SK</th>
-              <th>Für wen?</th>
-              <th>Grundfreibetrag 2026</th>
-              <th>Besonderheit</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>1</strong></td>
-              <td>Ledig, geschieden, verwitwet (ab 2. Jahr)</td>
-              <td>€12.348</td>
-              <td>Standard</td>
-            </tr>
-            <tr class="highlight-row">
-              <td><strong>2</strong></td>
-              <td>Alleinerziehend mit Kind im Haushalt</td>
-              <td>€12.348 + €4.260</td>
-              <td>Entlastungsbetrag — aktiv beantragen!</td>
-            </tr>
-            <tr>
-              <td><strong>3</strong></td>
-              <td>Verheiratet, höherer Verdiener</td>
-              <td>€24.696</td>
-              <td>Doppelter GFB — niedrigster Abzug</td>
-            </tr>
-            <tr>
-              <td><strong>4</strong></td>
-              <td>Verheiratet, ähnliche Einkommen</td>
-              <td>€12.348</td>
-              <td>Wie SK 1 — faire Aufteilung</td>
-            </tr>
-            <tr>
-              <td><strong>5</strong></td>
-              <td>Verheiratet, niedrigerer Verdiener</td>
-              <td>€0</td>
-              <td>Kein Freibetrag — höchste Abzüge</td>
-            </tr>
-            <tr>
-              <td><strong>6</strong></td>
-              <td>Zweiter Job / Nebenbeschäftigung</td>
-              <td>€0</td>
-              <td>Automatisch — höchste Abzüge aller Klassen</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2>Wie viel Lohnsteuer zahle ich in meiner Steuerklasse?</h2>
-      <p>Vergleich bei <strong>€3.000 Brutto / Monat</strong> (ohne Kirchensteuer, gesetzliche KV, 2026):</p>
-      <div class="table-scroll">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Steuerklasse</th>
-              <th>Lohnsteuer ca.</th>
-              <th>Netto ca.</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>SK 1</td><td>€293</td><td>€2.028</td></tr>
-            <tr><td>SK 2</td><td>€231</td><td>€2.090</td></tr>
-            <tr class="highlight-row"><td>SK 3</td><td>€39</td><td><strong>€2.309</strong></td></tr>
-            <tr><td>SK 4</td><td>€293</td><td>€2.028</td></tr>
-            <tr><td>SK 5</td><td>€648</td><td>€1.673</td></tr>
-            <tr><td>SK 6</td><td>€724</td><td>€1.597</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>
-        Für Ihre genaue Nettolohn-Berechnung:
-        <a href="/steuerklasse-3-5/">Steuerklasse 3 und 5 für Ehepaare – Rechner &amp; Vergleich</a>
-      </p>
-
-      <h2>Steuerklasse wechseln – Wann und wie geht das?</h2>
-      <p>
-        Der Wechsel ist kostenlos und seit 2020 jederzeit möglich — es gibt keinen festen Stichtag mehr.
-        Wirksam wird die Änderung ab dem 1. des Folgemonats.
-      </p>
-      <ol class="step-list">
-        <li>Einloggen auf <strong>mein.elster.de</strong></li>
-        <li>Formulare → <em>Antrag auf Steuerklassenwechsel</em> ausfüllen — beide Ehegatten müssen unterschreiben</li>
-        <li>Absenden — wirksam ab dem <strong>1. des Folgemonats</strong></li>
-        <li>Finanzamt informiert den Arbeitgeber automatisch — Sie müssen nichts tun</li>
-        <li><strong>Kein fester Stichtag:</strong> Wechsel ist jederzeit im Jahr möglich. Ein Rückwechsel (z.B. von 3/5 auf 4/4) ist nur einmal pro Kalenderjahr erlaubt.</li>
-      </ol>
-      <p>
-        Nach der Heirat gelten besondere Regelungen:
-        <a href="/steuerklasse-heirat/">Steuerklasse wechseln nach Heirat</a>
-      </p>
-
-      <h2>Steuerklasse 3 und 5 oder 4 und 4 – Was ist besser?</h2>
-      <p>
-        Die Jahressteuerlast ist bei beiden Kombinationen <strong>exakt identisch</strong>.
-        SK 3/5 lohnt sich nur, wenn ein Partner mindestens 60% des gemeinsamen Einkommens verdient.
-        Ausführliche Erklärung mit Rechner:
-        <a href="/steuerklasse-3-5/">Steuerklasse 3 und 5 für Ehepaare</a>
-      </p>
-
-      <h2>Steuerklasse bei besonderen Situationen</h2>
-      <div class="table-scroll">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Situation</th>
-              <th>Steuerklasse</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Minijob (538 €-Job)</td>
-              <td>Pauschal besteuert — Steuerklasse nicht relevant</td>
-            </tr>
-            <tr>
-              <td>Nebenjob (2. sozialversicherungspflichtiger Job)</td>
-              <td><strong>SK 6</strong> — automatisch, kein Antrag nötig</td>
-            </tr>
-            <tr>
-              <td>Elternzeit</td>
-              <td>Bleibt gleich — kein Wechsel durch Elternzeit</td>
-            </tr>
-            <tr class="highlight-row">
-              <td>Elterngeld</td>
-              <td>Berechnung basiert auf SK <strong>vor</strong> Geburt — rechtzeitig wechseln!</td>
-            </tr>
-            <tr>
-              <td>Verwitwet (Todesjahr + Folgejahr)</td>
-              <td><strong>SK 3</strong> für 2 Jahre, danach SK 1</td>
-            </tr>
-            <tr>
-              <td>Scheidung / Trennung</td>
-              <td><strong>SK 1</strong> ab dem Folgejahr der Trennung</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="inline-link-callout">
-        Wichtig für Elterngeld: Steuerklasse spätestens <strong>7 Monate vor dem Geburtstermin</strong>
-        wechseln — sonst wird das Elterngeld auf Basis der alten, ungünstigeren Klasse berechnet.
-      </div>
-
-      <!-- SK 2 BEANTRAGEN -->
-      <section id="steuerklasse-2-beantragen" class="anchor-section">
-        <h2>Steuerklasse 2 beantragen – Schritt-für-Schritt für Alleinerziehende</h2>
-
+        <!-- Fact Strip -->
         <dl class="fact-strip">
           <div class="fact-item">
-            <dt>Formular</dt>
-            <dd>Antrag auf Lohnsteuerermäßigung</dd>
+            <dt>Steuerklassen gesamt</dt>
+            <dd>6</dd>
           </div>
           <div class="fact-item">
-            <dt>Entlastungsbetrag 2026</dt>
-            <dd>€4.260 / Jahr</dd>
+            <dt>Grundfreibetrag 2026</dt>
+            <dd>€12.348 <span style="font-size:var(--text-xs); font-weight:400; color:var(--color-text-muted)">(= steuerfrei)</span></dd>
           </div>
           <div class="fact-item">
-            <dt>Rückwirkend möglich?</dt>
-            <dd>Ja — bis 31. Dez. des laufenden Jahres</dd>
+            <dt>Entlastungsbetrag SK 2</dt>
+            <dd>€4.260 (1. Kind)</dd>
           </div>
           <div class="fact-item">
-            <dt>Zuständig</dt>
-            <dd>Ihr lokales Finanzamt</dd>
+            <dt>Wahl möglich?</dt>
+            <dd>Nur Verheiratete</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Wechsel kostet</dt>
+            <dd>Nichts</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Rechtsgrundlage</dt>
+            <dd>§38b EStG</dd>
           </div>
         </dl>
 
-        <h3>Voraussetzungen für Steuerklasse 2</h3>
-        <ul class="content-list">
-          <li>Mindestens ein Kind lebt dauerhaft in Ihrem Haushalt</li>
-          <li>Sie beziehen Kindergeld oder den Kinderfreibetrag für dieses Kind</li>
-          <li>Keine weitere volljährige Person im Haushalt (Ausnahme: volljährige Kinder, für die noch Kindergeld läuft)</li>
-          <li>Gilt nach Trennung, Scheidung oder Tod des Partners</li>
-        </ul>
+        <div class="article-body">
 
-        <div class="correction-callout" role="note" aria-label="Wichtiger Hinweis">
-          <span class="correction-badge">Wichtig</span>
-          <p>
-            SK 2 wird <strong>nicht automatisch</strong> eingetragen — auch wenn Sie alle Voraussetzungen
-            erfüllen. Sie müssen aktiv einen Antrag stellen. Die Einstufung gilt dann rückwirkend
-            für das gesamte Kalenderjahr ab Januar.
-          </p>
-        </div>
+          <!-- ══ H2 1: Finder Tool ══ -->
+          <section id="finder" class="anchor-section">
+            <h2>Steuerklassen-Finder — Ergebnis in 30 Sekunden</h2>
 
-        <h3>So beantragen Sie Steuerklasse 2</h3>
-        <ol class="step-list">
-          <li>
-            Formular herunterladen:
-            <a href="https://www.formulare-bfinv.de/ffw/action/invoke.do?id=034003" target="_blank" rel="noopener noreferrer">
-              „Antrag auf Lohnsteuerermäßigung" (Bundesfinanzministerium)
-            </a>
-          </li>
-          <li>Seite 2 ausfüllen — Zeile „Entlastungsbetrag für Alleinerziehende" ankreuzen</li>
-          <li>Alternativ: Online über <strong>mein.elster.de</strong> → Formulare → Lohnsteuerermäßigung</li>
-          <li>Unterschreiben und an Ihr Finanzamt senden oder persönlich abgeben</li>
-          <li>In der nächsten Gehaltsabrechnung prüfen, ob SK 2 eingetragen wurde</li>
-        </ol>
+            <div class="calculator-card">
+              <h2>Welche Steuerklasse bin ich?</h2>
+              <p class="calc-subtitle">
+                Bitte Familienstand auswählen — die Empfehlung erscheint sofort.
+                Kein Login, keine Datenspeicherung.
+              </p>
 
-        <p>
-          Möchten Sie nach der Heirat die Steuerklasse wechseln?
-          <a href="/steuerklasse-heirat/">Steuerklasse nach Heirat wechseln</a>
-        </p>
-      </section>
+              <!-- Step 1: Familienstand -->
+              <div class="finder-step">
+                <p class="calc-label">Schritt 1: Ihr Familienstand</p>
+                <div class="radio-group" role="group" aria-label="Familienstand">
+                  <label class="radio-card">
+                    <input type="radio" name="familienstand" value="ledig" />
+                    <span class="radio-label">Ledig</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="familienstand" value="verheiratet" />
+                    <span class="radio-label">Verheiratet / Eingetr. Lebenspartner</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="familienstand" value="geschieden" />
+                    <span class="radio-label">Geschieden / Dauerhaft getrennt</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="familienstand" value="verwitwet" />
+                    <span class="radio-label">Verwitwet</span>
+                  </label>
+                </div>
+              </div>
 
-      <h2 id="faq">FAQ – Häufige Fragen zur Steuerklasse 2026</h2>
-      <div class="faq-list">
+              <!-- Step 2a: Alleinerziehend (nur bei ledig) -->
+              <div id="step-alleinerziehend" class="finder-step hidden">
+                <p class="calc-label">Schritt 2: Haben Sie ein Kind im Haushalt?</p>
+                <div class="radio-group" role="group" aria-label="Alleinerziehend">
+                  <label class="radio-card">
+                    <input type="radio" name="alleinerziehend" value="ja" />
+                    <span class="radio-label">Ja — Kind lebt bei mir</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="alleinerziehend" value="nein" />
+                    <span class="radio-label">Nein</span>
+                  </label>
+                </div>
+              </div>
 
-        <details class="faq-item">
-          <summary>Welche Steuerklasse bin ich als Single?</summary>
-          <div class="faq-answer">
-            <p>Als ledige Person ohne Kinder sind Sie automatisch in <strong>Steuerklasse 1</strong>. Wenn Sie alleinerziehend sind und mindestens ein Kind im Haushalt lebt, haben Sie Anspruch auf <strong>Steuerklasse 2</strong> — inklusive €4.260 Entlastungsbetrag jährlich. SK 2 wird nicht automatisch eingetragen, Sie müssen aktiv einen Antrag stellen.</p>
+              <!-- Step 2b: Zweiter Job (alle) -->
+              <div id="step-zweiterjob" class="finder-step">
+                <p class="calc-label">Haben Sie einen zweiten Job / Nebenjob?</p>
+                <div class="radio-group" role="group" aria-label="Zweiter Job">
+                  <label class="radio-card">
+                    <input type="radio" name="zweiterjob" value="nein" checked />
+                    <span class="radio-label">Nein — nur ein Arbeitgeber</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="zweiterjob" value="ja" />
+                    <span class="radio-label">Ja — zweiter sozialversicherungspflichtiger Job</span>
+                  </label>
+                </div>
+                <p class="calc-hint" style="margin-top: var(--space-2)">
+                  💡 <strong>Minijob bis €556/Monat?</strong> Das gilt nicht als zweiter Job im steuerlichen
+                  Sinne — Minijobs werden pauschal durch den Arbeitgeber versteuert, SK 6 greift hier
+                  <em>nicht</em>. Diese Frage betrifft nur reguläre Nebenjobs mit Sozialversicherungspflicht.
+                </p>
+              </div>
+
+              <!-- Step 3: Einkommensverteilung (nur bei verheiratet) -->
+              <div id="step-einkommen" class="finder-step hidden">
+                <p class="calc-label">Schritt 3: Einkommensverteilung im Haushalt</p>
+                <p class="calc-hint">Wie viel Prozent des gemeinsamen Einkommens verdienen <em>Sie</em>?</p>
+                <div style="display:flex; align-items:center; gap:var(--space-4); flex-wrap:wrap">
+                  <span id="anteil-display" style="font-size:var(--text-xl); font-weight:700; color:var(--color-primary); min-width:3rem">50%</span>
+                  <input
+                    type="range"
+                    id="einkommensanteil"
+                    min="0" max="100" value="50" step="5"
+                    style="flex:1; min-width:180px"
+                    aria-label="Ihr Einkommensanteil in Prozent"
+                  />
+                  <span style="font-size:var(--text-sm); color:var(--color-text-muted)">
+                    Partner: <strong id="partner-anteil">50%</strong>
+                  </span>
+                </div>
+                <div class="preset-row" style="margin-top:var(--space-3)">
+                  <button class="preset-chip" data-anteil="50">50/50</button>
+                  <button class="preset-chip" data-anteil="60">60/40</button>
+                  <button class="preset-chip" data-anteil="70">70/30</button>
+                  <button class="preset-chip" data-anteil="80">80/20</button>
+                  <button class="preset-chip" data-anteil="100">Alleinverdiener</button>
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <button id="sk-finder-btn" class="btn-primary btn-full" style="margin-top:var(--space-6)">
+                Meine Steuerklasse herausfinden →
+              </button>
+
+              <!-- Result -->
+              <div id="sk-result" class="hidden result-block" aria-live="polite">
+                <div class="result-top-row">
+                  <span class="result-badge" id="sk-badge"></span>
+                  <p class="result-reason" id="sk-reason"></p>
+                </div>
+                <a id="sk-cta" href="#" class="hidden" style="display:none; margin-top:var(--space-3); font-weight:600; color:var(--color-primary)"></a>
+                <div id="sk-share-row" class="preset-row hidden" style="display:none; margin-top:var(--space-4)"></div>
+              </div>
+
+              <!-- Embed Button -->
+              <div style="margin-top:var(--space-6); text-align:right">
+                <button id="embed-btn" class="preset-chip">&lt;/&gt; Einbetten</button>
+              </div>
+
+              <!-- Embed Modal -->
+              <div id="embed-modal" class="hidden" role="dialog" aria-modal="true" aria-label="Einbettungscode">
+                <div style="background:var(--color-surface-2); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-6); margin-top:var(--space-4)">
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-4)">
+                    <strong>Einbettungscode</strong>
+                    <button id="close-embed" class="preset-chip">✕ Schließen</button>
+                  </div>
+                  <code id="embed-code" style="display:block; font-size:var(--text-xs); background:var(--color-surface); padding:var(--space-3); border-radius:var(--radius-md); overflow-x:auto; white-space:pre-wrap; word-break:break-all">
+                    &lt;iframe src="https://nettoklar.de/steuerklasse-finder/" width="100%" height="600" frameborder="0" title="Steuerklassen-Finder NettoKlar"&gt;&lt;/iframe&gt;
+                  </code>
+                  <button id="copy-embed" class="btn-secondary" style="margin-top:var(--space-3)">Code kopieren</button>
+                </div>
+              </div>
+
+              <p style="margin-top:var(--space-4); font-size:var(--text-xs); color:var(--color-text-muted)">
+                Rechtsgrundlage:
+                <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a> ·
+                Grundfreibetrag:
+                <a href="https://www.gesetze-im-internet.de/estg/__32a.html" target="_blank" rel="noopener noreferrer">§32a EStG</a> ·
+                Kein Ersatz für individuelle Steuerberatung.
+              </p>
+            </div>
+          </section>
+
+          <!-- ══ H2 2: Wichtig: Steuerklasse ≠ Steuerlast ══ -->
+          <section id="steuerklasse-vs-steuer" class="anchor-section">
+            <h2>Das müssen Sie zuerst verstehen: Steuerklasse ≠ endgültige Steuerlast</h2>
+            <p>
+              Das ist der häufigste Irrtum: Viele denken, wer SK III hat, <em>zahlt dauerhaft weniger Steuern</em>
+              als jemand in SK IV. Das stimmt nicht — und der Unterschied ist wichtig.
+            </p>
+            <div class="summary-card" style="margin-top: var(--space-4)">
+              <p style="font-size: var(--text-base); line-height: 1.7">
+                <strong>Ihre Steuerklasse bestimmt nur die monatliche Vorauszahlung</strong> ans Finanzamt —
+                also wie viel Lohnsteuer Ihr Arbeitgeber jeden Monat einbehält.
+                Am Jahresende berechnet das Finanzamt Ihre <em>tatsächliche</em> Steuerschuld
+                auf Basis Ihres Jahreseinkommens. War die Vorauszahlung zu hoch → <strong>Erstattung</strong>.
+                Zu niedrig → <strong>Nachzahlung</strong>.
+              </p>
+              <p style="margin-top: var(--space-3); font-size: var(--text-sm); color: var(--color-text-muted)">
+                <strong>Konkret:</strong> SK 3/5 und SK 4/4 führen bei gleichem Einkommen zur
+                <em>identischen</em> Jahressteuerlast. SK 3/5 bedeutet nur: der Hauptverdiener
+                bekommt mehr im Monat — aber zahlt am Jahresende nach.
+                Ihre Steuerklasse steuert Ihren <strong>monatlichen Cash-Flow</strong>, nicht Ihre Gesamtsteuer.
+              </p>
+            </div>
+          </section>
+
+          <!-- ══ H2 3: Typische Fälle ══ -->
+          <section id="beispiele" class="anchor-section">
+            <h2>Typische Steuerklassen-Empfehlungen auf einen Blick</h2>
+            <p>
+              Diese Tabelle zeigt die häufigsten Situationen — für Ihren persönlichen Fall nutzen Sie den Finder oben.
+            </p>
+
+            <div class="table-scroll">
+              <table class="data-table" id="steuerklasse-beispiele">
+                <caption style="text-align:left; font-size:var(--text-sm); color:var(--color-text-muted); margin-bottom:var(--space-3); caption-side:top">
+                  Typische Steuerklassen-Empfehlungen 2026 · Quelle: §38b EStG
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Situation</th>
+                    <th>Empfohlene Steuerklasse</th>
+                    <th>Besonderheit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Alleinstehend, angestellt</td>
+                    <td><strong>Steuerklasse 1</strong></td>
+                    <td>Standard für Singles — automatisch zugeteilt</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td>Alleinerziehend mit Kind im Haushalt</td>
+                    <td><strong>Steuerklasse 2</strong></td>
+                    <td>+€4.260 Entlastungsbetrag (2026) — <strong>aktiv beantragen!</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Verheiratet, Alleinverdiener</td>
+                    <td><strong>Steuerklasse 3</strong></td>
+                    <td>Doppelter Grundfreibetrag (€24.696) — Nachzahlung am Jahresende</td>
+                  </tr>
+                  <tr>
+                    <td>Verheiratet, ein Partner verdient ≥60%</td>
+                    <td><strong>Steuerklasse 3 / 5</strong></td>
+                    <td>60-40-Regel; Steuererklärung Pflicht; Nachzahlung wahrscheinlich</td>
+                  </tr>
+                  <tr>
+                    <td>Verheiratet, ähnliche Einkommen (40–60%)</td>
+                    <td><strong>Steuerklasse 4 / 4</strong></td>
+                    <td>Fairste Aufteilung, kein Nachzahlungsrisiko, keine Steuererklärungspflicht</td>
+                  </tr>
+                  <tr>
+                    <td>Verheiratet, präzise Aufteilung gewünscht</td>
+                    <td>
+                      <strong>Steuerklasse 4 mit Faktor</strong>
+                      <span style="display:block; font-size:var(--text-xs); color:var(--color-text-muted); margin-top:2px">
+                        Individuelle Berechnung durch das Finanzamt — vermeidet Nachzahlungen, teilt Vorteile fair auf
+                      </span>
+                    </td>
+                    <td>Steuererklärung Pflicht; Faktor bei Einkommensänderung neu beantragen</td>
+                  </tr>
+                  <tr>
+                    <td>Zweiter Job / Nebenjob (sozialversicherungspflichtig)</td>
+                    <td><strong>Steuerklasse 6</strong></td>
+                    <td>Automatisch ab 2. Arbeitgeber; kein Grundfreibetrag — nicht für Minijobs</td>
+                  </tr>
+                  <tr>
+                    <td>Verwitwet (Todesjahr + direktes Folgejahr)</td>
+                    <td><strong>Steuerklasse 3</strong></td>
+                    <td>Gnadensplitting — danach automatisch SK 1</td>
+                  </tr>
+                  <tr>
+                    <td>Dauerhaft getrennt / Scheidung vollzogen</td>
+                    <td><strong>Steuerklasse 1</strong></td>
+                    <td>Ab Folgejahr der Trennung — nicht erst nach rechtskräftiger Scheidung</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- ══ H2 4: Alle 6 Klassen ══ -->
+          <section id="uebersicht" class="anchor-section">
+            <h2>Alle 6 Steuerklassen in Deutschland – Übersicht 2026</h2>
+
+            <div class="table-scroll table-scroll--wide">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Klasse</th>
+                    <th>Für wen?</th>
+                    <th>Grundfreibetrag 2026</th>
+                    <th>Besonderheit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>SK 1</strong></td>
+                    <td>Ledig, geschieden, dauerhaft getrennt, verwitwet (ab 2. Jahr nach Tod)</td>
+                    <td>€12.348</td>
+                    <td>Standard-Steuerklasse — wird automatisch zugeteilt</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>SK 2</strong></td>
+                    <td>Alleinerziehende mit mindestens einem Kind im eigenen Haushalt</td>
+                    <td>€12.348 + €4.260 Entlastungsbetrag</td>
+                    <td>Aktiv beantragen — wird <strong>nicht</strong> automatisch zugeteilt</td>
+                  </tr>
+                  <tr>
+                    <td><strong>SK 3</strong></td>
+                    <td>Verheiratet: Hauptverdiener (≥60% des gemeinsamen Einkommens) oder Alleinverdiener</td>
+                    <td>€24.696 (doppelter Freibetrag)</td>
+                    <td>Geringste monatliche Abzüge — aber Nachzahlung am Jahresende möglich</td>
+                  </tr>
+                  <tr>
+                    <td><strong>SK 4</strong></td>
+                    <td>Verheiratet: ähnliche Einkommen (ca. 40–60% je Partner)</td>
+                    <td>€12.348</td>
+                    <td>Fairste monatliche Aufteilung; kein Nachzahlungsrisiko</td>
+                  </tr>
+                  <tr>
+                    <td><strong>SK 5</strong></td>
+                    <td>Verheiratet: Geringverdiener (Partner hat SK 3)</td>
+                    <td>Kein Grundfreibetrag</td>
+                    <td>Höchste Abzüge nach SK 6 — immer zusammen mit SK 3</td>
+                  </tr>
+                  <tr>
+                    <td><strong>SK 6</strong></td>
+                    <td>Zweiter (oder weiterer) Job bei anderem Arbeitgeber</td>
+                    <td>Kein Grundfreibetrag</td>
+                    <td>Automatisch ab 2. Arbeitgeber; höchste Abzüge aller Klassen</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted)">
+              Quelle:
+              <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a> ·
+              Grundfreibetrag 2026:
+              <a href="https://www.gesetze-im-internet.de/estg/__32a.html" target="_blank" rel="noopener noreferrer">§32a EStG</a> ·
+              Stand: Mai 2026
+            </p>
+          </section>
+
+          <!-- ══ H2 5: Sonderfälle ══ -->
+          <section id="sonderfaelle" class="anchor-section">
+            <h2>Sonderfälle — Verwitwet, Trennung & Kinder auf der Gehaltsabrechnung</h2>
+
+            <h3 style="font-size: var(--text-base); font-weight: 700; margin-bottom: var(--space-2)">
+              Verwitwet — Das Gnadensplitting (§38b Abs. 1 Nr. 3b EStG)
+            </h3>
+            <p>
+              Wenn Ihr Ehepartner verstirbt, bleiben Sie <strong>im Todesjahr und im gesamten Folgejahr</strong>
+              automatisch in Steuerklasse 3. Diese Übergangsfrist — Gnadensplitting genannt — soll
+              finanziell stabilisieren. Ab dem übernächsten Jahr gilt dann automatisch SK 1.
+            </p>
+            <div class="correction-callout" role="note">
+              <span>💡</span>
+              <div>
+                <p style="font-size: var(--text-sm); color: var(--color-text)">
+                  <strong>Beispiel:</strong> Ehepartner verstirbt im März 2025 →
+                  SK 3 gilt für 2025 (Todesjahr) und das gesamte 2026 (Folgejahr).
+                  Ab 1. Januar 2027 automatisch SK 1.
+                </p>
+              </div>
+            </div>
+
+            <h3 style="font-size: var(--text-base); font-weight: 700; margin-top: var(--space-8); margin-bottom: var(--space-2)">
+              Dauerhaft getrennt — Steuervorteile enden vor der Scheidung
+            </h3>
+            <p>
+              Ein wichtiger Irrtum: Die Ehevergünstigungen (SK III, IV, V und Faktor) enden
+              <strong>nicht erst mit der Scheidung</strong>, sondern bereits ab dem Jahr nach
+              der dauerhaften Trennung — sobald beide Partner mit der Absicht, die Ehe zu beenden,
+              in verschiedenen Haushalten leben. Im Trennungsjahr selbst darf SK III/V noch
+              genutzt werden, ab dem Folgejahr gilt SK 1 für beide.
+              Rechtsgrundlage: §38b Abs. 1 EStG — „nicht dauernd getrennt lebend".
+            </p>
+
+            <h3 style="font-size: var(--text-base); font-weight: 700; margin-top: var(--space-8); margin-bottom: var(--space-2)">
+              Was bedeutet „0,5" oder „1,0" auf der Gehaltsabrechnung?
+            </h3>
+            <p>
+              Neben Ihrer Steuerklasse steht manchmal eine Zahl — das ist der
+              <strong>Kinderfreibetrag-Zähler</strong> (§38b Abs. 2 EStG).
+              Er ändert Ihre SK-Nummer <em>nicht</em>, reduziert aber den
+              <strong>Solidaritätszuschlag</strong> und ggf. die <strong>Kirchensteuer</strong>
+              monatlich.
+            </p>
+            <p style="font-size: var(--text-sm); color: var(--color-text-muted)">
+              0,5 = Kind wird hälftig aufgeteilt (Standardfall bei gemeinsamer Sorge, §38b Abs. 2 EStG).
+              1,0 = voller Kinderfreibetrag bei Ihnen (z.B. Alleinerziehende). Gilt für SK 1–4.
+            </p>
+
+            <h3 style="font-size: var(--text-base); font-weight: 700; margin-top: var(--space-8); margin-bottom: var(--space-2)">
+              Kann ich bewusst eine „schlechtere" Steuerklasse wählen?
+            </h3>
+            <p>
+              Ja — §38b Abs. 3 EStG erlaubt es, freiwillig eine ungünstigere Steuerklasse zu wählen.
+              Manche tun das, um am Jahresende eine größere Steuererstattung zu erhalten oder das
+              Risiko einer Nachzahlung zu vermeiden. Es ist eine persönliche Cash-Flow-Entscheidung —
+              die Jahressteuerlast ändert sich dadurch nicht.
+            </p>
+          </section>
+
+          <!-- ══ H2 6: SK 2 beantragen ══ -->
+          <section id="steuerklasse-2-beantragen" class="anchor-section">
+            <h2>Steuerklasse 2 beantragen — So geht's</h2>
+            <p>
+              Steuerklasse 2 wird <strong>nicht automatisch</strong> zugeteilt — auch nicht,
+              wenn das Finanzamt von Ihrem Kind weiß. Sie müssen den Entlastungsbetrag
+              für Alleinerziehende aktiv beantragen.
+            </p>
+            <ol class="step-list">
+              <li>Formular „Antrag auf Lohnsteuer-Ermäßigung" beim Finanzamt einreichen (kostenlos)</li>
+              <li>Alternativ: Online via <a href="https://www.elster.de" target="_blank" rel="noopener noreferrer">mein.elster.de</a></li>
+              <li>Nachweis: Geburtsurkunde des Kindes + Bestätigung, dass kein weiterer Elternteil im Haushalt lebt</li>
+              <li>Das Finanzamt trägt den Freibetrag in ELStAM ein — der Arbeitgeber wird automatisch informiert</li>
+            </ol>
+            <div class="correction-callout" role="note">
+              <span>💡</span>
+              <div>
+                <p style="font-size: var(--text-sm); color: var(--color-text)">
+                  Der Entlastungsbetrag beträgt 2026 <strong>€4.260 für das erste Kind</strong> +
+                  €240 je weiterem Kind. Bei 30% Grenzsteuersatz entspricht das ca.
+                  <strong>€106 mehr Netto pro Monat</strong>.
+                  Wer SK 2 nicht beantragt, verschenkt diesen Vorteil.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ══ H2 7: Wechsel ══ -->
+          <section id="wechsel" class="anchor-section">
+            <h2>Steuerklasse wechseln — Wann und wie?</h2>
+            <p>
+              Steuerklassen können jederzeit gewechselt werden — seit 2020 gibt es keinen festen
+              Stichtag mehr (viele Quellen nennen noch den 30. November — das ist seit dem
+              Jahressteuergesetz 2020 veraltet). Wirksam ist der Wechsel ab dem 1. des Folgemonats.
+              Der Wechsel ist kostenlos und läuft über ELSTER.
+            </p>
+            <div class="inline-link-callout">
+              <span>→</span>
+              <span>
+                Detaillierte Anleitung für Ehepaare:
+                <a href="/steuerklasse-heirat/">Steuerklasse wechseln nach Heirat – ELSTER & Formular Schritt für Schritt →</a>
+              </span>
+            </div>
+            <div class="inline-link-callout">
+              <span>→</span>
+              <span>
+                SK 3 und 5 mit Nachzahlungsrechner:
+                <a href="/steuerklasse-3-5/">Steuerklasse 3 und 5 – Lohnt es sich? →</a>
+              </span>
+            </div>
+          </section>
+
+          <!-- ══ H2 8: FAQ ══ -->
+          <section id="faq" class="anchor-section">
+            <h2>FAQ – Häufige Fragen zu Steuerklassen 2026</h2>
+
+            <div class="faq-list">
+
+              <details class="faq-item" id="faq-anzahl">
+                <summary>Wie viele Steuerklassen gibt es in Deutschland?</summary>
+                <div class="faq-answer">
+                  <p>
+                    Es gibt <strong>6 Steuerklassen</strong>
+                    (<a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a>):
+                    SK 1 (Ledig), SK 2 (Alleinerziehende), SK 3 (Verheiratet, Hauptverdiener),
+                    SK 4 (Verheiratet, ähnliche Einkommen), SK 5 (Verheiratet, Geringverdiener),
+                    SK 6 (Zweiter Job). Alle sind im Finder und der Übersichtstabelle oben erklärt.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item" id="faq-1vs4">
+                <summary>Was ist der Unterschied zwischen Steuerklasse 1 und 4?</summary>
+                <div class="faq-answer">
+                  <p>
+                    SK 1 gilt für Ledige, Geschiedene oder dauerhaft Getrenntlebende.
+                    SK 4 gilt für Verheiratete mit ähnlichen Einkommen.
+                    Beide Klassen haben denselben Grundfreibetrag (€12.348 in 2026) und
+                    führen zu nahezu identischen monatlichen Abzügen.
+                    Der Unterschied: Das Ehegattensplitting bei SK 4 wirkt erst in der
+                    jährlichen Steuererklärung — es senkt die Jahressteuerlast, nicht den
+                    monatlichen Abzug.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item" id="faq-sk2">
+                <summary>Was ist Steuerklasse 2 und wer bekommt sie?</summary>
+                <div class="faq-answer">
+                  <p>
+                    SK 2 gilt für Alleinerziehende mit mindestens einem Kind im Haushalt,
+                    für das Kindergeld bezogen wird, und keine weitere erwachsene Person im
+                    Haushalt lebt. Sie gewährt den Entlastungsbetrag von <strong>€4.260 (2026)</strong>
+                    für das erste Kind plus €240 je weiterem Kind.
+                    Wichtig: SK 2 muss <strong>aktiv beim Finanzamt beantragt</strong> werden —
+                    sie wird nicht automatisch zugeteilt.
+                    Details: <a href="#steuerklasse-2-beantragen">SK 2 beantragen ↑</a>
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item" id="faq-wahl">
+                <summary>Kann ich die Steuerklasse selbst wählen?</summary>
+                <div class="faq-answer">
+                  <p>
+                    Nur <strong>Verheiratete und eingetragene Lebenspartner</strong> können
+                    aktiv zwischen SK III/V, IV/IV und IV mit Faktor wählen.
+                    Alle anderen Klassen (1, 2, 6) werden nach Familienstand und Beschäftigung
+                    automatisch zugewiesen. Ausnahme: SK 2 muss aktiv beantragt werden.
+                    §38b Abs. 3 EStG erlaubt zusätzlich, freiwillig eine ungünstigere Klasse
+                    zu wählen — z.B. um Nachzahlungen zu vermeiden.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item" id="faq-entlastung">
+                <summary>Was ist der Entlastungsbetrag für Alleinerziehende 2026?</summary>
+                <div class="faq-answer">
+                  <p>
+                    Der Entlastungsbetrag beträgt 2026
+                    <strong>€4.260 für das erste Kind</strong> + €240 für jedes weitere
+                    Kind im Haushalt. Bei einem Grenzsteuersatz von 30% entspricht das
+                    ca. <strong>€106 mehr Netto pro Monat</strong>.
+                    Er wird automatisch in SK 2 berücksichtigt — muss aber aktiv beim
+                    Finanzamt beantragt werden. Viele Alleinerziehende kennen diesen
+                    Vorteil nicht und verschenken ihn.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item" id="faq-sk6">
+                <summary>Wann gilt Steuerklasse 6?</summary>
+                <div class="faq-answer">
+                  <p>
+                    SK 6 gilt automatisch für jeden zweiten (oder weiteren) sozialversicherungspflichtigen
+                    Job bei einem anderen Arbeitgeber — unabhängig vom Familienstand. Es gibt keinen
+                    Grundfreibetrag, die Abzüge sind entsprechend sehr hoch.
+                    <strong>Wichtige Ausnahme:</strong> Minijobs bis €556/Monat (2026) laufen
+                    mit pauschalierter Versteuerung durch den Arbeitgeber — SK 6 greift
+                    für Minijobs <em>nicht</em>.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item" id="faq-wechsel">
+                <summary>Wie oft darf man die Steuerklasse wechseln?</summary>
+                <div class="faq-answer">
+                  <p>
+                    Seit dem Jahressteuergesetz 2020 gibt es keine Begrenzung mehr —
+                    der Wechsel ist jederzeit möglich, wirksam ab dem 1. des Folgemonats.
+                    Einzige Einschränkung: Der Rückwechsel einer bestehenden Kombination
+                    (z.B. zurück von III/V auf IV/IV) ist auf <strong>einmal pro Kalenderjahr</strong>
+                    begrenzt. Viele Quellen nennen noch den 30. November als Stichtag —
+                    das ist seit 2020 veraltet.
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item" id="faq-faktor">
+                <summary>Was ist der Unterschied zwischen SK 3/5 und SK 4 mit Faktor?</summary>
+                <div class="faq-answer">
+                  <p>
+                    SK 3/5 ist <strong>„aggressiv"</strong>: Der Hauptverdiener (SK 3) bekommt
+                    <em>alle</em> monatlichen Steuervorteile — der Partner in SK 5 erhält
+                    keinen Grundfreibetrag und zahlt sehr hohe Abzüge. Das fühlt sich oft
+                    ungerecht an, obwohl die Jahressteuerlast identisch ist.
+                  </p>
+                  <p style="margin-top: var(--space-3)">
+                    Das <strong>Faktorverfahren (SK 4 mit Faktor)</strong> ist <strong>„fair"</strong>:
+                    Das Finanzamt berechnet einen individuellen Faktor (z.B. 0,84), der den
+                    Splittingvorteil proportional zum jeweiligen Einkommen aufteilt. Beide
+                    Partner zahlen monatlich weniger als ohne Splitting — und die Nachzahlung
+                    am Jahresende fällt sehr gering aus.
+                    Steuererklärung ist Pflicht (§46 EStG).
+                  </p>
+                </div>
+              </details>
+
+              <details class="faq-item" id="faq-trennung">
+                <summary>Ab wann endet die günstige Steuerklasse bei Trennung?</summary>
+                <div class="faq-answer">
+                  <p>
+                    Die Ehevergünstigungen (SK III, IV, V, Faktor) enden <strong>nicht erst
+                    mit der rechtskräftigen Scheidung</strong>, sondern ab dem Jahr nach der
+                    dauerhaften Trennung — also sobald beide in getrennten Haushalten leben
+                    mit der Absicht, die Ehe zu beenden.
+                    Im Trennungsjahr selbst darf SK III/V noch genutzt werden.
+                    Ab dem Folgejahr: SK 1 für beide.
+                    Rechtsgrundlage: §38b Abs. 1 EStG — „nicht dauernd getrennt lebend".
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </section>
+
+          <!-- Related Links -->
+          <div class="related-links-box">
+            <strong>Verwandte Themen auf NettoKlar</strong>
+            <ul>
+              <li><a href="/steuerklasse-3-5/">Steuerklasse 3 und 5: Nachzahlung, Rechner & Vergleich 2026</a></li>
+              <li><a href="/steuerklasse-heirat/">Steuerklasse wechseln nach Heirat – ELSTER & Formular</a></li>
+              <li><a href="/grundfreibetrag-2026/">Grundfreibetrag 2026: €12.348 – Was ist steuerfrei?</a></li>
+            </ul>
           </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>Wie oft kann man die Steuerklasse wechseln?</summary>
-          <div class="faq-answer">
-            <p>Seit 2020 können Sie die Steuerklasse <strong>unbegrenzt oft</strong> und jederzeit wechseln — wirksam ab dem 1. des Folgemonats. Den festen Stichtag 30. November gibt es nicht mehr. Einzige Einschränkung: Ein Rückwechsel (z.B. von 3/5 auf 4/4) ist nur einmal pro Kalenderjahr möglich.</p>
+          <!-- Author Bio -->
+          <div class="author-bio-block">
+            <strong>Über diesen Artikel</strong>
+            <p>
+              Verfasst von <strong>Riyaansh Mittal</strong>, Finanz- und Steuerredakteur bei NettoKlar.
+              Alle Angaben auf Basis von
+              <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a>,
+              <a href="https://www.gesetze-im-internet.de/estg/__32a.html" target="_blank" rel="noopener noreferrer">§32a EStG (Grundfreibetrag)</a>,
+              <a href="https://www.gesetze-im-internet.de/estg/__46.html" target="_blank" rel="noopener noreferrer">§46 EStG (Pflichtveranlagung)</a>
+              und den offiziellen BMF-Angaben für 2026.
+              Zuletzt geprüft: Mai 2026. Kein Ersatz für individuelle Steuerberatung.
+            </p>
           </div>
-        </details>
 
-        <details class="faq-item">
-          <summary>Wie beantrage ich Steuerklasse 2 als Alleinerziehende?</summary>
-          <div class="faq-answer">
-            <p>SK 2 muss aktiv beantragt werden über den „Antrag auf Lohnsteuerermäßigung" beim Finanzamt oder über mein.elster.de. Voraussetzung: mindestens ein Kind im Haushalt, Kindergeldbezug, keine weitere volljährige Person im Haushalt. Die Einstufung gilt rückwirkend ab Januar des laufenden Jahres.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Warum muss man bei Steuerklasse 3 und 5 immer nachzahlen?</summary>
-          <div class="faq-answer">
-            <p>SK 3 behält monatlich zu wenig Lohnsteuer ein (nutzt den doppelten Grundfreibetrag von €24.696), SK 5 behält zu viel ein. Am Jahresende gleicht das Finanzamt die Differenz aus — das führt für den SK-3-Partner typischerweise zu einer Nachzahlung. Das ist strukturell so vorgesehen, keine Strafe.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Welchen Nachteil hat Steuerklasse 5?</summary>
-          <div class="faq-answer">
-            <p>SK 5 rechnet keinen Grundfreibetrag an — der Geringverdiener zahlt Lohnsteuer vom ersten Euro. Das monatliche Netto ist deutlich niedriger als in SK 1 oder SK 4. Dazu kommt die Pflicht zur gemeinsamen Steuererklärung am Jahresende.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Wer zahlt in Deutschland 42% Steuern?</summary>
-          <div class="faq-answer">
-            <p>Den Spitzensteuersatz von 42% zahlen 2026 Singles ab einem zu versteuernden Einkommen von <strong>€68.480</strong> (Ehepaare: €136.960). Der Reichensteuersatz von 45% greift ab €277.826. Beide Sätze gelten nur auf den Einkommensteil über der jeweiligen Grenze — nicht auf das gesamte Einkommen.</p>
-          </div>
-        </details>
-
-      </div>
-
-      <div class="cta-group">
-        <a href="#finder-tool" class="btn-primary">Meine Steuerklasse herausfinden →</a>
-        <a href="/steuerklasse-3-5/" class="btn-secondary">SK 3 und 5 für Ehepaare →</a>
-      </div>
-
-    </article>
+        </div><!-- /.article-body -->
+      </article>
+    </div>
   </main>
 </BaseLayout>
 
 <script>
 (function () {
-  var radios       = document.querySelectorAll('input[name="familienstand"]');
-  var stepAE       = document.getElementById('step-alleinerziehend');
-  var stepEK       = document.getElementById('step-einkommen');
-  var slider       = document.getElementById('einkommensanteil');
-  var anteilDisp   = document.getElementById('anteil-display');
-  var partnerDisp  = document.getElementById('partner-anteil');
-  var btn          = document.getElementById('sk-finder-btn');
-  var resultBox    = document.getElementById('sk-result');
-  var badge        = document.getElementById('sk-badge');
-  var reason       = document.getElementById('sk-reason');
-  var ctaLink      = document.getElementById('sk-cta');
-  var shareRow     = document.getElementById('sk-share-row');
-  var embedBtn     = document.getElementById('embed-btn');
-  var embedModal   = document.getElementById('embed-modal');
-  var closeEmbed   = document.getElementById('close-embed');
-  var copyEmbed    = document.getElementById('copy-embed');
+  var radios      = document.querySelectorAll<HTMLInputElement>('input[name="familienstand"]');
+  var stepAE      = document.getElementById('step-alleinerziehend')!;
+  var stepEK      = document.getElementById('step-einkommen')!;
+  var slider      = document.getElementById('einkommensanteil') as HTMLInputElement;
+  var anteilDisp  = document.getElementById('anteil-display')!;
+  var partnerDisp = document.getElementById('partner-anteil')!;
+  var btn         = document.getElementById('sk-finder-btn')!;
+  var resultBox   = document.getElementById('sk-result')!;
+  var badge       = document.getElementById('sk-badge')!;
+  var reason      = document.getElementById('sk-reason')!;
+  var ctaLink     = document.getElementById('sk-cta') as HTMLAnchorElement;
+  var shareRow    = document.getElementById('sk-share-row')!;
+  var embedBtn    = document.getElementById('embed-btn')!;
+  var embedModal  = document.getElementById('embed-modal')!;
+  var closeEmbed  = document.getElementById('close-embed')!;
+  var copyEmbed   = document.getElementById('copy-embed')!;
 
-  function showHideSteps() {
-    var checked = document.querySelector('input[name="familienstand"]:checked');
+  /* ── Show/hide conditional steps ── */
+  function showHideSteps(): void {
+    var checked = document.querySelector<HTMLInputElement>('input[name="familienstand"]:checked');
     stepAE.classList.add('hidden');
     stepEK.classList.add('hidden');
     resultBox.classList.add('hidden');
@@ -526,67 +789,104 @@ const schema = {
     if (checked.value === 'ledig')       stepAE.classList.remove('hidden');
     if (checked.value === 'verheiratet') stepEK.classList.remove('hidden');
   }
+  radios.forEach(function (r) { r.addEventListener('change', showHideSteps); });
 
-  radios.forEach(function(r){ r.addEventListener('change', showHideSteps); });
-
+  /* ── Slider ── */
   slider.addEventListener('input', function () {
     anteilDisp.textContent  = slider.value + '%';
     partnerDisp.textContent = (100 - parseInt(slider.value)) + '%';
     resultBox.classList.add('hidden');
   });
 
-  function getSK(fs, ae, anteil, zweit) {
-    if (zweit === 'ja') return {
-      sk: 'SK 6',
-      text: 'Jeder Nebenjob wird automatisch mit Steuerklasse 6 besteuert — unabhängig vom Familienstand. Kein Antrag nötig.',
-      link: null, linkText: null
-    };
-    if (fs === 'ledig') {
-      if (ae === 'ja') return {
-        sk: 'SK 2',
-        text: 'Als Alleinerziehende/r mit Kind im Haushalt haben Sie Anspruch auf SK 2 — inklusive €4.260 Entlastungsbetrag (2026). Aktiv beantragen!',
-        link: '#steuerklasse-2-beantragen', linkText: 'So beantragen Sie SK 2 →'
-      };
-      return { sk: 'SK 1', text: 'Als ledige Person ohne Kinder sind Sie in Steuerklasse 1 — die Standardklasse für Singles.', link: null, linkText: null };
-    }
-    if (fs === 'verwitwet') return {
-      sk: 'SK 3 → SK 1',
-      text: 'Im Todesjahr und im Folgejahr gilt noch SK 3. Ab dem übernächsten Jahr wechseln Sie automatisch in SK 1.',
-      link: null, linkText: null
-    };
-    if (fs === 'geschieden') return {
-      sk: 'SK 1',
-      text: 'Nach dauerhafter Trennung werden Sie ab dem Folgejahr automatisch in SK 1 eingestuft.',
-      link: null, linkText: null
-    };
-    if (fs === 'verheiratet') {
-      var a = parseInt(anteil);
-      if (a >= 60 || a <= 40) return {
-        sk: 'SK 3 / SK 5',
-        text: 'Die 60-40-Regel ist erfüllt. SK 3 erhöht das monatliche Netto des Hauptverdieners deutlich. Die Jahressteuerlast bleibt identisch zu SK 4/4.',
-        link: '/steuerklasse-3-5/', linkText: 'SK 3 und 5 im Detail →'
-      };
-      if (a >= 45 && a <= 55) return {
-        sk: 'SK 4 / SK 4',
-        text: 'Beide Partner verdienen ähnlich viel — SK 4/4 ist die fairste Wahl. Kein Nachzahlungsrisiko, keine gemeinsame Steuererklärungspflicht.',
-        link: '/steuerklasse-3-5/', linkText: 'Vergleich SK 3/5 vs 4/4 →'
-      };
-      return {
-        sk: 'SK 4 mit Faktor',
-        text: 'Grenzbereich (40–60%): Das Faktorverfahren verteilt monatliche Abzüge präzise und vermeidet die Nachzahlung, die SK 3/5 typischerweise bringt.',
-        link: '/steuerklasse-3-5/', linkText: 'Faktor-Methode erklärt →'
-      };
-    }
-    return { sk: 'SK 1', text: 'Standardsteuerklasse.', link: null, linkText: null };
+  /* ── Preset chips ── */
+  document.querySelectorAll<HTMLButtonElement>('.preset-chip[data-anteil]').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      slider.value            = chip.dataset.anteil!;
+      anteilDisp.textContent  = chip.dataset.anteil + '%';
+      partnerDisp.textContent = (100 - parseInt(chip.dataset.anteil!)) + '%';
+      resultBox.classList.add('hidden');
+    });
+  });
+
+  /* ── Core logic ── */
+  interface SKResult {
+    sk: string;
+    text: string;
+    link: string | null;
+    linkText: string | null;
   }
 
-  function runFinder() {
-    var fs = (document.querySelector('input[name="familienstand"]:checked') || {}).value;
-    if (!fs) { alert('Bitte wählen Sie zuerst Ihren Familienstand aus.'); return; }
-    var ae    = ((document.querySelector('input[name="alleinerziehend"]:checked') || {}).value) || 'nein';
-    var anteil = slider.value;
-    var zweit = ((document.querySelector('input[name="zweiterjob"]:checked') || {}).value) || 'nein';
-    var res   = getSK(fs, ae, anteil, zweit);
+  function getSK(fs: string, ae: string, anteil: number, zweit: string): SKResult {
+    if (zweit === 'ja') return {
+      sk: 'Steuerklasse 6',
+      text: 'Jeder zweite sozialversicherungspflichtige Job wird automatisch mit SK 6 besteuert — unabhängig vom Familienstand. Es gibt keinen Grundfreibetrag, daher sind die Abzüge sehr hoch. Hinweis: Minijobs bis €556/Monat fallen nicht unter SK 6 — diese werden pauschal versteuert.',
+      link: null, linkText: null
+    };
+
+    if (fs === 'ledig') {
+      if (ae === 'ja') return {
+        sk: 'Steuerklasse 2',
+        text: 'Als Alleinerziehende/r mit Kind im Haushalt haben Sie Anspruch auf SK 2 — inklusive €4.260 Entlastungsbetrag (2026, erstes Kind) + €240 je weiterem Kind. Bei 30% Grenzsteuersatz entspricht das ca. €106 mehr Netto/Monat. Wichtig: SK 2 wird nicht automatisch zugeteilt — bitte aktiv beim Finanzamt beantragen!',
+        link: '#steuerklasse-2-beantragen',
+        linkText: 'So beantragen Sie SK 2 →'
+      };
+      return {
+        sk: 'Steuerklasse 1',
+        text: 'Als ledige Person ohne Kinder sind Sie in SK 1 — die Standardklasse für Singles. Es gibt nichts zu beantragen. Der Grundfreibetrag 2026 beträgt €12.348 — auf diesen Betrag zahlen Sie 0% Einkommensteuer.',
+        link: null, linkText: null
+      };
+    }
+
+    if (fs === 'verwitwet') return {
+      sk: 'SK 3 → danach SK 1',
+      text: 'Im Todesjahr und im gesamten Folgejahr gilt noch SK 3 (Gnadensplitting, §38b Abs. 1 Nr. 3b EStG) — eine Übergangsfrist zur finanziellen Stabilisierung. Ab dem übernächsten Jahr wechseln Sie automatisch in SK 1. Beispiel: Tod im März 2025 → SK 3 gilt für 2025 und 2026 → ab Januar 2027 SK 1.',
+      link: null, linkText: null
+    };
+
+    if (fs === 'geschieden') return {
+      sk: 'Steuerklasse 1',
+      text: 'Nach dauerhafter Trennung oder Scheidung werden Sie ab dem Folgejahr der Trennung in SK 1 eingestuft — nicht erst nach rechtskräftiger Scheidung. Im Trennungsjahr selbst darf SK III/V noch genutzt werden. Rechtsgrundlage: §38b Abs. 1 EStG — „nicht dauernd getrennt lebend".',
+      link: null, linkText: null
+    };
+
+    if (fs === 'verheiratet') {
+      var a = anteil;
+      if (a >= 60 || a <= 40) return {
+        sk: 'Steuerklasse 3 / 5',
+        text: 'Die 60-40-Regel ist erfüllt: SK 3 erhöht das monatliche Netto des Hauptverdieners erheblich. Wichtig: Die Jahressteuerlast ist identisch zu SK 4/4 — SK 3/5 ist nur eine andere monatliche Vorauszahlung. Am Jahresende kommt eine Nachzahlung, da SK 3 zu wenig einbehält. Beide müssen eine Steuererklärung einreichen (Pflichtveranlagung, §46 EStG).',
+        link: '/steuerklasse-3-5/',
+        linkText: 'SK 3 und 5 im Detail — Rechner & Nachzahlung →'
+      };
+      if (a >= 45 && a <= 55) return {
+        sk: 'Steuerklasse 4 / 4',
+        text: 'Beide Partner verdienen ähnlich viel — SK 4/4 ist die fairste und unkomplizierteste Wahl. Kein Nachzahlungsrisiko, keine Pflicht zur gemeinsamen Steuererklärung. Die Jahressteuerlast ist identisch zu SK 3/5.',
+        link: '/steuerklasse-3-5/',
+        linkText: 'Vergleich SK 3/5 vs. 4/4 →'
+      };
+      return {
+        sk: 'Steuerklasse 4 mit Faktor',
+        text: 'Grenzbereich (40–60%): Das Faktorverfahren teilt den Splittingvorteil fair und proportional auf beide Partner auf — kein Partner zahlt unverhältnismäßig hohe Abzüge. Kaum Nachzahlung am Jahresende. Steuererklärung ist Pflicht (§46 EStG). Der Faktor wird bei größeren Einkommensänderungen neu beantragt.',
+        link: '/steuerklasse-heirat/',
+        linkText: 'Faktorverfahren im Detail →'
+      };
+    }
+
+    return { sk: 'Steuerklasse 1', text: 'Standardsteuerklasse. §38b EStG.', link: null, linkText: null };
+  }
+
+  /* ── Run Finder ── */
+  function runFinder(): void {
+    var fsEl = document.querySelector<HTMLInputElement>('input[name="familienstand"]:checked');
+    if (!fsEl) { alert('Bitte wählen Sie zuerst Ihren Familienstand aus.'); return; }
+
+    var fs    = fsEl.value;
+    var aeEl  = document.querySelector<HTMLInputElement>('input[name="alleinerziehend"]:checked');
+    var ae    = aeEl ? aeEl.value : 'nein';
+    var anteil = parseInt(slider.value);
+    var zwEl  = document.querySelector<HTMLInputElement>('input[name="zweiterjob"]:checked');
+    var zweit = zwEl ? zwEl.value : 'nein';
+
+    var res = getSK(fs, ae, anteil, zweit);
 
     badge.textContent  = res.sk;
     reason.textContent = res.text;
@@ -594,74 +894,108 @@ const schema = {
     if (res.link) {
       ctaLink.href        = res.link;
       ctaLink.textContent = res.linkText;
+      (ctaLink as HTMLElement).style.display = 'inline-block';
       ctaLink.classList.remove('hidden');
-      ctaLink.style.display = 'inline-block';
     } else {
+      (ctaLink as HTMLElement).style.display = 'none';
       ctaLink.classList.add('hidden');
     }
 
-    var shareUrl  = 'https://nettoklar.de/steuerklasse-finder/?' + new URLSearchParams({fs:fs,ae:ae,anteil:anteil,zweit:zweit}).toString();
+    /* Share row */
+    var shareUrl  = 'https://nettoklar.de/steuerklasse-finder/?' +
+      new URLSearchParams({ fs, ae, anteil: String(anteil), zweit }).toString();
     var shareText = 'Meine Steuerklasse ist ' + res.sk + ' — NettoKlar Steuerklassen-Finder: ' + shareUrl;
 
     shareRow.innerHTML = '';
+
     var cpBtn = document.createElement('button');
     cpBtn.className   = 'preset-chip';
     cpBtn.textContent = '📋 Ergebnis kopieren';
-    cpBtn.addEventListener('click', function(){
-      navigator.clipboard.writeText(shareText).then(function(){
+    cpBtn.addEventListener('click', function () {
+      navigator.clipboard.writeText(shareText).then(function () {
         cpBtn.textContent = '✓ Kopiert!';
-        setTimeout(function(){ cpBtn.textContent = '📋 Ergebnis kopieren'; }, 2000);
+        setTimeout(function () { cpBtn.textContent = '📋 Ergebnis kopieren'; }, 2000);
       });
     });
-    var waLink = document.createElement('a');
-    waLink.href      = 'https://wa.me/?text=' + encodeURIComponent(shareText);
-    waLink.target    = '_blank';
-    waLink.rel       = 'noopener noreferrer';
-    waLink.className = 'preset-chip';
+
+    var waLink        = document.createElement('a');
+    waLink.href       = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+    waLink.target     = '_blank';
+    waLink.rel        = 'noopener noreferrer';
+    waLink.className  = 'preset-chip';
     waLink.textContent = '💬 WhatsApp teilen';
+
     shareRow.appendChild(cpBtn);
     shareRow.appendChild(waLink);
+    (shareRow as HTMLElement).style.display = 'flex';
     shareRow.classList.remove('hidden');
-    shareRow.style.display = 'flex';
 
-    history.replaceState(null, '', '?' + new URLSearchParams({fs:fs,ae:ae,anteil:anteil,zweit:zweit}).toString());
+    history.replaceState(null, '', '?' + new URLSearchParams({ fs, ae, anteil: String(anteil), zweit }).toString());
+
     resultBox.classList.remove('hidden');
     resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
   btn.addEventListener('click', runFinder);
 
-  // Restore from URL
-  (function(){
+  /* ── Restore state from URL params ── */
+  (function restoreFromUrl(): void {
     var p = new URLSearchParams(window.location.search);
     if (!p.get('fs')) return;
-    var fsR = document.querySelector('input[name="familienstand"][value="' + p.get('fs') + '"]');
+
+    var fsR = document.querySelector<HTMLInputElement>('input[name="familienstand"][value="' + p.get('fs') + '"]');
     if (fsR) { fsR.checked = true; showHideSteps(); }
+
     if (p.get('ae')) {
-      var aeR = document.querySelector('input[name="alleinerziehend"][value="' + p.get('ae') + '"]');
+      var aeR = document.querySelector<HTMLInputElement>('input[name="alleinerziehend"][value="' + p.get('ae') + '"]');
       if (aeR) aeR.checked = true;
     }
     if (p.get('anteil')) {
-      slider.value            = p.get('anteil');
+      slider.value            = p.get('anteil')!;
       anteilDisp.textContent  = p.get('anteil') + '%';
-      partnerDisp.textContent = (100 - parseInt(p.get('anteil'))) + '%';
+      partnerDisp.textContent = (100 - parseInt(p.get('anteil')!)) + '%';
     }
     if (p.get('zweit')) {
-      var zwR = document.querySelector('input[name="zweiterjob"][value="' + p.get('zweit') + '"]');
+      var zwR = document.querySelector<HTMLInputElement>('input[name="zweiterjob"][value="' + p.get('zweit') + '"]');
       if (zwR) zwR.checked = true;
     }
     runFinder();
   })();
 
-  // Embed modal
-  embedBtn.addEventListener('click', function(){ embedModal.style.display = 'flex'; });
-  closeEmbed.addEventListener('click', function(){ embedModal.style.display = 'none'; });
-  embedModal.addEventListener('click', function(e){ if (e.target === embedModal) embedModal.style.display = 'none'; });
-  copyEmbed.addEventListener('click', function(){
-    navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(function(){
-      copyEmbed.textContent = '✓ Kopiert!';
-      setTimeout(function(){ copyEmbed.textContent = 'Code kopieren'; }, 2000);
+  /* ── Embed modal ── */
+  embedBtn.addEventListener('click', function () {
+    (embedModal as HTMLElement).style.display = 'flex';
+  });
+  closeEmbed.addEventListener('click', function () {
+    (embedModal as HTMLElement).style.display = 'none';
+  });
+  embedModal.addEventListener('click', function (e: Event) {
+    if (e.target === embedModal) (embedModal as HTMLElement).style.display = 'none';
+  });
+  copyEmbed.addEventListener('click', function () {
+    var code = document.getElementById('embed-code')!.textContent || '';
+    navigator.clipboard.writeText(code.trim()).then(function () {
+      (copyEmbed as HTMLButtonElement).textContent = '✓ Kopiert!';
+      setTimeout(function () {
+        (copyEmbed as HTMLButtonElement).textContent = 'Code kopieren';
+      }, 2000);
     });
   });
+
+  /* ── FAQ deep-link ── */
+  function openFaqFromHash(): void {
+    var hash = window.location.hash.slice(1);
+    if (!hash) return;
+    var target = document.getElementById(hash);
+    if (target && target.tagName === 'DETAILS') {
+      (target as HTMLDetailsElement).open = true;
+      setTimeout(function () {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', openFaqFromHash);
+  window.addEventListener('hashchange', openFaqFromHash);
+
 })();
 </script>
