@@ -233,44 +233,72 @@ const schema = [
           </div>
         </dl>
 
-        <!-- Summary Card -->
-        <div class="summary-card">
+        <!-- ══ Zahlen im Überblick ══ -->
+        <div class="summary-card" id="heirat-zusammenfassung">
           <h2>Das Wichtigste auf einen Blick</h2>
+          
           <div class="table-scroll">
             <table class="data-table">
-              <thead>
-                <tr><th>Frage</th><th>Antwort</th></tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>Automatische SK nach Heirat</td>
-                  <td><strong>IV / IV</strong></td>
+                  <td><strong>Automatische SK nach Heirat</strong></td>
+                  <td>IV / IV (ohne Antrag)</td>
                 </tr>
                 <tr>
-                  <td>Wann lohnt sich III / V?</td>
-                  <td>Ein Partner verdient ≥ 60% des gemeinsamen Einkommens</td>
-                </tr>
-                <tr>
-                  <td>Frist für den Wechsel</td>
-                  <td>Jederzeit — kein fixer Stichtag seit 2020</td>
-                </tr>
-                <tr>
-                  <td>Wirksam ab</td>
-                  <td>1. des Folgemonats nach Antragstellung</td>
+                  <td><strong>Wann lohnt sich III / V?</strong></td>
+                  <td>Wenn ein Partner ≥ 60% des Einkommens verdient</td>
                 </tr>
                 <tr class="highlight-row">
-                  <td>Kosten des Wechsels</td>
-                  <td><strong>Kostenlos</strong> — via ELSTER oder Papierformular</td>
+                  <td><strong>Frist für den Wechsel</strong></td>
+                  <td>Jederzeit — wirksam ab dem 1. des Folgemonats</td>
                 </tr>
                 <tr>
-                  <td>Rechtsgrundlage</td>
-                  <td>
-                    <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a>
-                  </td>
+                  <td><strong>Kosten & Antrag</strong></td>
+                  <td>Kostenlos via ELSTER (oder Papier)</td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+          <details style="margin-top: var(--space-4); border-top: 1px solid var(--color-border); padding-top: var(--space-3);">
+            <summary style="font-size: var(--text-sm); font-weight: 600; cursor: pointer;">
+              Steuer-Kenngrößen & offizielle Quellen 2026 anzeigen ▾
+            </summary>
+            <div class="table-scroll" style="margin-top: var(--space-3);">
+              <table class="data-table" style="font-size: var(--text-xs);">
+                <thead>
+                  <tr><th>Kenngröße</th><th>Wert 2026</th><th>Quelle</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Grundfreibetrag (Einzel)</td>
+                    <td><strong>12.096 €</strong></td>
+                    <td><a href="https://www.bundesfinanzministerium.de/Web/DE/Themen/Steuern/Steuerarten/Lohnsteuer/Programmablaufplan/programmablaufplan.html" target="_blank" rel="noopener noreferrer">BMF</a></td>
+                  </tr>
+                  <tr>
+                    <td>Splitting-Freibetrag</td>
+                    <td><strong>24.192 €</strong></td>
+                    <td><a href="https://www.gesetze-im-internet.de/estg/__32a.html" target="_blank" rel="noopener noreferrer">§32a EStG</a></td>
+                  </tr>
+                  <tr>
+                    <td>Arbeitnehmer-Pauschbetrag</td>
+                    <td><strong>1.230 €</strong></td>
+                    <td><a href="https://www.gesetze-im-internet.de/estg/__9a.html" target="_blank" rel="noopener noreferrer">§9a EStG</a></td>
+                  </tr>
+                  <tr>
+                    <td>Sonderausgaben-Pauschbetrag</td>
+                    <td><strong>36 €</strong></td>
+                    <td><a href="https://www.gesetze-im-internet.de/estg/__10c.html" target="_blank" rel="noopener noreferrer">§10c EStG</a></td>
+                  </tr>
+                  <tr>
+                    <td>Kinderfreibetrag (je Elternteil)</td>
+                    <td><strong>3.192 €</strong></td>
+                    <td><a href="https://www.gesetze-im-internet.de/estg/__32.html" target="_blank" rel="noopener noreferrer">§32 EStG</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
         </div>
 
         <div class="article-body">
@@ -280,8 +308,9 @@ const schema = [
             <h2>Welche Steuerklasse gilt automatisch nach der Hochzeit?</h2>
             <p>
               Nach der Heirat werden beide Partner vom Finanzamt automatisch in
-              <strong>Steuerklasse IV / IV</strong> eingestuft. Das passiert ohne Antrag —
-              das Standesamt meldet die Heirat an die Meldebehörde, die das Finanzamt informiert.
+              <strong>Steuerklasse IV / IV</strong> eingestuft. 
+              <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Quelle: §38b Abs. 1 Nr. 4 EStG">[§38b Abs. 1 Nr. 4 EStG]</a> 
+              Das passiert ohne Antrag — das Standesamt meldet die Heirat an die Meldebehörde, die das Finanzamt informiert.
             </p>
             <p>
               Viele frisch verheiratete Paare wundern sich, warum sich ihr Netto nach der Hochzeit
@@ -630,6 +659,11 @@ const schema = [
               </table>
             </div>
 
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2)">
+              Faktorverfahren: <a href="https://www.gesetze-im-internet.de/estg/__39f.html" target="_blank" rel="noopener noreferrer">§39f EStG</a> ·
+              Pflichtveranlagung bei IV+Faktor: <a href="https://www.gesetze-im-internet.de/estg/__46.html" target="_blank" rel="noopener noreferrer">§46 Abs. 2 Nr. 3a EStG</a>
+            </p>
+
             <p style="margin-top: var(--space-4)">
               Das Faktorverfahren lohnt sich besonders, wenn beide Partner arbeiten, die Gehälter
               unterschiedlich sind (aber nicht extrem), und Sie die psychologische Gehaltsschere
@@ -703,7 +737,7 @@ const schema = [
                 <div class="faq-answer">
                   <p>
                     Seit 2020 gibt es <strong>keine feste Frist mehr</strong> — der Wechsel ist jederzeit möglich,
-                    wirksam ab dem 1. des Folgemonats.
+                    wirksam ab dem 1. des Folgemonats. <a href="https://www.gesetze-im-internet.de/estg/__39.html" target="_blank" rel="noopener noreferrer" class="source-link">[§39b EStG]</a>
                     Viele Quellen nennen noch den 30. November — das ist seit dem Jahressteuergesetz 2020 veraltet.
                     Einzige Einschränkung: Eine Kombination darf nur einmal pro Kalenderjahr rückgängig gemacht werden.
                   </p>

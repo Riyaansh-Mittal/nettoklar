@@ -151,7 +151,10 @@ const schema = {
           </div>
           <div class="fact-item">
             <dt>Grundfreibetrag 2026</dt>
-            <dd>€12.348 <span style="font-size:var(--text-xs); font-weight:400; color:var(--color-text-muted)">(= steuerfrei)</span></dd>
+            <dd>€12.348 <span style="font-size:var(--text-xs); font-weight:400; color:var(--color-text-muted)">
+                (= steuerfrei · <a href="https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html" target="_blank" rel="noopener noreferrer">Quelle: BMF</a>)
+              </span>
+            </dd>
           </div>
           <div class="fact-item">
             <dt>Entlastungsbetrag SK 2</dt>
@@ -167,9 +170,35 @@ const schema = {
           </div>
           <div class="fact-item">
             <dt>Rechtsgrundlage</dt>
-            <dd>§38b EStG</dd>
+            <dd><a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a></dd>
           </div>
         </dl>
+
+        <!-- Zahlen im Überblick -->
+        <div class="summary-card">
+          <h2>Steuerklassen 2026 – Zahlen im Überblick</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Steuerklasse</th>
+                <th>Gilt für</th>
+                <th>Grundfreibetrag 2026</th>
+                <th>Besonderheit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>SK 1</strong></td><td>Ledig, geschieden, verwitwet (ab 2. Jahr)</td><td>€12.348</td><td>Standardklasse</td></tr>
+              <tr><td><strong>SK 2</strong></td><td>Alleinerziehende</td><td>€12.348 + €4.260</td><td>Entlastungsbetrag</td></tr>
+              <tr class="highlight-row"><td><strong>SK 3</strong></td><td>Verheiratet – Hauptverdiener</td><td>€24.696 (doppelt)</td><td>Nur mit SK 5-Partner</td></tr>
+              <tr><td><strong>SK 4</strong></td><td>Verheiratet – ähnliche Einkommen</td><td>€12.348</td><td>Optional: Faktorverfahren</td></tr>
+              <tr><td><strong>SK 5</strong></td><td>Verheiratet – Geringverdiener</td><td>€0</td><td>Nur mit SK 3-Partner</td></tr>
+              <tr><td><strong>SK 6</strong></td><td>Zweiter Job</td><td>€0</td><td>Höchste Abzüge</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2)">
+            Quelle: <a href="https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html" target="_blank" rel="noopener noreferrer">BMF – Steuerliche Änderungen 2026</a>, §38b EStG. Stand Januar 2026.
+          </p>
+        </div>
 
         <div class="article-body">
 

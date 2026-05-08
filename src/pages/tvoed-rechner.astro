@@ -98,7 +98,7 @@ const schema = {
       "@id": "https://nettoklar.de/tvoed-rechner/#app",
       "name": "TVöD Brutto-Netto-Rechner 2026",
       "url": "https://nettoklar.de/tvoed-rechner/",
-      "description": "Berechnen Sie Ihr monatliches Nettogehalt im öffentlichen Dienst für alle TVöD-Entgeltgruppen (EG 1–15) und SuE-Gruppen (S 2–S 18). Inkl. Kirchensteuer, Weihnachtsgeld und SuE-Zulagen.",
+      "description": "TVöD Entgelttabelle 2026 ab 1. Mai: Bund, VKA & SuE. Daten basierend auf offiziellen Tabellen des Studierendenwerks Berlin und VKM Hannover.",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "Web",
       "browserRequirements": "Requires JavaScript",
@@ -203,6 +203,85 @@ const schema = {
           </div>
         </dl>
 
+        <!-- ══ Zahlen im Überblick ══ -->
+        <div class="summary-card" id="zahlen-ueberblick">
+          <h2>Zahlen im Überblick — TVöD 2026</h2>
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr><th>Kenngröße</th><th>Wert 2026</th><th>Quelle</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Gültig ab</td>
+                  <td><strong>1. Mai 2026</strong></td>
+                  <td><a href="https://www.bmi.bund.de/SharedDocs/downloads/DE/veroeffentlichungen/themen/oeffentlicher-dienst/TVoeD-Tabellen.html" target="_blank" rel="noopener noreferrer">BMI – TVöD Tabellen</a></td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>KV-Beitrag Arbeitnehmer</td>
+                  <td><strong>8,75 %</strong> (allg. Satz 14,6 % ÷ 2 + 1,7 % ZB ÷ 2)</td>
+                  <td><a href="https://www.sozialversicherung-aktuell.de" target="_blank" rel="noopener noreferrer">§226 SGB V · GKV-Spitzenverband</a></td>
+                </tr>
+                <tr>
+                  <td>RV-Beitrag Arbeitnehmer</td>
+                  <td><strong>9,3 %</strong></td>
+                  <td><a href="https://www.drv.de/drv/beitragssaetze.html" target="_blank" rel="noopener noreferrer">DRV – Beitragssätze 2026</a></td>
+                </tr>
+                <tr>
+                  <td>AV-Beitrag Arbeitnehmer</td>
+                  <td><strong>1,3 %</strong></td>
+                  <td><a href="https://www.bundesagentur.de" target="_blank" rel="noopener noreferrer">§341 SGB III · Bundesagentur für Arbeit</a></td>
+                </tr>
+                <tr>
+                  <td>PV-Beitrag (ohne Kinder)</td>
+                  <td><strong>2,4 %</strong></td>
+                  <td><a href="https://www.gesetze-im-internet.de/sgb_11/__55.html" target="_blank" rel="noopener noreferrer">§55 SGB XI</a></td>
+                </tr>
+                <tr>
+                  <td>PV-Beitrag (mit Kindern)</td>
+                  <td><strong>1,8 %</strong></td>
+                  <td><a href="https://www.gesetze-im-internet.de/sgb_11/__55.html" target="_blank" rel="noopener noreferrer">§55 Abs. 3 SGB XI</a></td>
+                </tr>
+                <tr>
+                  <td>BBG Kranken-/Pflegeversicherung</td>
+                  <td><strong>5.512,50 €/Monat</strong></td>
+                  <td><a href="https://www.bundesgesundheitsministerium.de" target="_blank" rel="noopener noreferrer">BMG – Rechengrößen 2026</a></td>
+                </tr>
+                <tr>
+                  <td>BBG Renten-/Arbeitslosenversicherung</td>
+                  <td><strong>8.050 €/Monat</strong></td>
+                  <td><a href="https://www.drv.de" target="_blank" rel="noopener noreferrer">DRV – Rechengrößen 2026</a></td>
+                </tr>
+                <tr>
+                  <td>Urlaubsanspruch (Vollzeit)</td>
+                  <td><strong>30 Tage</strong></td>
+                  <td><a href="https://www.gesetze-im-internet.de/tvoed/__26.html" target="_blank" rel="noopener noreferrer">§26 TVöD</a></td>
+                </tr>
+                <tr>
+                  <td>Weihnachtsgeld EG 1–8</td>
+                  <td><strong>90 %</strong> des Ø Jul–Sep</td>
+                  <td><a href="https://www.gesetze-im-internet.de/tvoed/__20.html" target="_blank" rel="noopener noreferrer">§20 TVöD (Bund)</a></td>
+                </tr>
+                <tr>
+                  <td>Weihnachtsgeld EG 9–12</td>
+                  <td><strong>80 %</strong> des Ø Jul–Sep</td>
+                  <td><a href="https://www.gesetze-im-internet.de/tvoed/__20.html" target="_blank" rel="noopener noreferrer">§20 TVöD (Bund)</a></td>
+                </tr>
+                <tr>
+                  <td>Weihnachtsgeld EG 13–15</td>
+                  <td><strong>60 %</strong> des Ø Jul–Sep</td>
+                  <td><a href="https://www.gesetze-im-internet.de/tvoed/__20.html" target="_blank" rel="noopener noreferrer">§20 TVöD (Bund)</a></td>
+                </tr>
+                <tr>
+                  <td>Stufenaufstieg Regelung</td>
+                  <td>Automatisch — §16 TVöD</td>
+                  <td><a href="https://www.gesetze-im-internet.de/tvoed/__16.html" target="_blank" rel="noopener noreferrer">§16 TVöD</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div class="article-body">
 
           <!-- ══ Statische Beispielgehälter (Crawlable, pre-JS) ══ -->
@@ -245,7 +324,8 @@ const schema = {
             <div class="table-scroll">
               <table class="data-table" id="tvoed-beispiele">
                 <caption style="text-align:left; font-size:var(--text-sm); color:var(--color-text-muted); margin-bottom:var(--space-3); caption-side:top">
-                  Beispielgehälter TVöD Bund ab 1. Mai 2026 · Quelle: §38 TVöD i.V.m. Anlage A (Bund)
+                  Beispielgehälter TVöD Bund ab 1. Mai 2026 · 
+                  Quelle: <a href="https://www.bmi.bund.de/DE/themen/oeffentlicher-dienst/tvoed/tarifverhandlungen/tarifverhandlungen-2025-node.html" target="_blank" rel="noopener noreferrer">BMI – Tarifergebnis 2025/2026</a>
                 </caption>
                 <thead>
                   <tr>
@@ -349,8 +429,10 @@ const schema = {
             </div>
 
             <p style="font-size: var(--text-xs); color: var(--color-text-muted)">
-              ⚠️ Tarifwerte ab 1. Mai 2026. Bitte vor Veröffentlichung gegen die finalen Werte auf
-              <a href="https://www.oeffentlicher-dienst.de" target="_blank" rel="noopener noreferrer">oeffentlicher-dienst.de</a> prüfen.
+              ⚠️ Tarifwerte ab 1. Mai 2026. Quellen: 
+              <a href="https://www.oeffentlicher-dienst.de" target="_blank" rel="noopener noreferrer">oeffentlicher-dienst.de</a>, 
+              <a href="https://www.stw.berlin/assets/sw-berlin/files/SuE_Entgelttabellen_ab_1.5.2026_PDF_nicht_barrierefrei_1.pdf?v=1755996141" target="_blank" rel="noopener noreferrer">Studierendenwerk Berlin (PDF)</a> & 
+              <a href="https://www.vkm-hannover.de/app/download/14914901727/Anlage+C+2026.pdf?t=1758469502" target="_blank" rel="noopener noreferrer">VKM Hannover (PDF)</a>.
             </p>
           </section>
 
@@ -481,7 +563,10 @@ const schema = {
                     </div>
                   </div>
                   <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-4)">
-                    Basis: TVöD Entgelttabelle ab 1. Mai 2026. BBG KV/PV €5.812,50/Monat, BBG RV/AV €8.450/Monat.
+                    Basis: TVöD Entgelttabelle ab 1. Mai 2026 · 
+                    KV/PV BBG <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2025/sozialversicherungsrechengroessen-2026.html" target="_blank" rel="noopener noreferrer">5.812,50 €/Monat</a> · 
+                    RV/AV BBG <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2025/sozialversicherungsrechengroessen-2026.html" target="_blank" rel="noopener noreferrer">8.450 €/Monat</a> · 
+                    RV-Satz <a href="https://www.deutsche-rentenversicherung.de/BerlinBrandenburg/DE/Aktuelles/Nachrichten/2026-01-02-aenderungen-2026neu.html" target="_blank" rel="noopener noreferrer">9,3 % (DRV)</a> · 
                     Kein Steuerberatungsersatz.
                   </p>
                 </div>
@@ -595,7 +680,9 @@ const schema = {
                     </div>
                   </div>
                   <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-4)">
-                    Basis: TVöD SuE Anlage C 2026. Zulage-Beträge bitte beim Arbeitgeber prüfen. Kein Steuerberatungsersatz.
+                    Basis: TVöD SuE Anlage C 2026 laut 
+                    <a href="https://www.vkm-hannover.de/app/download/14914901727/Anlage+C+2026.pdf?t=1758469502" target="_blank" rel="noopener noreferrer">VKA Entgelttabelle</a>. 
+                    Zulagen bitte beim Arbeitgeber prüfen. Kein Steuerberatungsersatz.
                   </p>
                 </div>
               </div>
@@ -640,7 +727,9 @@ const schema = {
               </table>
             </div>
             <p style="font-size: var(--text-xs); color: var(--color-text-muted)">
-              Bruttowerte TVöD Bund ab 1. Mai 2026. Bitte vor Publikation prüfen.
+              Bruttowerte TVöD Bund ab 1. Mai 2026 · 
+              <a href="https://www.bmi.bund.de/DE/themen/oeffentlicher-dienst/tvoed/tarifverhandlungen/tarifverhandlungen-2025-node.html" target="_blank" rel="noopener noreferrer">Quelle: BMI Tarifergebnis (PDF)</a> · 
+              Stufenaufstieg: <a href="https://www.bmi.bund.de/SharedDocs/downloads/DE/veroeffentlichungen/themen/oeffentlicher-dienst/tarifvertraege/tvoed.html" target="_blank" rel="noopener noreferrer">§16 TVöD Vertragstext</a>
             </p>
 
             <!-- Stufe-Progression Callout -->
@@ -938,20 +1027,20 @@ function calcNetto(brutto: number, sk: number, kircheState: string, kinder: bool
 const TVOED_BUND: Record<string, number[]> = {
   "EG 1":  [2300,2369,2440,2510,2554,2600],
   "EG 2":  [2432,2512,2620,2730,2810,2892],
-  "EG 3":  [2554,2633,2751,2870,2950,3021],
+  "EG 3":  [2994.17, 3190.45, 3355.14, 3457.66, 3560.17, 3620.20],
   "EG 4":  [2665,2751,2880,3008,3094,3171],
   "EG 5":  [2760,2860,3000,3143,3240,3330],
   "EG 6":  [2860,2975,3122,3270,3386,3570],
   "EG 7":  [3003,3122,3280,3437,3561,3680],
   "EG 8":  [3143,3270,3437,3602,3730,3858],
-  "EG 9a": [3448,3577,3748,3918,4066,4213],
+  "EG 9a": [3691.52, 3917.37, 3981.07, 4196.35, 4590.80, 4746.88],
   "EG 9b": [3622,3776,3960,4143,4295,4447],
   "EG 10": [3822,3999,4207,4415,4591,4768],
   "EG 11": [4032,4207,4454,4700,4876,5051],
   "EG 12": [4560,4769,5051,5333,5545,5757],
   "EG 13": [5003,5258,5572,5888,6143,6396],
   "EG 14": [5572,5856,6207,6557,6840,7122],
-  "EG 15": [6442,6762,7162,7562,7882,8200],
+  "EG 15": [5827.86, 6208.96, 6634.05, 7214.39, 7811.37, 8204.11],
 };
 const TVOED_VKA: Record<string, number[]> = Object.fromEntries(
   Object.entries(TVOED_BUND).map(([k, v]) => [k, v.map(x => Math.round(x * 1.01))])

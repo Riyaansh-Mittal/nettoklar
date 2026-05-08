@@ -89,7 +89,7 @@ const schema = [
     "@id": "https://nettoklar.de/rentenpunkte-kaufen/#app",
     "name": "Rentenpunkte Kauf-Rechner 2026",
     "url": "https://nettoklar.de/rentenpunkte-kaufen/",
-    "description": "Berechnen Sie Ihre persönliche Rendite, Steuerersparnis und Break-Even-Alter beim Kauf von Rentenpunkten 2026.",
+    "description": "1 Rentenpunkt kaufen kostet 2026 genau €9.661,58 (§ 187a SGB VI, DRV-Quelle). Rechner zeigt Break-Even & Steuerersparnis. Formular V0800 erklärt.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
     "browserRequirements": "Requires JavaScript",
@@ -140,8 +140,7 @@ const schema = [
 
         <!-- Direct Answer (above the fold — cited by LLMs) -->
         <p class="direct-answer">
-          Ein Rentenpunkt kostet 2026 genau <strong>€9.661,58</strong> (§ 187a SGB VI).
-          Ab Juli 2026 bringt er <strong>€42,52/Monat</strong> mehr Rente.
+          Ein Rentenpunkt kostet 2026 genau <strong>€9.661,58</strong> (berechnet nach <a href="https://www.gesetze-im-internet.de/sgb_6/__187a.html" target="_blank" rel="noopener noreferrer">§ 187a SGB VI</a>). Ab Juli 2026 bringt er laut <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">BMAS-Rentenanpassung</a> <strong>€42,52/Monat</strong> mehr Rente.
           Break-even bei Grenzsteuersatz 30%: <strong>ca. Alter 80</strong>.
           Für Personen mit ≥42% Steuersatz und ≥10 Jahren bis zur Rente lohnt es sich meistens.
         </p>
@@ -198,6 +197,83 @@ const schema = [
           </div>
         </dl>
 
+        <!-- ══ Zahlen im Überblick ══ -->
+        <div class="table-scroll" style="margin-bottom: var(--space-8);">
+          <table class="data-table" aria-label="Zahlen im Überblick – Rentenpunkte kaufen 2026">
+            <caption style="text-align:left; font-weight:600; font-size:var(--text-lg); margin-bottom:var(--space-3); caption-side:top;">
+              Zahlen im Überblick – Rentenpunkte kaufen 2026
+            </caption>
+            <thead>
+              <tr>
+                <th>Kennzahl</th>
+                <th>Wert</th>
+                <th>Quelle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><strong>Kosten pro Rentenpunkt (2026)</strong></td>
+                <td><strong>€9.661,58</strong></td>
+                <td>
+                  <a href="https://www.gesetze-im-internet.de/sgb_6/__187a.html" target="_blank" rel="noopener noreferrer">
+                    § 187a SGB VI
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>Vorläufiges Durchschnittsentgelt 2026</td>
+                <td>€51.944 / Jahr</td>
+                <td>
+                  <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2025/sozialversicherungsrechengroessen-2026.html" target="_blank" rel="noopener noreferrer">
+                    BMAS Rechengrößen 2026
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>Rentenwert ab Juli 2026</td>
+                <td>€42,52 / Monat</td>
+                <td>
+                  <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">
+                    BMAS – Rentenanpassung 2026
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>Beitragsbemessungsgrenze (BBG) 2026</td>
+                <td>€101.400 / Jahr</td>
+                <td>
+                  <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2025/sozialversicherungsrechengroessen-2026.html" target="_blank" rel="noopener noreferrer">
+                    BMAS Rechengrößen 2026
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>Sonderausgaben-Höchstbetrag 2026 (Singles)</td>
+                <td>€30.826 / Jahr</td>
+                <td>
+                  <a href="https://www.gesetze-im-internet.de/estg/__10.html" target="_blank" rel="noopener noreferrer">
+                    § 10 EStG (Höchstbetrag)
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>Break-Even (Grenzsteuersatz 30%)</td>
+                <td>ca. Alter 80</td>
+                <td>Eigene Berechnung (Basis: DRV-Werte 2026)</td>
+              </tr>
+              <tr>
+                <td>Rechtsgrundlage</td>
+                <td>§ 187a SGB VI</td>
+                <td>
+                  <a href="https://www.gesetze-im-internet.de/sgb_6/__187a.html" target="_blank" rel="noopener noreferrer">
+                    gesetze-im-internet.de
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="article-body">
 
           <!-- ══ H2 1: Kosten ══ -->
@@ -205,7 +281,7 @@ const schema = [
             <h2>Was kostet ein Rentenpunkt 2026?</h2>
             <p>
               Die Kosten ergeben sich aus dem vorläufigen Durchschnittsentgelt 2026 multipliziert mit dem
-              Rentenversicherungsbeitragssatz: <strong>€51.944 × 18,6% = €9.661,58 pro Punkt</strong>.
+              Rentenversicherungsbeitragssatz: <strong><a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2025/sozialversicherungsrechengroessen-2026.html" target="_blank" rel="noopener noreferrer" title="BMAS Rechengrößen 2026"><strong>€51.944</strong></a> × <a href="https://www.deutsche-rentenversicherung.de/KnappschaftBahnSee/DE/Aktuelles/Meldungen/2026/2026_01_02_Sozialversicherungsrechengroessen2026.html" target="_blank" rel="noopener noreferrer" title="DRV Contribution Rate 2026"><strong>18,6%</strong></a> = <strong>€9.661,58 pro Punkt</strong></strong>.
               Der exakte Betrag wird von der DRV auf Anfrage per <a href="#v0800">Formular V0800</a> bestätigt.
             </p>
 
@@ -335,8 +411,8 @@ const schema = [
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Steuerlich absetzbar (Sonderausgaben, bis €29.344)</td>
-                    <td>Hoher Einmalbetrag (~€9.662/Punkt)</td>
+                    <td>Steuerlich absetzbar (Sonderausgaben, bis <strong>€30.826</strong>)</td>
+                    <td>Hoher Einmalbetrag (~€9.661,58/Punkt)</td>
                   </tr>
                   <tr>
                     <td>Lebenslange, inflationsgesicherte Rente</td>
@@ -499,8 +575,12 @@ const schema = [
           <section id="steuer" class="anchor-section">
             <h2>Steuerlicher Vorteil beim Rentenpunkte kaufen</h2>
             <p>
-              Die Einzahlung ist als <strong>Sonderausgabe</strong> steuerlich absetzbar —
-              bis zu €29.344/Jahr (Singles 2026).
+              Die Einzahlung ist als <strong>Sonderausgabe</strong> steuerlich absetzbar — 
+              bis zu <strong>€30.826/Jahr</strong> (Singles 2026).
+            </p>
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2)">
+              <strong>Hinweis zur Berechnung:</strong> Der absetzbare Höchstbetrag nach § 10 Abs. 3 EStG entspricht dem Maximalbeitrag zur knappschaftlichen Rentenversicherung. 
+              Rechnung 2026: <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2025/sozialversicherungsrechengroessen-2026.html" target="_blank" rel="noopener noreferrer"><strong>124.800 €</strong> (jährliche BBG Knappschaft)</a> × <a href="https://www.deutsche-rentenversicherung.de/KnappschaftBahnSee/DE/Aktuelles/Meldungen/2026/2026_01_02_Sozialversicherungsrechengroessen2026.html" target="_blank" rel="noopener noreferrer"><strong>24,7 %</strong> (Beitragssatz)</a> = 30.825,60 €.
             </p>
 
             <div class="table-scroll">
@@ -540,6 +620,19 @@ const schema = [
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <div class="correction-callout" style="margin-top: var(--space-4); background-color: var(--color-bg-alt); padding: var(--space-4); border-radius: var(--radius-md); border-left: 4px solid var(--color-net);">
+              <p style="font-size: var(--text-sm); font-weight: 600; margin-bottom: var(--space-2);">
+                💡 Warum zwei verschiedene Beitragssätze?
+              </p>
+              <p style="font-size: var(--text-xs); line-height: 1.6;">
+                Es gibt einen wichtigen Unterschied zwischen Ihren <strong>Kosten</strong> und Ihrem <strong>Steuervorteil</strong>:
+                <br><br>
+                1. <strong>Ihre Kosten (18,6 %):</strong> Da Sie Rentenpunkte in der <em>allgemeinen</em> Rentenversicherung kaufen, zahlen Sie den normalen Satz von 18,6 % auf das Durchschnittsentgelt.
+                <br><br>
+                2. <strong>Ihr Steuervorteil (24,7 %):</strong> Das Finanzamt ist großzügiger. Laut Gesetz (§ 10 EStG) ist der maximale Steuerabzug an die <em>knappschaftliche</em> Rentenversicherung gekoppelt. Da dort ein höherer Beitragssatz von 24,7 % gilt, dürfen Sie steuerlich mehr absetzen, als ein Durchschnittsverdiener eigentlich einzahlt.
+              </p>
             </div>
           </section>
 
@@ -691,7 +784,7 @@ const schema = [
                   <p>
                     Nicht berechtigt: bereits Rentenbeziehende, Personen die in den letzten 24 Monaten
                     vor Renteneintritt arbeitslos waren, sowie Beamte außerhalb der gesetzlichen
-                    Rentenversicherung (§ 187a SGB VI).
+                    Rentenversicherung ((<a href="https://www.gesetze-im-internet.de/sgb_6/__187a.html" target="_blank" rel="noopener noreferrer">§ 187a SGB VI</a>)).
                   </p>
                 </div>
               </details>
@@ -718,7 +811,7 @@ const schema = [
           <div class="author-bio-block">
             <strong>Über diesen Artikel</strong>
             <p>
-              Verfasst von <strong>Riyaansh Mittal</strong> auf Basis des § 187a SGB VI,
+              Verfasst von <strong>Riyaansh Mittal</strong> auf Basis des <a href="https://www.gesetze-im-internet.de/sgb_6/__187a.html" target="_blank" rel="noopener noreferrer">§ 187a SGB VI</a>,
               des SVRVG 2026 und der offiziellen DRV-Rechengrößen (Sozialversicherungsrechengrößenverordnung 2026).
               Alle Zahlen wurden zuletzt im Mai 2026 geprüft.
               Quelle: <a href="https://www.deutsche-rentenversicherung.de" target="_blank" rel="noopener noreferrer">Deutsche Rentenversicherung (DRV)</a>.
