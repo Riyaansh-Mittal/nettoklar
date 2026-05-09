@@ -11,6 +11,14 @@ const schema = {
       "name": "NettoKlar",
       "description": "Kostenlose Steuer- und Gehaltsrechner für Deutschland – Steuerklassen, Rentenpunkte, TVöD und mehr.",
       "inLanguage": "de-DE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nettoklar.de/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
       "publisher": { "@id": "https://nettoklar.de/#organization" }
     },
     {
@@ -27,15 +35,159 @@ const schema = {
     }
   ]
 };
+
+const tools = [
+  {
+    href: "/grundfreibetrag-2026/",
+    title: "Grundfreibetrag 2026",
+    desc: "€11.784 steuerfrei – Freibetrag, Grenzsteuersatz & Rechner",
+    badge: "Steuer",
+    key: "€11.784"
+  },
+  {
+    href: "/kinderfreibetrag-2026/",
+    title: "Kinderfreibetrag 2026",
+    desc: "€9.312 pro Kind – Vergleich mit Kindergeld & Optimierung",
+    badge: "Familie",
+    key: "€9.312"
+  },
+  {
+    href: "/rentenpunkt-2026/",
+    title: "Rentenpunkt-Rechner 2026",
+    desc: "Wie viele Punkte haben Sie? Berechnung nach Ihrem Gehalt",
+    badge: "Rente",
+    key: "Rechner"
+  },
+  {
+    href: "/rentenpunkte-kaufen/",
+    title: "Rentenpunkte kaufen",
+    desc: "1 Punkt kostet 2026 genau €9.661,58 – lohnt es sich?",
+    badge: "Rente",
+    key: "€9.661"
+  },
+  {
+    href: "/wert-der-rentenpunkte/",
+    title: "Wert der Rentenpunkte 2026",
+    desc: "€42,52/Monat ab Juli 2026 – historische Entwicklung",
+    badge: "Rente",
+    key: "€42,52"
+  },
+  {
+    href: "/steuererklarung-frist-2025/",
+    title: "Steuererklärung Frist 2025",
+    desc: "Abgabefrist, Verlängerung & was passiert bei Verspätung",
+    badge: "Steuer",
+    key: "Fristen"
+  },
+  {
+    href: "/steuerklasse-3-5/",
+    title: "Steuerklasse 3 und 5",
+    desc: "Kombination 3/5 erklärt – wann lohnt sie sich wirklich?",
+    badge: "Steuerklasse",
+    key: "3 / 5"
+  },
+  {
+    href: "/steuerklasse-finder/",
+    title: "Steuerklassen-Finder",
+    desc: "Welche Steuerklasse ist die beste für Ihre Situation?",
+    badge: "Steuerklasse",
+    key: "Finder"
+  },
+  {
+    href: "/steuerklasse-heirat/",
+    title: "Steuerklasse nach Heirat",
+    desc: "Kombination optimieren – IV/IV, III/V oder Faktorverfahren",
+    badge: "Steuerklasse",
+    key: "Heirat"
+  },
+  {
+    href: "/tvoed-rechner/",
+    title: "TVöD-Rechner 2026",
+    desc: "Entgelt nach Tabelle berechnen – Stufe, Erfahrung & Brutto",
+    badge: "Gehalt",
+    key: "TVöD"
+  }
+];
 ---
 
 <BaseLayout
-  title="NettoKlar – Steuer & Rente einfach erklärt"
-  description="Steuerklassen-Finder, Rentenpunkte-Rechner, Grundfreibetrag 2026 und TVöD-Rechner – kostenlos und aktuell."
+  title="NettoKlar – Kostenlose Steuer- & Rentenrechner für Deutschland 2026"
+  description="Deutschlands übersichtliche Steuerrechner: Grundfreibetrag, Steuerklassen, Rentenpunkte, TVöD – kostenlos, aktuell und mit klarer Erklärung."
+  canonical="https://nettoklar.de/"
   schema={schema}
 >
   <main class="page-wrapper">
-    <h1>NettoKlar</h1>
-    <p>Dein Brutto-Netto-Rechner 2026 — wird gerade gebaut.</p>
+
+    <!-- ── Hero ── -->
+    <header class="home-hero">
+      <p class="home-eyebrow">Kostenlos · Aktuell 2026 · Ohne Anmeldung</p>
+      <h1 class="home-h1">
+        Steuern &amp; Rente<br>
+        <span class="home-h1-accent">einfach berechnen</span>
+      </h1>
+      <p class="home-lead">
+        NettoKlar erklärt den <a href="/grundfreibetrag-2026/">Grundfreibetrag</a>,
+        berechnet Ihre <a href="/steuerklasse-finder/">optimale Steuerklasse</a>
+        und zeigt, was ein <a href="/wert-der-rentenpunkte/">Rentenpunkt wirklich wert</a> ist –
+        auf Basis offizieller Quellen von DRV, BMF und Bundesgesetzblatt.
+      </p>
+    </header>
+
+    <!-- ── Zahlen im Überblick ── -->
+    <section class="home-facts fact-strip" aria-label="Aktuelle Kennzahlen 2026">
+      <dl class="fact-item">
+        <dt>Grundfreibetrag 2026</dt>
+        <dd><a href="/grundfreibetrag-2026/">€11.784</a></dd>
+      </dl>
+      <dl class="fact-item">
+        <dt>Rentenwert ab Juli 2026</dt>
+        <dd><a href="/wert-der-rentenpunkte/">€42,52 / Pkt.</a></dd>
+      </dl>
+      <dl class="fact-item">
+        <dt>Rentenpunkt kaufen 2026</dt>
+        <dd><a href="/rentenpunkte-kaufen/">€9.661,58</a></dd>
+      </dl>
+      <dl class="fact-item">
+        <dt>Kinderfreibetrag 2026</dt>
+        <dd><a href="/kinderfreibetrag-2026/">€9.312</a></dd>
+      </dl>
+    </section>
+
+    <!-- ── Tool Grid ── -->
+    <section aria-labelledby="tools-heading">
+      <h2 id="tools-heading" class="home-section-label">Alle Rechner &amp; Erklärungen</h2>
+      <nav aria-label="Rechner und Artikel" class="home-tool-grid">
+        {tools.map(t => (
+          <a href={t.href} class="home-tool-card">
+            <div class="home-tool-top">
+              <span class="home-tool-badge">{t.badge}</span>
+              <span class="home-tool-key">{t.key}</span>
+            </div>
+            <strong class="home-tool-title">{t.title}</strong>
+            <p class="home-tool-desc">{t.desc}</p>
+          </a>
+        ))}
+      </nav>
+    </section>
+
+    <!-- ── Why NettoKlar ── -->
+    <section class="home-why summary-card" aria-labelledby="why-heading">
+      <h2 id="why-heading">Warum NettoKlar?</h2>
+      <p>
+        Alle Angaben basieren auf offiziellen Quellen –
+        <a href="https://www.deutsche-rentenversicherung.de" target="_blank" rel="noopener noreferrer">Deutsche Rentenversicherung (DRV)</a>,
+        <a href="https://www.bundesfinanzministerium.de" target="_blank" rel="noopener noreferrer">Bundesfinanzministerium (BMF)</a>
+        und <a href="https://www.gesetze-im-internet.de" target="_blank" rel="noopener noreferrer">Gesetze im Internet</a>.
+        Jede Kennzahl wird mit Rechtsgrundlage (§ SGB VI, § EStG) verlinkt,
+        damit Sie die Quelle direkt prüfen können.
+      </p>
+      <ul class="content-list" style="margin-top: var(--space-4); margin-bottom: 0;">
+        <li>Keine Werbung, keine Anmeldung, keine Cookies ohne Einwilligung</li>
+        <li>Alle Rechner direkt im Browser – keine Daten werden übertragen</li>
+        <li>Inhalte werden bei jeder Gesetzesänderung aktualisiert</li>
+        <li>Quellen zu jeder Zahl: DRV, BMF, Bundesgesetzblatt</li>
+      </ul>
+    </section>
+
   </main>
 </BaseLayout>
