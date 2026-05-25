@@ -4,26 +4,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const schema = [
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://nettoklar.de/rentenpunkte-kaufen/#webpage",
-    "url": "https://nettoklar.de/rentenpunkte-kaufen/",
-    "name": "Rentenpunkte kaufen 2026: Kosten, Rechner & lohnt sich?",
-    "headline": "Rentenpunkte kaufen 2026 – Was kostet ein Punkt & lohnt es sich wirklich?",
+    "@type": "Article",
+    "@id": "https://nettoklar.de/rentenpunkte-kaufen#article",
+    "mainEntityOfPage": {
+      "@id": "https://nettoklar.de/rentenpunkte-kaufen#webpage"
+    },
+    "headline": "Rentenpunkte kaufen 2026: Was kostet ein Punkt & lohnt es sich wirklich?",
+    "description": "1 Rentenpunkt kaufen kostet 2026 genau 9.661,58 Euro. Mit Rechner, Break-Even, Steuerersparnis und Formular V0800.",
     "datePublished": "2026-04-25",
-    "dateModified": "2026-05-05",
+    "dateModified": "2026-05-25",
     "inLanguage": "de-DE",
-    "isPartOf": { "@id": "https://nettoklar.de/#website" },
-    "breadcrumb": { "@id": "https://nettoklar.de/rentenpunkte-kaufen/#breadcrumb" },
     "author": {
       "@type": "Person",
+      "@id": "https://nettoklar.de/#riyaansh-mittal",
       "name": "Riyaansh Mittal",
-      "url": "https://nettoklar.de/ueber-uns/"
+      "url": "https://nettoklar.de/ueber-uns"
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "NettoKlar",
-      "@id": "https://nettoklar.de/#organization",
-      "url": "https://nettoklar.de/"
+      "@id": "https://nettoklar.de#organization"
     }
   },
   {
@@ -140,7 +138,7 @@ const schema = [
 
         <!-- Direct Answer (above the fold — cited by LLMs) -->
         <p class="direct-answer">
-          Ein Rentenpunkt kostet 2026 genau <strong>€9.661,58</strong> (berechnet nach <a href="https://www.gesetze-im-internet.de/sgb_6/__187a.html" target="_blank" rel="noopener noreferrer">§ 187a SGB VI</a>). Ab Juli 2026 bringt er laut <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">BMAS-Rentenanpassung</a> <strong>€42,52/Monat</strong> mehr Rente.
+          Ein Rentenpunkt kostet 2026 genau <strong>€9.661,58</strong> (berechnet nach <a href="https://www.gesetze-im-internet.de/sgb_6/__187a.html" target="_blank" rel="noopener noreferrer">§ 187a SGB VI</a>). Ab Juli 2026 bringt er laut <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2026/260305-rentenanpassung-2026.html#_i8h6c9kgy" target="_blank" rel="noopener noreferrer">DRV-Rentenanpassung</a> <strong>€42,52/Monat</strong> mehr Rente.
           Break-even bei Grenzsteuersatz 30%: <strong>ca. Alter 80</strong>.
           Für Personen mit ≥42% Steuersatz und ≥10 Jahren bis zur Rente lohnt es sich meistens.
         </p>
@@ -161,6 +159,7 @@ const schema = [
           <span class="jump-nav-label">Auf dieser Seite:</span>
           <a href="#kosten">Kosten</a>
           <a href="#lohnt-sich">Lohnt es sich?</a>
+          <a href="#vergleich-etf">Rentenpunkte vs. ETF</a>
           <a href="#rechner">Rechner</a>
           <a href="#wer-darf">Wer darf?</a>
           <a href="#steuer">Steuer</a>
@@ -399,6 +398,22 @@ const schema = [
               Basis: Renteneintritt 67, Rentenwert €42,52/Monat (ab Jul 2026). Kein Steuerberatungsersatz.
             </p>
 
+            <div class="inline-link-callout">
+              <span>Externe Einordnung:</span>
+              <span>
+                Auch verbraucherorientierte Quellen vergleichen gesetzliche Rentenpunkte mit privatem Vermögensaufbau –
+                etwa <a href="https://www.finanztip.de/gesetzliche-rentenversicherung/rentenpunkte-kaufen" target="_blank" rel="noopener noreferrer">Finanztip zu Sonderzahlungen in die Rentenversicherung</a>.
+              </span>
+            </div>
+
+            <div class="inline-link-callout">
+              <span>Weitere Perspektive:</span>
+              <span>
+                Für eine neutrale Einordnung zu Altersvorsorge und gesetzlicher Rente siehe auch
+                <a href="https://www.verbraucherzentrale.de/wissen/geld-versicherungen/altersvorsorge" target="_blank" rel="noopener noreferrer">Verbraucherzentrale – Altersvorsorge</a>.
+              </span>
+            </div>
+
             <!-- Pro/Con table -->
             <h3 style="margin-top: var(--space-8); margin-bottom: var(--space-4); font-size: var(--text-lg)">Vor- und Nachteile – Rentenpunkte kaufen</h3>
             <div class="table-scroll">
@@ -433,6 +448,66 @@ const schema = [
                 </tbody>
               </table>
             </div>
+          </section>
+
+          <section id="vergleich-etf" class="anchor-section">
+            <h2>Rentenpunkte kaufen oder ETF – was ist die Alternative?</h2>
+
+            <p>
+              Wer einen Rentenpunkt kauft, tauscht heute <strong>€9.661,58</strong> gegen eine
+              lebenslange zusätzliche gesetzliche Rente von <strong>€42,52 pro Monat</strong> ab Juli 2026.
+              Ein ETF kann langfristig eine höhere Rendite bringen, trägt aber Markt- und Entnahmerisiko.
+              Rentenpunkte sind dafür planbarer, inflationsnah angepasst und nicht von Börsenschwankungen abhängig.
+            </p>
+
+            <div class="table-scroll">
+              <table class="data-table" aria-label="Vergleich Rentenpunkte oder ETF">
+                <thead>
+                  <tr>
+                    <th>Aspekt</th>
+                    <th>Rentenpunkte kaufen</th>
+                    <th>ETF / Wertpapierdepot</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight-row">
+                    <td><strong>Einzahlung heute</strong></td>
+                    <td><strong>€9.661,58 pro Punkt</strong></td>
+                    <td><strong>frei wählbar</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Auszahlung</td>
+                    <td>lebenslange Monatsrente</td>
+                    <td>flexible Entnahme</td>
+                  </tr>
+                  <tr>
+                    <td>Risiko</td>
+                    <td>kein Kapitalmarktrisiko</td>
+                    <td>Kurs- und Sequenzrisiko</td>
+                  </tr>
+                  <tr>
+                    <td>Steuervorteil beim Einstieg</td>
+                    <td>ja, als Sonderausgabe</td>
+                    <td>nein, in der Regel nicht</td>
+                  </tr>
+                  <tr>
+                    <td>Vererbbar</td>
+                    <td>nein</td>
+                    <td>ja</td>
+                  </tr>
+                  <tr>
+                    <td>Geeignet für</td>
+                    <td>Sicherheitsorientierte mit hohem Steuersatz</td>
+                    <td>Renditeorientierte mit langem Anlagehorizont</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">
+              Faustregel: Wer vor allem planbare, lebenslange Zusatzeinkünfte sucht, schaut eher auf Rentenpunkte.
+              Wer Renditechancen und Vererbbarkeit priorisiert, vergleicht zusätzlich ETF-Sparen.
+            </p>
           </section>
 
           <!-- ══ H2 3: Rechner ══ -->
