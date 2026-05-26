@@ -190,6 +190,7 @@ const schema = [
           <a href="#dauer">Dauer & Frist</a>
           <a href="#faktor">Faktorverfahren</a>
           <a href="#finanzamt">Was ändert sich?</a>
+          <a href="#elterngeld">Elterngeld</a>
           <a href="#howto">Schritt für Schritt</a>
           <a href="#faq">FAQ</a>
         </nav>
@@ -403,6 +404,65 @@ const schema = [
               </table>
             </div>
 
+            <div class="table-scroll" style="margin-top: var(--space-6);">
+              <table
+                class="data-table"
+                aria-label="Einkommensbeispiele Steuerklassen nach Heirat"
+                style="font-size: var(--text-xs); line-height: 1.45;"
+              >
+                <caption style="text-align:left; font-size:var(--text-sm); color:var(--color-text-muted); margin-bottom:var(--space-3); caption-side:top;">
+                  Rechennahe Einkommensbeispiele zur Orientierung – die genaue Monatsdifferenz hängt von Bundesland, Kirchensteuer und Kinderfreibeträgen ab.
+                </caption>
+
+                <thead>
+                  <tr style="vertical-align: top;">
+                    <th style="padding: var(--space-2) var(--space-3); line-height: 1.25; white-space: normal;">Beispiel Haushalt</th>
+                    <th style="padding: var(--space-2) var(--space-3); line-height: 1.25; white-space: normal;">Sinnvolle Kombination</th>
+                    <th style="padding: var(--space-2) var(--space-3); line-height: 1.25; white-space: normal;">Monatlicher Netto-Effekt</th>
+                    <th style="padding: var(--space-2) var(--space-3); line-height: 1.25; white-space: normal;">Hinweis</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr class="highlight-row" style="vertical-align: top;">
+                    <td style="padding: var(--space-2) var(--space-3);"><strong>Partner A €60.000 / Partner B €30.000 brutto</strong></td>
+                    <td style="padding: var(--space-2) var(--space-3);"><strong>III / V</strong></td>
+                    <td style="padding: var(--space-2) var(--space-3);"><strong>Spürbar mehr Netto beim Hauptverdiener</strong></td>
+                    <td style="padding: var(--space-2) var(--space-3); color: var(--color-text-muted); font-size: var(--text-xs);">
+                      Typischer 67/33-Fall; Steuererklärung Pflicht, Nachzahlung wahrscheinlich.
+                    </td>
+                  </tr>
+
+                  <tr style="vertical-align: top;">
+                    <td style="padding: var(--space-2) var(--space-3);">Partner A €80.000 / Partner B €20.000 brutto</td>
+                    <td style="padding: var(--space-2) var(--space-3);">III / V</td>
+                    <td style="padding: var(--space-2) var(--space-3);">Sehr deutlicher Monatsvorteil bei Partner A</td>
+                    <td style="padding: var(--space-2) var(--space-3); color: var(--color-text-muted); font-size: var(--text-xs);">
+                      Stark ungleiche Einkommen; IV mit Faktor nur bei Wunsch nach fairerer Verteilung.
+                    </td>
+                  </tr>
+
+                  <tr style="vertical-align: top;">
+                    <td style="padding: var(--space-2) var(--space-3);">Partner A €50.000 / Partner B €50.000 brutto</td>
+                    <td style="padding: var(--space-2) var(--space-3);">IV / IV</td>
+                    <td style="padding: var(--space-2) var(--space-3);">Kaum Unterschied zu anderen Kombinationen</td>
+                    <td style="padding: var(--space-2) var(--space-3); color: var(--color-text-muted); font-size: var(--text-xs);">
+                      Fairste und einfachste Lösung; kaum Nachzahlungsrisiko.
+                    </td>
+                  </tr>
+
+                  <tr style="vertical-align: top;">
+                    <td style="padding: var(--space-2) var(--space-3);">Partner A €55.000 / Partner B €40.000 brutto</td>
+                    <td style="padding: var(--space-2) var(--space-3);">IV mit Faktor</td>
+                    <td style="padding: var(--space-2) var(--space-3);">Moderater Vorteil, gerechter verteilt</td>
+                    <td style="padding: var(--space-2) var(--space-3); color: var(--color-text-muted); font-size: var(--text-xs);">
+                      Gut bei mittleren Unterschieden; Pflichtveranlagung, aber meist geringe Nachzahlung.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <p style="font-size: var(--text-xs); color: var(--color-text-muted)">
               Rechtsgrundlage:
               <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a> ·
@@ -540,6 +600,58 @@ const schema = [
             <p>
               Sie benötigen Ihre Steueridentifikationsnummern (11-stellig, auf dem Lohnsteuerausweis oder unter
               <a href="https://www.bzst.de/DE/Privatpersonen/SteuerlicheIdentifikationsnummer/steuerlicheidentifikationsnummer_node.html" target="_blank" rel="noopener noreferrer">bzst.de</a>).
+            </p>
+          </section>
+
+          <section id="elterngeld" class="anchor-section">
+            <h2>Steuerklasse und Elterngeld: Vor der Geburt rechtzeitig wechseln</h2>
+
+            <p>
+              Für das Elterngeld zählt nicht Ihre spätere Jahressteuer, sondern das <strong>durchschnittliche Nettoeinkommen</strong>
+              in den 12 Monaten vor dem Monat der Geburt. Deshalb kann eine frühere Steuerklassenwahl – meist
+              <strong>Steuerklasse III für den später betreuenden Elternteil</strong> – das Elterngeld erhöhen.
+            </p>
+
+            <div class="summary-card" style="margin-top: var(--space-4);">
+              <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-3);">Faustregel für Ehepaare mit Kinderwunsch</h3>
+              <p>
+                Wer sein Elterngeld optimieren will, sollte die günstigere Steuerklasse <strong>spätestens 7 Monate vor dem Geburtsmonat</strong>
+                wechseln. Dann wirkt sie in genügend Lohnabrechnungen innerhalb des relevanten Bemessungszeitraums.
+              </p>
+            </div>
+
+            <div class="table-scroll" style="margin-top: var(--space-6);">
+              <table class="data-table" aria-label="Steuerklasse vor Geburt und Elterngeld">
+                <thead>
+                  <tr>
+                    <th>Situation</th>
+                    <th>Sinnvolle Steuerklasse</th>
+                    <th>Warum?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight-row">
+                    <td><strong>Ein Elternteil bleibt nach Geburt überwiegend zuhause</strong></td>
+                    <td><strong>Vorher eher SK III</strong></td>
+                    <td><strong>Höheres Netto kann zu höherem Elterngeld führen</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Beide verdienen ähnlich und teilen Betreuung gleichmäßig</td>
+                    <td>IV / IV oder IV mit Faktor</td>
+                    <td>Meist fairere Monatsverteilung, weniger Verzerrung im Alltag</td>
+                  </tr>
+                  <tr>
+                    <td>Geburt steht kurz bevor</td>
+                    <td>Wechsel oft zu spät für vollen Effekt</td>
+                    <td>Relevant sind die bereits abgerechneten Monate vor der Geburt</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-3);">
+              Wichtig: Elterngeldrecht und Steuerrecht greifen hier zusammen. Für den Einzelfall sollte zusätzlich die
+              Elterngeldstelle oder eine spezialisierte Beratung geprüft werden.
             </p>
           </section>
 
