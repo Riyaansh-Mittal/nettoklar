@@ -11,13 +11,13 @@ const schema = {
       "name": "Steuerklassen-Finder 2026 – Welche Steuerklasse bin ich?",
       "headline": "Steuerklassen-Finder 2026 – Welche Steuerklasse bin ich?",
       "datePublished": "2026-04-26",
-      "dateModified": "2026-05-05",
+      "dateModified": "2026-05-26",
       "inLanguage": "de-DE",
       "isPartOf": { "@id": "https://nettoklar.de/#website" },
       "breadcrumb": { "@id": "https://nettoklar.de/steuerklasse-finder/#breadcrumb" },
-      "author": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de" },
+      "author": { "@type": "Person", "name": "Riyaansh Mittal", "url": "https://nettoklar.de/ueber-uns" },
       "publisher": { "@type": "Organization", "name": "NettoKlar", "url": "https://nettoklar.de" },
-      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".fact-strip", "#faq"] }
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".direct-answer", ".fact-strip", "#faq"] }
     },
     {
       "@type": "BreadcrumbList",
@@ -74,6 +74,23 @@ const schema = {
       "browserRequirements": "Requires JavaScript",
       "inLanguage": "de-DE",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://nettoklar.de/steuerklasse-finder#article",
+      "mainEntityOfPage": { "@id": "https://nettoklar.de/steuerklasse-finder#webpage" },
+      "headline": "Steuerklassen-Finder 2026 – Welche Steuerklasse bin ich?",
+      "description": "Welche Steuerklasse bin ich? In 30 Sekunden herausfinden – Familienstand eingeben → sofortige Empfehlung. Alle 6 Steuerklassen erklärt.",
+      "datePublished": "2026-04-26",
+      "dateModified": "2026-05-26",
+      "inLanguage": "de-DE",
+      "author": {
+        "@type": "Person",
+        "@id": "https://nettoklar.de/#riyaansh-mittal",
+        "name": "Riyaansh Mittal",
+        "url": "https://nettoklar.de/ueber-uns"
+      },
+      "publisher": { "@id": "https://nettoklar.de#organization" }
     }
   ]
 }
@@ -330,14 +347,14 @@ const schema = {
                   <button id="copy-embed" class="btn-secondary" style="margin-top:var(--space-3)">Code kopieren</button>
                 </div>
               </div>
-
-              <p style="margin-top:var(--space-4); font-size:var(--text-xs); color:var(--color-text-muted)">
-                Rechtsgrundlage:
-                <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§38b EStG</a> ·
-                Grundfreibetrag:
-                <a href="https://www.gesetze-im-internet.de/estg/__32a.html" target="_blank" rel="noopener noreferrer">§32a EStG</a> ·
-                Kein Ersatz für individuelle Steuerberatung.
-              </p>
+                <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted);">
+                  Rechtsgrundlage: <a href="https://www.gesetze-im-internet.de/estg/__38b.html" target="_blank" rel="noopener noreferrer">§ 38b EStG</a>.
+                  Steuerklasse ändern über
+                  <a href="https://www.elster.de/eportal/start" target="_blank" rel="noopener noreferrer">ELSTER (Mein ELSTER)</a>
+                  oder beim zuständigen Finanzamt.
+                  Grundfreibetrag: <a href="https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Steuern/das-aendert-sich-2026.html" target="_blank" rel="noopener noreferrer">BMF – Steuerliche Änderungen 2026</a>.
+                  Kein Ersatz für individuelle Steuerberatung.
+                </p>
             </div>
           </section>
 
