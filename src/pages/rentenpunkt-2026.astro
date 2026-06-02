@@ -204,6 +204,7 @@ const schema = {
     <nav class="article-jump-nav" aria-label="Springe zu Abschnitt">
       <span class="jump-nav-label">Auf dieser Seite:</span>
       <a href="#was-ist">Was ist ein Rentenpunkt?</a>
+      <a href="#verdienst">Wie viele Punkte sammle ich?</a>
       <a href="#verlauf">Rentenwert Verlauf</a>
       <a href="#juli-2026">Änderung Juli 2026</a>
       <a href="#kaufen">Rentenpunkt kaufen</a>
@@ -273,110 +274,190 @@ const schema = {
         </p>
       </div>
 
-      <h2 id="verlauf">Rentenwert – Historischer Verlauf</h2>
-      <table class="data-table rentenwert-table">
-        <thead>
-          <tr>
-            <th>Jahr</th>
-            <th>Rentenwert (West = Ost)</th>
-            <th>Jahresveränderung</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Jahr">2021</td>
-            <td data-label="Rentenwert">€34,19</td>
-            <td data-label="Veränderung">+0,00%</td>
-          </tr>
-          <tr>
-            <td data-label="Jahr">2022</td>
-            <td data-label="Rentenwert">€36,02</td>
-            <td data-label="Veränderung">+5,35%</td>
-          </tr>
-          <tr>
-            <td data-label="Jahr">2023</td>
-            <td data-label="Rentenwert">€37,60</td>
-            <td data-label="Veränderung">+4,39%</td>
-          </tr>
-          <tr>
-            <td data-label="Jahr">2024</td>
-            <td data-label="Rentenwert">€39,32</td>
-            <td data-label="Veränderung">+4,57%</td>
-          </tr>
-          <tr>
-            <td data-label="Jahr">2025 (Jan–Jun)</td>
-            <td data-label="Rentenwert">€40,79</td>
-            <td data-label="Veränderung">+3,74%</td>
-          </tr>
-          <tr class="highlight-row">
-            <td data-label="Jahr"><strong>2026 (ab Jul)</strong></td>
-            <td data-label="Rentenwert"><strong>€42,52</strong></td>
-            <td data-label="Veränderung">+4,24%</td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="font-size:var(--text-xs); color:var(--color-text-muted);">
-        Quelle: <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Experten/Zahlen-und-Fakten/Wissenswertes-zur-Rentenversicherung/aktuelle-werte/aktuelle-werte.html" target="_blank" rel="noopener noreferrer">Deutsche Rentenversicherung — Aktuelle Werte</a>
-      </p>
-      <div class="inline-link-callout">
-        → Detaillierte Tabelle mit Rentenwerten ab 2000:
-        <a href="/wert-der-rentenpunkte/">Wert der Rentenpunkte – Historische Übersicht</a>
-      </div>
+      <section id="verdienst" class="anchor-section">
+        <h2>Wie viele Rentenpunkte sammle ich – je nach Gehalt?</h2>
+        <p>
+          Entgeltpunkte berechnen sich als Ihr Bruttolohn geteilt durch das
+          Durchschnittsentgelt des jeweiligen Jahres. 2026 liegt dieses bei
+          <strong>ca. €45.358</strong>
+          (<a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Experten/Zahlen-und-Fakten/Wissenswertes-zur-Rentenversicherung/aktuelle-werte/aktuelle-werte.html" target="_blank" rel="noopener noreferrer">DRV</a>).
+          Die Formel: <strong>Jahresbrutto ÷ €45.358 = Entgeltpunkte pro Jahr</strong>.
+        </p>
+        <div class="table-scroll">
+          <table class="data-table" aria-label="Gehalt und Rentenpunkte 2026">
+            <thead>
+              <tr>
+                <th>Jahresbrutto 2026</th>
+                <th>Rentenpunkte pro Jahr</th>
+                <th>Monatsrente pro Arbeitsjahr (ab Jul 2026)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>€20.000</td>
+                <td>0,44 Punkte</td>
+                <td>+€18,71 / Monat</td>
+              </tr>
+              <tr>
+                <td>€30.000</td>
+                <td>0,66 Punkte</td>
+                <td>+€28,06 / Monat</td>
+              </tr>
+              <tr>
+                <td>€40.000</td>
+                <td>0,88 Punkte</td>
+                <td>+€37,42 / Monat</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>€45.358 (Durchschnitt)</strong></td>
+                <td><strong>1,00 Punkt</strong></td>
+                <td><strong>+€42,52 / Monat</strong></td>
+              </tr>
+              <tr>
+                <td>€60.000</td>
+                <td>1,32 Punkte</td>
+                <td>+€56,13 / Monat</td>
+              </tr>
+              <tr>
+                <td>€80.000</td>
+                <td>1,76 Punkte</td>
+                <td>+€74,84 / Monat</td>
+              </tr>
+              <tr>
+                <td>€101.400 (BBG-Grenze)</td>
+                <td>2,24 Punkte (Maximum)</td>
+                <td>+€95,24 / Monat</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2);">
+          Basis: Rentenwert €42,52/Monat ab 1. Juli 2026 · Durchschnittsentgelt 2026 ca. €45.358 ·
+          Quelle: <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Experten/Zahlen-und-Fakten/Wissenswertes-zur-Rentenversicherung/aktuelle-werte/aktuelle-werte.html" target="_blank" rel="noopener noreferrer">DRV – Aktuelle Werte</a>.
+          Gerundete Orientierungswerte; ohne Zugangsfaktor und Rentenartfaktor.
+        </p>
+      </section>
 
-      <h2 id="juli-2026">Was ändert sich ab Juli 2026?</h2>
-      <p>
-        Die Rentenanpassung 2026 erfolgt in zwei Stufen. Der Rentenwert stieg bereits
-        zum Januar 2026 auf €40,79. Die <strong>offizielle Rentenanpassung zum 1. Juli 2026</strong>
-        bringt den zweiten Schritt: +4,24% auf <strong>€42,52</strong>.
-        Gegenüber dem 2025er Ausgangswert (€39,32) ergibt sich ein Gesamtanstieg von <strong>+8,1%</strong>.
-      </p>
-      <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1)">
-        Quelle: <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2026/260305-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">DRV – Rentenanpassung 2026</a> · <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">BMAS – Rentenanpassung 2026</a> · Stand: Mai 2026.
-      </p>
-      <p>
-        <strong>Konkret:</strong> Wer 35 Rentenpunkte hat, bekommt ab Juli 2026 statt
-        €1.427,65 nun <strong>€1.488,20 pro Monat</strong> — ein Plus von €60,55 monatlich.
-      </p>
-      <div class="inline-link-callout">
-        → Zwangsverrentung ab 2027: Jobcenter können Bürgergeld-Empfänger ab 63 Jahren
-        in Frühverrentung schicken — auch mit dauerhaften Abschlägen.
-        <a href="#faq-zwangsverrentung">Details im FAQ ↓</a>
-      </div>
+      <section id="verlauf" class="anchor-section">
+        <h2>Rentenwert – Historischer Verlauf</h2>
+        <table class="data-table rentenwert-table">
+          <thead>
+            <tr>
+              <th>Jahr</th>
+              <th>Rentenwert (West = Ost)</th>
+              <th>Jahresveränderung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Jahr">2019</td>
+              <td data-label="Rentenwert">€33,05</td>
+              <td data-label="Veränderung">+3,18%</td>
+            </tr>
+            <tr>
+              <td data-label="Jahr">2020</td>
+              <td data-label="Rentenwert">€34,19</td>
+              <td data-label="Veränderung">+3,45%</td>
+            </tr>
+            <tr>
+              <td data-label="Jahr">2021</td>
+              <td data-label="Rentenwert">€34,19</td>
+              <td data-label="Veränderung">+0,00%</td>
+            </tr>
+            <tr>
+              <td data-label="Jahr">2022</td>
+              <td data-label="Rentenwert">€36,02</td>
+              <td data-label="Veränderung">+5,35%</td>
+            </tr>
+            <tr>
+              <td data-label="Jahr">2023</td>
+              <td data-label="Rentenwert">€37,60</td>
+              <td data-label="Veränderung">+4,39%</td>
+            </tr>
+            <tr>
+              <td data-label="Jahr">2024</td>
+              <td data-label="Rentenwert">€39,32</td>
+              <td data-label="Veränderung">+4,57%</td>
+            </tr>
+            <tr>
+              <td data-label="Jahr">2025 (Jan–Jun)</td>
+              <td data-label="Rentenwert">€40,79</td>
+              <td data-label="Veränderung">+3,74%</td>
+            </tr>
+            <tr class="highlight-row">
+              <td data-label="Jahr"><strong>2026 (ab Jul)</strong></td>
+              <td data-label="Rentenwert"><strong>€42,52</strong></td>
+              <td data-label="Veränderung">+4,24%</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:var(--text-xs); color:var(--color-text-muted);">
+          Quelle: <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2026/260305-rentenanpassung-2026?nn=6a097debca84ce5471c1aa2d" target="_blank" rel="noopener noreferrer">Deutsche Rentenversicherung — Rentenanpassung 2026</a>
+        </p>
+        <div class="inline-link-callout">
+          → Offizielle historische Übersicht (ab 1957):
+          <a href="https://rvrecht.deutsche-rentenversicherung.de/SharedDocs/rvRecht/07_AktuelleWerte/A-C/awert_aktrtwt.html" target="_blank" rel="noopener noreferrer">DRV rvRecht – Verlauf des aktuellen Rentenwerts</a>
+        </div>
+      </section>
 
-      <h2 id="kaufen">Rentenpunkt kaufen oder selbst ansparen?</h2>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Weg</th>
-            <th>Kosten pro Punkt</th>
-            <th>Steuerbonus</th>
-            <th>Für wen?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Weg">Regulär (Arbeit)</td>
-            <td data-label="Kosten">Automatisch via Lohn</td>
-            <td data-label="Steuerbonus">Ja (AN-Anteil)</td>
-            <td data-label="Für wen?">Alle Arbeitnehmer</td>
-          </tr>
-          <tr class="highlight-row">
-            <td data-label="Weg"><strong>Freiwillig kaufen</strong></td>
-            <td data-label="Kosten"><strong>~€9.661</strong></td>
-            <td data-label="Steuerbonus">Ja (Sonderausgaben)</td>
-            <td data-label="Für wen?">Ab 50, hoher Steuersatz</td>
-          </tr>
-          <tr>
-            <td data-label="Weg">Versorgungsausgleich</td>
-            <td data-label="Kosten">Individuell</td>
-            <td data-label="Steuerbonus">Nein</td>
-            <td data-label="Für wen?">Nur bei Scheidung</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>
-        <a href="/rentenpunkte-kaufen/">Lohnt sich der Kauf? → Break-even-Analyse & Rechner</a>
-      </p>
+      <section id="juli-2026" class="anchor-section">
+        <h2>Was ändert sich ab Juli 2026?</h2>
+        <p>
+          Die Rentenanpassung 2026 erfolgt in zwei Stufen. Der Rentenwert stieg bereits
+          zum Januar 2026 auf €40,79. Die <strong>offizielle Rentenanpassung zum 1. Juli 2026</strong>
+          bringt den zweiten Schritt: +4,24% auf <strong>€42,52</strong>.
+          Gegenüber dem 2025er Ausgangswert (€39,32) ergibt sich ein Gesamtanstieg von <strong>+8,1%</strong>.
+        </p>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1)">
+          Quelle: <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2026/260305-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">DRV – Rentenanpassung 2026</a> · <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">BMAS – Rentenanpassung 2026</a> · Stand: Mai 2026.
+        </p>
+        <p>
+          <strong>Konkret:</strong> Wer 35 Rentenpunkte hat, bekommt ab Juli 2026 statt
+          €1.427,65 nun <strong>€1.488,20 pro Monat</strong> — ein Plus von €60,55 monatlich.
+        </p>
+        <div class="inline-link-callout">
+          → Zwangsverrentung ab 2027: Jobcenter können Bürgergeld-Empfänger ab 63 Jahren
+          in Frühverrentung schicken — auch mit dauerhaften Abschlägen.
+          <a href="#faq-zwangsverrentung">Details im FAQ ↓</a>
+        </div>
+      </section>
+
+      <section id="kaufen" class="anchor-section">
+        <h2>Rentenpunkt kaufen oder selbst ansparen?</h2>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Weg</th>
+              <th>Kosten pro Punkt</th>
+              <th>Steuerbonus</th>
+              <th>Für wen?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Weg">Regulär (Arbeit)</td>
+              <td data-label="Kosten">Automatisch via Lohn</td>
+              <td data-label="Steuerbonus">Ja (AN-Anteil)</td>
+              <td data-label="Für wen?">Alle Arbeitnehmer</td>
+            </tr>
+            <tr class="highlight-row">
+              <td data-label="Weg"><strong>Freiwillig kaufen</strong></td>
+              <td data-label="Kosten"><strong>~€9.661</strong></td>
+              <td data-label="Steuerbonus">Ja (Sonderausgaben)</td>
+              <td data-label="Für wen?">Ab 50, hoher Steuersatz</td>
+            </tr>
+            <tr>
+              <td data-label="Weg">Versorgungsausgleich</td>
+              <td data-label="Kosten">Individuell</td>
+              <td data-label="Steuerbonus">Nein</td>
+              <td data-label="Für wen?">Nur bei Scheidung</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <a href="/rentenpunkte-kaufen/">Lohnt sich der Kauf? → Break-even-Analyse & Rechner</a>
+        </p>
+      </section>
 
       <div class="summary-card" style="text-align: center;">
         <p style="font-weight: 600; font-size: var(--text-base); margin-bottom: var(--space-3); color: var(--color-text);">
@@ -435,9 +516,15 @@ const schema = {
       </div>
 
       <div class="author-bio-block">
-        <strong>Riyaansh Mittal</strong> ist Gründer von NettoKlar und recherchiert
-        Renten- und Steuerdaten direkt anhand offizieller Quellen (DRV, BMF, §§ SGB VI).
-        <a href="/ueber-nettoklar/">Vollständiges Profil →</a>
+        <strong>Über diesen Artikel</strong>
+        <p>
+          Verfasst von <strong>Riyaansh Mittal</strong>, Gründer von NettoKlar.
+          Alle Zahlen wurden direkt anhand offizieller Quellen geprüft:
+          <a href="https://www.deutsche-rentenversicherung.de/DRV/DE/Ueber-uns-und-Presse/Presse/Meldungen/2026/260305-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">DRV – Rentenanpassung 2026</a>,
+          <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">BMAS – Kabinettsbeschluss 2026</a>
+          sowie §§ 63–68 SGB VI. Zuletzt geprüft: Mai 2026. Kein Ersatz für individuelle Rentenberatung.
+          <a href="/ueber-nettoklar/">Vollständiges Profil →</a>
+        </p>
       </div>
 
       <div class="cta-group">

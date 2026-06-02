@@ -5,8 +5,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "@id": "https://nettoklar.de/tvoed-rechner/#webpage",
+      "@type": "Article",
+      "@id": "https://nettoklar.de/tvoed-rechner/#article",
       "url": "https://nettoklar.de/tvoed-rechner/",
       "name": "TVöD Entgelttabelle 2026 – Gehaltsrechner Öffentlicher Dienst",
       "headline": "TVöD Entgelttabelle 2026 & Gehaltsrechner — Brutto-Netto Öffentlicher Dienst",
@@ -19,16 +19,24 @@ const schema = {
       "author": {
         "@type": "Person",
         "name": "Riyaansh Mittal",
-        "url": "https://nettoklar.de/ueber-uns/"
+        "url": "https://nettoklar.de/ueber-nettoklar/",
+        "jobTitle": "Gründer, NettoKlar"
       },
       "publisher": {
         "@type": "Organization",
         "name": "NettoKlar",
-        "url": "https://nettoklar.de"
+        "url": "https://nettoklar.de",
+        "@id": "https://nettoklar.de/#organization"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://nettoklar.de/og-default.png",
+        "width": 1200,
+        "height": 630
       },
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": [".fact-strip", "#tvoed-beispiele", "#faq"]
+        "cssSelector": [".fact-strip", "#tvoed-beispiele", "#faq", ".direct-answer"]
       }
     },
     {
@@ -138,7 +146,7 @@ const schema = {
         <header class="article-header">
           <h1>TVöD Entgelttabelle 2026 &amp; Gehaltsrechner — Brutto-Netto Öffentlicher Dienst</h1>
           <div class="author-byline">
-            <span>Von <strong>Riyaansh Mittal</strong>, Finanz- und Steuerredakteur</span>
+            <span>Von <strong><a href="/ueber-nettoklar/">Riyaansh Mittal</a></strong>, Gründer & Finanz-Redakteur, NettoKlar</span>
             <span class="byline-sep">·</span>
             <span>Aktualisiert: Mai 2026</span>
             <span class="byline-sep">·</span>
@@ -801,6 +809,8 @@ const schema = {
             <div class="correction-callout" role="note">
               <span>💡</span>
               <div>
+                · <a href="https://vka.de/wp-content/uploads/2026/04/250406_TVoeD_Flughaefen.pdf" target="_blank" rel="noopener noreferrer">VKA – Offizielle Entgelttabellen</a>
+                · <a href="https://www.bmi.bund.de/SharedDocs/downloads/DE/veroeffentlichungen/themen/oeffentlicher-dienst/TVoeD-Tabellen.html" target="_blank" rel="noopener noreferrer">BMI TVöD-Tabellen</a>
                 <p style="font-size: var(--text-sm); color: var(--color-text)">
                   <strong>Beamte:</strong> TVöD gilt <em>nicht</em> für Beamte. Beamte werden nach dem
                   Bundesbesoldungsgesetz (BBesG) oder den Landesbesoldungsgesetzen besoldet —

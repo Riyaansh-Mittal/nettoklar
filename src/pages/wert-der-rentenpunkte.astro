@@ -5,8 +5,8 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "@id": "https://nettoklar.de/wert-der-rentenpunkte/#webpage",
+      "@type": "Article",
+      "@id": "https://nettoklar.de/wert-der-rentenpunkte/#article",
       "url": "https://nettoklar.de/wert-der-rentenpunkte/",
       "name": "Wert der Rentenpunkte 2026 – Historische Tabelle & Rechner",
       "headline": "Wert der Rentenpunkte 2026 – Aktueller Rentenpunktwert, historische Tabelle & Rechner",
@@ -18,13 +18,20 @@ const schema = {
       "author": {
         "@type": "Person",
         "name": "Riyaansh Mittal",
-        "url": "https://nettoklar.de/ueber-uns/"
+        "url": "https://nettoklar.de/ueber-nettoklar/",
+        "jobTitle": "Gründer & Finanz-Redakteur, NettoKlar"
       },
       "publisher": {
         "@type": "Organization",
         "name": "NettoKlar",
         "@id": "https://nettoklar.de/#organization",
         "url": "https://nettoklar.de/"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://nettoklar.de/og-default.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
@@ -167,13 +174,13 @@ const schema = {
         <header class="article-header">
           <h1>Wert der Rentenpunkte 2026 – Aktueller Rentenpunktwert, historische Tabelle &amp; Rechner</h1>
           <div class="author-byline">
-            <span>Von <strong>Riyaansh Mittal</strong></span>
+            <span>Von <strong><a href="/ueber-nettoklar/">Riyaansh Mittal</a></strong></span>
+            <span class="byline-sep">·</span>
+            <span>Gründer &amp; Finanz-Redakteur, NettoKlar</span>
             <span class="byline-sep">·</span>
             <span>Aktualisiert: Mai 2026</span>
             <span class="byline-sep">·</span>
-            <span>Lesezeit: ca. 6 Minuten</span>
-            <span class="byline-sep">·</span>
-            <span class="freshness-badge">✓ Geprüft 2026</span>
+            <span>Geprüft anhand: <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">BMAS Rentenanpassung 2026</a></span>
           </div>
         </header>
 
@@ -198,6 +205,7 @@ const schema = {
         <nav class="article-jump-nav" aria-label="Seitennavigation">
           <span class="jump-nav-label">Auf dieser Seite:</span>
           <a href="#aktuell">Aktueller Wert</a>
+          <a href="#rentenformel">Rentenformel</a>
           <a href="#historisch">Historische Tabelle</a>
           <a href="#rechner-vorwaerts">Rechner A</a>
           <a href="#rechner-rueckwaerts">Rechner B</a>
@@ -346,11 +354,79 @@ const schema = {
                 </table>
               </div>
             </div>
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2)">
+              Quellen:
+              <a href="https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2026/bundeskabinett-beschliesst-rentenanpassung-2026.html" target="_blank" rel="noopener noreferrer">BMAS Pressemitteilung</a> ·
+              <a href="https://www.gesetze-im-internet.de/sgb_6/__68.html" target="_blank" rel="noopener noreferrer">§ 68 SGB VI</a> · Stand: Mai 2026.
+            </p>
 
             <p>
               Seit Juli 2024 gilt für West und Ost derselbe Rentenpunktwert — die jahrzehntelange
               Ungleichbehandlung ist vollständig abgebaut. Ab dem <strong>1. Juli 2026</strong> steigt
               der Wert von €40,79 auf <strong>€42,52 pro Monat und Rentenpunkt</strong>.
+            </p>
+          </section>
+
+          <section id="rentenformel" class="anchor-section">
+            <h2>Die Rentenformel – So berechnet sich Ihre Rente</h2>
+            <p>
+              Die gesetzliche Monatsrente ergibt sich aus vier Faktoren
+              (<a href="https://www.gesetze-im-internet.de/sgb_6/__64.html" target="_blank" rel="noopener noreferrer">§ 64 SGB VI</a>):
+            </p>
+
+            <div class="summary-card" style="background: var(--color-primary-highlight); border-color: rgba(0,107,112,0.2); text-align: center;">
+              <p style="font-size: var(--text-lg); font-weight: 600; color: var(--color-text); margin: 0;">
+                Monatsrente = EP × ZF × RW × RAF
+              </p>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-2); margin-bottom: 0;">
+                EP = Entgeltpunkte · ZF = Zugangsfaktor · RW = Rentenwert · RAF = Rentenartfaktor
+              </p>
+            </div>
+
+            <div class="table-scroll" style="margin-top: var(--space-6);">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Faktor</th>
+                    <th>Bedeutung</th>
+                    <th>Typischer Wert</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>EP</strong> – Entgeltpunkte</td>
+                    <td>Gesammelte Rentenpunkte aus allen Beitragsjahren</td>
+                    <td>30–50 Punkte (typisch)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ZF</strong> – Zugangsfaktor</td>
+                    <td>1,0 bei Regelaltersrente (67); −0,003 pro Monat früher; +0,005 pro Monat später</td>
+                    <td>0,856–1,0–1,06+</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>RW</strong> – Rentenwert</td>
+                    <td>Aktueller Rentenpunktwert (gesetzlich festgelegt)</td>
+                    <td><strong>€42,52 (ab Jul 2026)</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>RAF</strong> – Rentenartfaktor</td>
+                    <td>1,0 für Altersrente; 0,5 für Erwerbsminderungsrente (teilweise); 0,25 für Teilrente</td>
+                    <td>1,0 (Normalfall)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p style="margin-top: var(--space-4);">
+              <strong>Beispiel:</strong> 40 Entgeltpunkte, Renteneintritt mit 67 (ZF = 1,0), Rentenwert €42,52,
+              Altersrente (RAF = 1,0):<br>
+              40 × 1,0 × €42,52 × 1,0 = <strong>€1.700,80 Bruttorente pro Monat</strong>.
+            </p>
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted);">
+              Rechtsgrundlage:
+              <a href="https://www.gesetze-im-internet.de/sgb_6/__64.html" target="_blank" rel="noopener noreferrer">§ 64 SGB VI</a> (Rentenformel) ·
+              <a href="https://www.gesetze-im-internet.de/sgb_6/__77.html" target="_blank" rel="noopener noreferrer">§ 77 SGB VI</a> (Zugangsfaktor) ·
+              <a href="https://www.gesetze-im-internet.de/sgb_6/__67.html" target="_blank" rel="noopener noreferrer">§ 67 SGB VI</a> (Rentenartfaktor)
             </p>
           </section>
 
